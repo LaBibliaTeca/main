@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Iglesia y Sinagoga</title>
+	<style type="text/css">
+
+
+        .contenido {
+            max-width: 360px;
+            min-width: 100px
+            margin: 0 auto;
+            padding: 10px;
+            background-color: #ffffff;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            box-sizing: border-box;
+
+        }
+        .imagen1 {
+            position: absolute; /* Posiciona la imagen de manera absoluta dentro del contenedor */
+            top: 20px; /* Distancia desde la parte superior del contenedor */
+            right: 20px; /* Distancia desde la parte derecha del contenedor */
+            width: 150px;
+            height: auto;
+        }
+        .imagen2 {
+            float: center; /* Fija la segunda imagen a la derecha */
+            margin: 0 0 1px 1px;
+            width: 100%;
+            height: auto;
+        }
+        
+
+
+		
+	</style>
+</head>
+<body>
+		<button onclick="leerEnVozAlta()">Presionar para Leer en Voz Alta</button>
+<div class="contenido">
+	<img src="flia.png" class="imagen1"/>
+	
+        <p><i><b>
+          <span style="background-color:#FFFF00;"> La familia es un <br> diseño de Dios.<br>No hemos<br>inventado nada.</span><br />
+        </b></i></p>
+
+				<p></p><p></p>
+
+	<p></p><p></p><p></p><p></p><p></p><p></p>
+
+		<h3>"¿La Iglesia <br> apareció en el <br>primer siglo?<br>
+			¿Estaba la sinagoga referida a un lugar o una multitud?</h3>
+
+		<p><i><b>El concepto de Iglesia y Sinagoga existen desde antes del siglo V AC </b></i></p>
+		<p><i>Las palabras Iglesia y Sinagoga se vienen mencionando desde el libro de Deuteronomio
+		en la versión griega de Antiguo Testamento que data del año 300 AC .</i><br>
+		La palabra "sinagoga" se usó en versión griega del Antiguo Testamento en
+		Génesis 1-9 para el término de juntar las aguas que están debajo los cielos.<p>
+<p>		En Génesis 28-3 para "multitud de los pueblos".<br>En Éxodo 12:3 "Hablad a toda la congregación de Israel"<br>
+		Y así 179 veces expresando <b> personas juntas o multitud existente </b> generalmente en el lugar que se encuentre.</p>
+	<p>A partir la época Macabea sinagoga se refiere a un lugar donde reunir la multitud.</p>
+		<h3><i>¿Qué diferencia hay con Iglesia?</h3>
+		<p><i>Deu 4-10   cuando Jehová me dijo:, Reúneme el pueblo,</i><br>
+		τη ημερα της <b>εκκλησιας</b> οτε ειπεν κυριος προς με εκκλησιασον προς με τον λαον.<br>
+		el día de la asamblea (iglesia) cuando   dijo el Señor a mí reúneme al pueblo.<br>
+		<b>8 veces en Deuteronomio un total de 73 veces en el antiguo testamento.</b>
+		Jos 8:35  No hubo palabra alguna de todo cuanto mandó Moisés, <i>que Josué no hiciese leer delante de toda la congregación de Israel,</i><br>
+		Ἰησοῦς εἰς τὰ ὦτα πάσης ἐκκλησίας υἱῶν Ισραηλ, <br>
+		<i>que no leyó Josué a los oídos de toda la iglesia de los hijos de Israel</i><br>
+		<b>Vemos que Iglesia se refiere a un grupo o multitud que han sido convocados con un propósito.</b><br>
+		De ahí la palabra ἐκκλησία ekklesía= ἐκ ec (de,fuera) + καλέω kaléo (llamar).<br>
+		<b>IMPORTANTE QUE ENTENDAMOS: .</b><br>
+			<img src="DIAGRAMA.png" class="imagen2"/> <p>
+		Ahora bién el Señor Jesucristo dice : "edificaré de mí la iglesia "[de mí o mía].<br>
+		Así que este grupo humano convocado es un trabajo de Jesucristo. Si digo la palabra Iglesia aislada fuera del contesto del  Nuevo Testamento , no podría asegurar a quién responde este grupo.<br>
+		<b>"LA IGLESIA DE JESUCRISTO"</b> <br>
+		Las que siguen no se refieren a "La Iglesia de Jesucristo" sino a una asamblea convocada generalmente para decidir temas legales:
+		Mat_18-17  Si no los oyere a ellos, dilo a la iglesia o <br>
+		Hch 19-39  Y si demandáis alguna otra cosa, en legítima asamblea(Iglesia) se puede decidir.  εν τη εννομω <b>εκκλησια</b> επιλυθησεται (en la legítima asamblea decidir)<br>
+		<b> LA IGLESIA , EL CUERPO DE CRISTO  </b><br>
+		Efe_5:23  así como Cristo es cabeza de la iglesia, la cual es su cuerpo<br>
+		Y el es su (de la Iglesia) Salvador<br>
+		<b>LA ESPOSA DEL CORDERO</b><br>
+		La esposa del cordero expresa en un criterio amplio (todos los redimidos) : <br> 
+		<i>LA NUEVA JERUSALEM DISPUESTA COMO UNA ESPOSA ATAVIADA PARA SU MARIDO</i><br>
+		 <b>Entrarán en ella Apo 21:27  ... solamente los que están inscritos en el libro de la vida del Cordero.</b></p>
+		</div>
+<script>
+     function leerEnVozAlta() {
+    // Obtener el texto del elemento con la clase "contenido-texto"
+    var texto = document.querySelector('.contenido').innerText;
+
+    // Dividir el texto en segmentos más pequeños
+    var partes = dividirTextoEnPartes(texto, 510); // Por ejemplo, 200 caracteres por parte
+
+    // Leer cada parte secuencialmente
+    partes.forEach((parte) => {
+        var mensaje = new SpeechSynthesisUtterance(parte);
+        mensaje.lang = 'es-ES';
+        mensaje.pitch = 1;
+        mensaje.rate = 1;
+        window.speechSynthesis.speak(mensaje);
+    });
+}
+
+function dividirTextoEnPartes(texto, tamano) {
+    var partes = [];
+    for (var i = 0; i < texto.length; i += tamano) {
+        partes.push(texto.slice(i, i + tamano));
+    }
+    return partes;
+}
+
+    </script>
+	</body>
+		<html>
