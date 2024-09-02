@@ -14,9 +14,9 @@ jobs:
   with:server: (link unavailable)
   port 587
   username: $
-  {{ secrets.EMAIL_USERNAME }}
+  {{ secrets.EMAILUSER }}
     password: $
-  {{secrets.EMAIL-PASSWORD }}
+  {{secrets.EMAILPASS }}
         to: gustavo.uliarte@hotmail.com
         from:Formulario de contacto< gustavo.uliarte@gmail.com>
         subject: Nuevo mensaje desde elformulario de contacto
