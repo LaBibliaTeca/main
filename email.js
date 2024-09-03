@@ -6,7 +6,7 @@ document.head.appendChild(script);
 
 script.onload = function() {
     // Iniciar EmailJS
-    emailjs.init("YOUR_PUBLIC_KEY"); // Reemplaza "YOUR_PUBLIC_KEY" con tu clave pública
+    emailjs.init("_vmfJzPaAfLKlio-k"); // Reemplaza "YOUR_PUBLIC_KEY" con tu clave pública
 
     // Asignar evento click al botón "Enviar Email"
     document.getElementById('send-email-button').addEventListener('click', function() {
@@ -14,7 +14,7 @@ script.onload = function() {
         var form = document.getElementById('contact-form');
 
         // Enviar el formulario usando EmailJS
-        emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form)
+        emailjs.sendForm('service_2ajarrr', 'template_biqdvfi', form)
             .then(function() {
                 alert('Correo enviado exitosamente!');
             }, function(error) {
