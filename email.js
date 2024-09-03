@@ -1,21 +1,24 @@
-<!-- Incluir EmailJS SDK -->
-    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
-    <script type="text/javascript">
-        (function() {
-            emailjs.init("_vmfJzPaAfLKlio-k"); // Reemplaza con tu User ID de EmailJS
-        })();
-    </script>
+// Incluir la biblioteca de EmailJS
+var script = document.createElement('script');
+script.type = 'text/javascript';
+script.src = 'https://cdn.emailjs.com/dist/email.min.js';
+document.head.appendChild(script);
 
-    <script type="text/javascript">
-        document.getElementById('contact-form').addEventListener('submit', function(event) {
-            event.preventDefault(); // Previene la acción por defecto del formulario
+script.onload = function() {
+    // Iniciar EmailJS
+    emailjs.init("YOUR_PUBLIC_KEY"); // Reemplaza "YOUR_PUBLIC_KEY" con tu clave pública
 
-            // Enviar el formulario usando EmailJS
-            emailjs.sendForm('service_2ajarrr', 'template_biqdvfi', this)
-                .then(function() {
-                    alert('Correo enviado exitosamente!');
-                }, function(error) {
-                    alert('Error al enviar el correo: ' + JSON.stringify(error));
-                });
-        });
-    </script>
+    // Asignar evento click al botón "Enviar Email"
+    document.getElementById('send-email-button').addEventListener('click', function() {
+        // Obtener el formulario
+        var form = document.getElementById('contact-form');
+
+        // Enviar el formulario usando EmailJS
+        emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form)
+            .then(function() {
+                alert('Correo enviado exitosamente!');
+            }, function(error) {
+                alert('Error al enviar el correo: ' + JSON.stringify(error));
+            });
+    });
+};
