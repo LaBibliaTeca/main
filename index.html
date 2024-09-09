@@ -76,7 +76,27 @@
 	
 </head>
 	<body>
-		<audio autoplay loop> <source src="Tu Santo Nombre Alabaré.mp3" type="audio/mp3">Tu navegador no soporta mp3</audio>
+    <audio id="melodia" autoplay>
+        <source src="Tu Santo Nombre Alabaré.mp3" type="audio/mp3">
+        Tu navegador no soporta la etiqueta de audio.
+    </audio>
+		    <script>
+        // Verificamos si la reproducción automática es bloqueada
+        const audio = document.getElementById('melodia');
+        audio.play().catch(function() {
+            // Si es bloqueada, mostramos un botón para que el usuario inicie la reproducción
+            const boton = document.createElement('button');
+            boton.innerHTML = 'Reproducir';
+            boton.addEventListener('click', function() {
+                audio.play();
+            });
+            document.body.appendChild(boton);
+        });
+    </script>
+
+
+
+		
         <div class="container">
 
             <div class="middle-boxes">
