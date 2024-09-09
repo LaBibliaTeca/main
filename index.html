@@ -76,10 +76,7 @@
 	
 </head>
 	<body>
-    <audio id="melodia" autoplay>
-        <source src="Tu Santo Nombre Alabaré.mp3" type="audio/mp3">
-        Tu navegador no soporta la etiqueta de audio.
-    </audio>
+
 		
 
 
@@ -169,18 +166,7 @@
 
 	</div>
       <!-- Script para manejar la reproducción de música tras la primera interacción -->
- 
-		 <script>
-        const audio = document.getElementById('melodia');
-        audio.play().catch(function() {
-            const boton = document.createElement('button');
-            boton.innerHTML = 'Reproducir';
-            boton.addEventListener('click', function() {
-                audio.play();
-            });
-            document.body.appendChild(boton);
-        });
-    </script>
+
 	    <script src="email.js"></script>
 					<h6><i></i></h6>
 <!--<a href="https://forms.gle/fWh4EKLiSsfFuk1m8" target ="_blank">[Haz tu pregunta]</a>-->
