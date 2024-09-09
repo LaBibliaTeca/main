@@ -119,7 +119,7 @@
 
 	<p>
 	<span style="font-size:16px;">
-	<a href="https://labibliateca.github.io/Dones/" target="_blank"><b><span style= "color:red">Dones según los textos griegos</span></b></a><br>
+	<a href="https://labibliateca.github.io/Dones/"onclick="cerrarPagina()"><b><span style= "color:red">Dones según los textos griegos</span></b></a><br>
 	<a href="https://labibliateca.github.io/IglesiaYSinagoga/"><b>Iglesia¿Aparecio en Siglo I?</b></a><br>
 	<a href="https://labibliateca.github.io/Eleccion/"><b>¿Elección de Dios o  nuestra?</b></a><br />	
 	<a href="https://labibliateca.github.io/Apostol/"target="_blank"><b><span>¿Qué es un Apóstol?</b></a><br />
@@ -161,7 +161,12 @@
 	<div class="page-footer">
 	</div>
 		<script>
-		window.onload=function() {window.close(); };
+		var seAbriodesdeEnlace=false;
+		function cerrarPagina() {
+			if (seAbrioDesdeEnlace) {window.close();}
+					}	
+			
+		window.onload=function() {seAbrioDesdeEnlace=true; };
 		</script>
        <!-- Carga del archivo externo con los scripts -->
     <script src="scripts.js"></script>
