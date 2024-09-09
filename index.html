@@ -169,30 +169,18 @@
 
 	</div>
       <!-- Script para manejar la reproducción de música tras la primera interacción -->
-   function iniciarMusica() {
-            if (!musicaIniciada) {
-                const audio = document.getElementById('melodia');
-                audio.play().then(() => {
-                    musicaIniciada = true; // Marca que la música ya ha sido iniciada
-                }).catch((error) => {
-                    console.log('Error al reproducir la música:', error);
-                });
-            }
-        }
-
-        // Detecta cualquier interacción del usuario en la página
-        document.addEventListener('click', iniciarMusica);
-        document.addEventListener('touchstart', iniciarMusica);
-
-        // Evento que ocurre cuando el botón de "Enviar Pregunta" es presionado
-        const sendButton = document.getElementById('send-email-button');
-        sendButton.addEventListener('click', function() {
-            // Aquí puedes agregar la lógica para enviar el correo
-            // Por ejemplo, llamando a las funciones de email.js
-            console.log('Se envía la pregunta');
+ 
+		 <script>
+        const audio = document.getElementById('melodia');
+        audio.play().catch(function() {
+            const boton = document.createElement('button');
+            boton.innerHTML = 'Reproducir';
+            boton.addEventListener('click', function() {
+                audio.play();
+            });
+            document.body.appendChild(boton);
         });
     </script>
-		
 	    <script src="email.js"></script>
 					<h6><i></i></h6>
 <!--<a href="https://forms.gle/fWh4EKLiSsfFuk1m8" target ="_blank">[Haz tu pregunta]</a>-->
