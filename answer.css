@@ -4,7 +4,7 @@ body{
 
             .boton{   
             background-color:transparent;
-            border:none;padding:20px;font: size 24px;
+            border:none;padding:20px;font-size:24px;
             cursor:pointer;text-decoration:none;}
 
             .icono1{display:inline-block;width:20px;height:20px;border radius:50%;
