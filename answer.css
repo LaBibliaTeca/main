@@ -15,5 +15,6 @@ body{
                     background-color:#4F7D3C;border-radius:50%;}
             .icono4{display:inline-block;width:20px;height:20px;border radius:50%;
                         background-color:#E0BD2F;border-radius:50%}
+            .parpadea{text-decoration:blink;}
 
     }
