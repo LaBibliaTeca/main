@@ -114,14 +114,14 @@ Ahora bien , la  Escrituta dice: Lucas 1:35 "el Espíritu Santo vendrá sobre t�
     var texto = document.querySelector('.contenido').innerText;
 
     // Dividir el texto en segmentos más pequeños
-    var partes = dividirTextoEnPartes(texto, 510); // Por ejemplo, 200 caracteres por parte
+    var partes = dividirTextoEnPartes(texto, 800); // Por ejemplo, 200 caracteres por parte
 
     // Leer cada parte secuencialmente
     partes.forEach((parte) => {
         var mensaje = new SpeechSynthesisUtterance(parte);
         mensaje.lang = 'es-ES';
         mensaje.pitch = 1;
-        mensaje.rate = 1;
+        mensaje.rate = .9;
         window.speechSynthesis.speak(mensaje);
     });
 }
