@@ -25,38 +25,37 @@
 
 	    	<button style="width: 200px; height: 50px;background-color: yellow;font-size: 16px;" onclick="leerEnVozAlta()">Presionar para Leer en Voz Alta</button>
     <div id="contenido"></div>
-    <script>
-fetch('respuesta.txt')
-            .then(response=>response.text())
-            .then(textos =>{document.getElementById('contenido').innerHTML=textos;});
-    </script>
 
     <script>
-     function leerEnVozAlta() {
-    // Obtener el texto del elemento con la clase "contenido-texto"
-    var texto = document.querySelector('.contenido').innerText;
+        async function leerArchivoEnVozAlta() {
+            // Usar fetch para obtener el contenido del archivo de texto
+            try {
+                const response = await fetch('respuesta.txt'); // Cambia 'archivo.txt' por la ruta de tu archivo
+                if (!response.ok) {
+                    throw new Error('Error al cargar el archivo');
+                }
+                
+                // Leer el contenido del archivo
+                const texto = await response.text();
 
-    // Dividir el texto en segmentos más pequeños
-    var partes = dividirTextoEnPartes(texto, 800); // Por ejemplo, 200 caracteres por parte
+                // Mostrar el contenido del archivo en el <div> con id "contenido"
+                document.getElementById('contenido').innerText = texto;
 
-    // Leer cada parte secuencialmente
-    partes.forEach((parte) => {
-        var mensaje = new SpeechSynthesisUtterance(parte);
-        mensaje.lang = 'es-ES';
-        mensaje.pitch = 1;
-        mensaje.rate = .9;
-        window.speechSynthesis.speak(mensaje);
-    });
-}
+                // Crear una nueva instancia de SpeechSynthesisUtterance
+                const mensaje = new SpeechSynthesisUtterance(texto);
 
-function dividirTextoEnPartes(texto, tamano) {
-    var partes = [];
-    for (var i = 0; i < texto.length; i += tamano) {
-        partes.push(texto.slice(i, i + tamano));
-    }
-    return partes;
-}
+                // Configurar propiedades del mensaje
+                mensaje.lang = 'es-ES'; // Idioma y acento
+                mensaje.pitch = 1; // Tono
+                mensaje.rate = 1; // Velocidad de habla
 
+                // Usar la API de síntesis de voz del navegador para hablar el mensaje
+                window.speechSynthesis.speak(mensaje);
+
+            } catch (error) {
+                console.error('Error:', error.message);
+            }
+        }
     </script>
 </body>
 </html>
