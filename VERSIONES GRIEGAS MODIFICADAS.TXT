@@ -1,0 +1,43 @@
+
+Este artículo no es para evaluar la fiabilidad del los textos publicados, sino mas bien para poner en conocimiento del estudiante que junto con aplicaciones en celulares de la Biblia y en otras para computadoras se han presentedo versiones modificadas por la escuela crítica sin aclarar ese proceso. Al encontrar ciertas inconsistencias , las he hecho notar.
+Recomiendo revisar en cada caso que versión presenta cada uno . 
+Por ejemplo e-sword va a presentar una versión del TEXTUS RECEPTUS  que no es de Erasmo (1516)  sino  de Robert Esttiene llamado Stephanus de 1546. (ver https://es.wikipedia.org/wiki/Textus_Receptus).
+
+De hecho todo esto , no vamos a llegar a las mismas conclusiones de Casiodoro de Reina de 1569.
+Sin reprochar el trabajo crítico , me parece que hubiera sido honesto advertir al lector.
+
+CONSEJOS.
+Precaución al realizar traducciones sobre el texto griego. Qué texto griego te están facilitando?. Evitaría el texto de stefanus ,  preferiría el de Erasmo.
+¿Qué versión del Texto Mayoritario Bizantino te están ofreciendo? Por lo general colocan el año al lado.
+
+La presencia de "paizó" (juego de jóvenes) en lugar de "kōmos" ( referido a orgías)  en 1 Corintios 10:7 sugiere que la versión del Nuevo Testamento griego podría ser una edición crítica del Texto Bizantino, pero no necesariamente una reproducción exacta de un manuscrito bizantino específico. 
+Lo mismo en algunas versiones de la LXX.
+
+
+La mención de "kōmos" en lugar de "paizō" en 1 Corintios 10:7 podría sugerir que la versión griega del Nuevo Testamento que estás utilizando se basa en la edición de Stephanus (Robert Estienne) en lugar de la de Erasmo.
+
+Robert Estienne, un impresor y erudito francés, publicó su edición del Nuevo Testamento griego en 1550, conocida como la "Edición de Stephanus". Incluyó otros manuscritos .
+
+Por otro lado, la edición de Erasmo, publicada en 1516, se basó en solo unos pocos manuscritos y contenía algunas lecturas diferentes.
+
+Algunas características de la Edición de Stephanus que podrían ayudar a identificarla son:
+
+1. Uso de "paizó" en 1 Corintios 10:7.
+2. Inclusión de la perícopa de la adúltera (Juan 7:53-8:11).
+3. Uso de la lectura "τὸ πνεῦμα" (el Espíritu) en lugar de "τὸ πνεῦμα ἅγιον" (el Espíritu Santo) en Hebreos 10:29.
+4.La coma juanina 1 Juan 5:7.
+ 
+
+Hay varias posibilidades:
+
+1. Edición crítica: Tu versión podría ser una edición crítica del Texto Bizantino, que combina lecturas de varios manuscritos bizantinos para crear un texto más fiable.
+2. Texto Mayoritario: Tu versión podría estar basada en el Texto Mayoritario (Majority Text), que es una reconstrucción del texto bizantino más común.
+3. Edición moderna: Tu versión podría ser una edición moderna del Nuevo Testamento griego que se basa en el Texto Bizantino, pero con algunas modificaciones o correcciones.
+
+La ausencia de opciones de lectura (variantes textuales) sugiere que tu versión podría ser una edición simplificada o estandarizada del Texto Bizantino.
+
+Para determinar con certeza la procedencia de tu versión, podrías:
+
+1. Verificar la introducción o prefacio de la versión para obtener información sobre su base textual y método de edición.
+2. Buscar información en línea sobre la versión específica que estás utilizando.
+3. Comparar tu versión con otras versiones del Nuevo Testamento griego para identificar similitudes y diferencias.
