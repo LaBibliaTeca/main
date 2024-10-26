@@ -42,37 +42,7 @@
     window.open('https://drive.google.com/file/d/1FJkF-v_9rYjApbPWvy0uCBbCMoEj7eZB/view?usp=sharing', '_blank');
 };
 
-            try {
-                const response = await fetch(url); // Cambia 'archivo.txt' por la ruta de tu archivo
-                if (!response.ok) {
-                    throw new Error('Error al cargar el archivo');
-                }
-                
-                // Leer el contenido del archivo
-                const texto = await response.text();
-
-                // Mostrar el contenido del archivo en el <div> con id "contenido"
-                document.getElementById('contenido').innerText = texto;
-            } catch (error) {
-                console.error('Error:', error.message);
-            }
-        }
-
-        // Función para leer en voz alta el contenido del archivo
-        function leerEnVozAlta() {
-            const texto = document.getElementById('contenido').innerText;
-
-            // Crear una nueva instancia de SpeechSynthesisUtterance
-            const mensaje = new SpeechSynthesisUtterance(texto);
-
-            // Configurar propiedades del mensaje
-            mensaje.lang = 'es-ES'; // Idioma y acento
-            mensaje.pitch = 1; // Tono
-            mensaje.rate = .85; // Velocidad de habla
-
-            // Usar la API de síntesis de voz del navegador para hablar el mensaje
-            window.speechSynthesis.speak(mensaje);
-        }
+         
     </script>
 </body>
 </html>
