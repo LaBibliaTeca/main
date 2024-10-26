@@ -37,7 +37,7 @@
         // Cargar el archivo automáticamente al cargar la página
         window.onload = async function cargarArchivo() {
             try {
-                const response = await fetch('OSCAR.txt'); // Cambia 'archivo.txt' por la ruta de tu archivo
+                const response = await fetch("https://drive.google.com/file/d/1FJkF-v_9rYjApbPWvy0uCBbCMoEj7eZB/view?usp=sharing"); // Cambia 'archivo.txt' por la ruta de tu archivo
                 if (!response.ok) {
                     throw new Error('Error al cargar el archivo');
                 }
