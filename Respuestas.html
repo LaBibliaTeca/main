@@ -34,9 +34,9 @@
     <div id="contenido"></div>
 
     <script>
-        // Cargar el archivo automáticamente al cargar la página
+        
         window.onload = async function cargarArchivo() {
-		const url = 'https://drive.google.com/uc?export=download&id=1FJkF-v_9rYjApbPWvy0uCBbCMoEj7eZB';
+		const url = 'https://drive.google.com/file/d/1FJkF-v_9rYjApbPWvy0uCBbCMoEj7eZB/view?usp=drive_link';
             try {
                 const response = await fetch(url); // Cambia 'archivo.txt' por la ruta de tu archivo
                 if (!response.ok) {
