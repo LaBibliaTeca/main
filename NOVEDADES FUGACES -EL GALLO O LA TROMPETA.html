@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOVEDADES FUGACES -El gallo o la trompeta</title>
+<style>
+    body {
+        font-family:'Times New Roman', Times, serif;
+       *font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 3px;
+        background-color: rgb(247, 244, 244);
+        color: rgb(7, 7, 7);
+        box-sizing: border-box;
+    }
+    .container {
+        max-width: 500px;
+        display: flex;
+        flex-direction: column;
+        min-height: 10vh;
+    }
+</style>
+</head>
+<body>
+
+	
+<!-- Botón para leer en voz alta el contenido del archivo -->
+	    	<button style="width: 200px; height: 50px;background-color: yellow;font-size: 16px;" onclick="leerEnVozAlta()">Presionar para Leer en Voz Alta</button>
+
+	<p><i>De Gustavo Uliarte</i></p>
+	
+	<p><b>Novedades Fugaces</b><br> El Gallo o la Trompeta </p>
+    <p><i> El video original en instagram</i></p>
+    <a href="https://www.instagram.com/reel/DBW8NemSGGm/?igsh=MW5jem1mbnppeWQyeA==">PULSAR</a><br>
+    <!-- Div donde se mostrará el contenido del archivo -->
+    <div id="contenido"><br>El canto del gallo NO es la trompeta. El 
+término griego es alektoro-,fonia  . Gallo- canto. En Mateo 13:.35 da 
+una progresión de los sucesos de  cuando vendría el Señor: anochecer, 
+medianoche, canto del gallo , o la mañana. El canto del gallo podría 
+estar entre las 3 y 5  hs. La referencia podría hacer a un horario o un 
+suceso. Si la gallina con sus polluelos es la imagen de Jesús con Israel
+ ¿podría ser el gallo un animal inmundo ya que es el macho de la 
+especie?.  La gallina es kosher. Marcos 14:.30 no usa la palabra 
+compuesta alectorofonia sino el sujeto : alector gallo y el verbo foneo 
+ , "el gallo  cante". En la vulgata latina no usa la palabra galicilium 
+sino el sujeto gallus y  objeto :vocem  voces, dederit :de, 'gallo dé, 
+la voz" . La hipótesis de la trompeta ha sido manejada por un grupo pero
+ no se ha probado.<br>EL GALLO NO ES INMUNDO . <br>
+ colaboración Jorge Ramírez.<br><br>Es uno de los capitulos de talmud
+  judío se nombra a un gallo Tratados Eduyot - Capítulo 6 - Mishná 1<br>Rabí
+ Yehuda ben Baba testificó cinco cosas. El que se burla de los pequeños,
+ y el que avergüenza a la mujer según un testigo, y el que apedreó a un 
+gallo en Jerusalén por matar un alma, y por un vino añejo de cuarenta 
+días. Oraremos sobre la parte trasera del altar, y sobre el aurora del 
+alba que ha llegado en cuatro horas. Por lo que se puede deducir habían 
+gallos dando vueltas por la comunidad.<br>
+</div>
+
+    <script>
+        // Cargar el archivo automáticamente al cargar la página
+        window.onload = async function cargarArchivo() {
+            try {
+                const response = await fetch('Novedad.txt'); // Cambia 'archivo.txt' por la ruta de tu archivo
+                if (!response.ok) {
+                    throw new Error('Error al cargar el archivo');
+                }
+                
+                // Leer el contenido del archivo
+                const texto = await response.text();
+
+                // Mostrar el contenido del archivo en el <div> con id "contenido"
+                document.getElementById('contenido').innerText = texto;
+            } catch (error) {
+                console.error('Error:', error.message);
+            }
+        }
+
+        // Función para leer en voz alta el contenido del archivo
+        function leerEnVozAlta() {
+            const texto = document.getElementById('contenido').innerText;
+
+            // Crear una nueva instancia de SpeechSynthesisUtterance
+            const mensaje = new SpeechSynthesisUtterance(texto);
+
+            // Configurar propiedades del mensaje
+            mensaje.lang = 'es-ES'; // Idioma y acento
+            mensaje.pitch = 1; // Tono
+            mensaje.rate = .7; // Velocidad de habla
+
+            // Usar la API de síntesis de voz del navegador para hablar el mensaje
+            window.speechSynthesis.speak(mensaje);
+        }
+    </script>
+
+
+
+</body></html>
