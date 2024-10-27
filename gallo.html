@@ -61,22 +61,7 @@ gallos dando vueltas por la comunidad.<br>
 
     <script>
         // Cargar el archivo automáticamente al cargar la página
-        window.onload = async function cargarArchivo() {
-            try {
-                const response = await fetch('Novedad.txt'); // Cambia 'archivo.txt' por la ruta de tu archivo
-                if (!response.ok) {
-                    throw new Error('Error al cargar el archivo');
-                }
-                
-                // Leer el contenido del archivo
-                const texto = await response.text();
 
-                // Mostrar el contenido del archivo en el <div> con id "contenido"
-                document.getElementById('contenido').innerText = texto;
-            } catch (error) {
-                console.error('Error:', error.message);
-            }
-        }
 
         // Función para leer en voz alta el contenido del archivo
         function leerEnVozAlta() {
