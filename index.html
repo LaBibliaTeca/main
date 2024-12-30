@@ -98,9 +98,24 @@
       <!-- <input type="text" name="to_name" placeholder="a" required -->
      <input style="font-size:18x;" type="text" name="from_name" placeholder="Tu Nombre"  />
 	 <br>    
-       <b> <textarea maxlength="180" name="message" placeholder="Tu Pregunta:         " rows="6" cols="30"  required></textarea></b><br>
+       <b> <textarea maxlength="180" id="message" name="message" placeholder="Tu Pregunta:         " rows="6" cols="30"  required></textarea></b><br>
     <button style="width: 200px; height: 40px;background-color: #CCFFFF;font-size: 16px;" id="send-email-button">Enviar x Casilla </button>
-	<a href="https://wa.me/541156394763" >WHATSAPP</a>
+	       <button onclick="enviarMensajeWhatsApp()">Enviar por WhatsApp</button>
+	       <div id="mensaje-whatsapp"></div>
+
+
+<script>
+function enviarMensajeWhatsApp() {
+const nombre = "Usuario"; // Puedes obtener el nombre del usuario de otra parte
+  const mensaje = document.getElementById("message").value;
+  const whatsappURL = `https://wa.me/541156394763/?text=Hola! Soy ${nombre} y tengo una pregunta: ${encodeURIComponent(mensaje)}`;
+  // ... resto del código
+
+  // Abrir el enlace en una nueva pestaña
+  window.open(whatsappURL, '_blank');
+}
+</script>
+	
 	      
     </form>	        
         </div>
