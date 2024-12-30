@@ -100,7 +100,7 @@
 	 <br>    
        <b> <textarea maxlength="180" name="message" placeholder="Tu Pregunta:         " rows="6" cols="30"  required></textarea></b><br>
     <button style="width: 200px; height: 40px;background-color: #CCFFFF;font-size: 16px;" id="send-email-button">Enviar x Casilla </button>
-	<button style="width: 200px; height: 40px;background-color: #CCFFFF;font-size: 16px;" id="sendWhatsapp">Enviar por Whatsapp </button>
+	<a href="https://wa.mew/541156394763" >WHATSAPP</a>
 	      
     </form>	        
         </div>
@@ -202,22 +202,7 @@
     <!-- Carga de script externo para el envío del correo -->
     <script src="email.js"></script>
 		<!-- Carga Wharasapp-->
-    <script>
-        document.getElementById('sendWhatsapp').addEventListener('click', function(event) {
-            event.preventDefault();
-
-            // Obtener los datos del formulario
-            var nombre = document.querySelector('input[name="from_name"]').value;
-            var mensaje = document.querySelector('textarea[name="name="message"]').value;
-
-            // Construir el enlace para WhatsApp Web
-            var whatsappURL = "https://web.whatsapp.com/send?phone=54XXXXXXXXXX&text=" + encodeURIComponent("Mensaje de: " + nombre + "\n" + mensaje);
-
-            // Redirigir al usuario a WhatsApp Web
-            window.open(whatsappURL, '_blank');
-        });
-    </script>
-
+  
 		
 <!--<a href="https://forms.gle/fWh4EKLiSsfFuk1m8" target ="_blank">[Haz tu pregunta]</a>-->
 </body>
