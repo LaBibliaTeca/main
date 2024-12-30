@@ -9,7 +9,7 @@ document.getElementById('sendWhatsapp').addEventListener('click', function() {
     const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
     // Forzar apertura del enlace
-    location.href = whatsappLink;
+    // location.href = whatsappLink;
     window.open(whatsappLink, '_blank');
 
 });
