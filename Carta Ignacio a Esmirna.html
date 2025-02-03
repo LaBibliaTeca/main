@@ -13,7 +13,7 @@
             padding: 20px;
         }
 
-        .container {
+        .contenido {
             max-width: 600px;
             margin: 0 auto;
             padding: 20px;
@@ -39,7 +39,8 @@
     </style>
 </head>
 <body>
-    <div class="container">
+	<button style="width: 500px; height: 150px;background-color: rgb(255, 221, 3);font-size: 28px;" onclick="leerEnVozAlta()">Presionar para Escuchar en Voz Alta</button>
+    <div class="contenido">
         <div class="title-line">
 <h5> IGNACIO DE ANTIOQUIA <br>Discípulo de Juan , es el primero en introducir el término κατολικε (katolike)  para la iglesia única ,
 	también la palabra ευχαριστια (eukaristia) pasa de ser la acción de graciascomo parte de la oración a referirse a la Cena del Señor.
@@ -116,5 +117,32 @@ Saludo a la casa de Tavia, y rezo para que sea confirmada en la fe y en el amor,
 			
         </div>
     </div>
+	<script>
+     function leerEnVozAlta() {
+    // Obtener el texto del elemento con la clase "contenido-texto"
+    var texto = document.querySelector('.contenido').innerText;
+
+    // Dividir el texto en segmentos más pequeños
+    var partes = dividirTextoEnPartes(texto, 560); // Por ejemplo, 200 caracteres por parte
+
+    // Leer cada parte secuencialmente
+    partes.forEach((parte) => {
+        var mensaje = new SpeechSynthesisUtterance(parte);
+        mensaje.lang = 'es-ES';
+        mensaje.pitch = 1;
+        mensaje.rate = 0.9;
+        window.speechSynthesis.speak(mensaje);
+    });
+}
+
+function dividirTextoEnPartes(texto, tamano) {
+    var partes = [];
+    for (var i = 0; i < texto.length; i += tamano) {
+        partes.push(texto.slice(i, i + tamano));
+    }
+    return partes;
+}
+
+    </script>
 </body>
 </html>
