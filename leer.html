@@ -48,17 +48,20 @@ i<!DOCTYPE html>
 </head>
 <body>
   <h2>Texto cargado:</h2>
+  <div style="margin-top: 20px;">
+    <button onclick="leerEnVozAlta()">Leer en voz alta</button>
+  </div>
+  
   <div id="contenido" style="white-space: pre-wrap; display:none;"></div>
 
   <div id="entradaLink" style="margin-top: 20px;">
     <label>Pega aquí el enlace de Google Drive:</label><br>
+    
     <input type="text" id="linkInput" placeholder="https://drive.google.com/..." style="width:90%;heigth:35px">
-    <button onclick="procesarLink()">Cargar documento</button>
+  
   </div>
 
-  <div style="margin-top: 20px;">
-    <button onclick="leerEnVozAlta()">Leer en voz alta</button>
-  </div>
+
 
   <script>
     let text = "";
