@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Lector con Control de Velocidad</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 20px;
+    }
+    #speed-controls {
+      margin-bottom: 20px;
+    }
+    #speed-controls button {
+      font-size: 18px;
+      padding: 8px 12px;
+      margin-right: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    /* Ejemplo de colores para diferenciar los botones */
+    #btn-slow { background-color: #ff9a9e; }
+    #btn-normal { background-color: #a0e7e5; }
+    #btn-fast { background-color: #b4f8c8; }
+  </style>
+</head>
+<body>
+
+  <!-- Botones para seleccionar la velocidad -->
+  <div id="speed-controls">
+    <button id="btn-slow" onclick="setSpeed(0.8)">0.8x</button>
+    <button id="btn-normal" onclick="setSpeed(1)">1x</button>
+    <button id="btn-fast" onclick="setSpeed(1.2)">1.2x</button>
+  </div>
+
+  <!-- Botón para disparar la lectura (por encima del contenido) -->
+  <div style="margin-bottom: 20px;">
+    <button onclick="leerEnVozAlta()">Leer en voz alta</button>
+  </div>
+
+  <!-- Zona donde se muestra el texto (puede estar oculto si no lo necesitas en pantalla) -->
+  <div id="contenido" style="display:none; white-space: pre-wrap;"></div>
+
+  <script>
+    // Variable global para la velocidad
+    let speed = 1; // velocidad por defecto: 1
+
+    // Función para cambiar la velocidad
+    function setSpeed(newSpeed) {
+      speed = newSpeed;
+      console.log("Velocidad actual: " + speed);
+      // Opcional: Podrías actualizar la apariencia de los botones para indicar la selección
+    }
+
+    // Ejemplo de función para leer el contenido en voz alta por fragmentos
+    function leerEnVozAlta() {
+      const texto = document.getElementById("contenido").innerText;
+      if (!texto) return;
+
+      // Fragmentar el texto en bloques de 200 caracteres, ideal para Android
+      const fragmentos = texto.match(/.{1,200}(\s|$)/g);
+      let index = 0;
+
+      function hablarFragmento() {
+        if (index < fragmentos.length) {
+          const mensaje = new SpeechSynthesisUtterance(fragmentos[index]);
+          mensaje.lang = 'es-ES';
+          mensaje.pitch = 1;
+          // Aquí se multiplica 0.6 (velocidad base) por la variable speed
+          mensaje.rate = 0.6 * speed;
+          mensaje.onend = function() {
+            index++;
+            hablarFragmento();
+          };
+          speechSynthesis.speak(mensaje);
+        }
+      }
+
+      hablarFragmento();
+    }
+
+    // Ejemplo: Insertar texto en el div "contenido" para probar la lectura
+    document.getElementById("contenido").innerText = "Este es un ejemplo de texto para la lectura en voz alta. " +
+      "Puedes ajustar la velocidad con los botones de arriba. La velocidad se basa en multiplicar la tasa base (0.6) " +
+      "por el valor seleccionado. Prueba cambiando entre 0.8x, 1x y 1.2x para escuchar la diferencia en la velocidad. " +
+      "Este es un texto adicional para que veas cómo se fragmenta y se reproduce en secuencia.";
+    document.getElementById("contenido").style.display = "block";
+  </script>
+</body>
+</html>
