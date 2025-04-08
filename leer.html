@@ -65,6 +65,18 @@
       min-width: 50px;
       text-align: center;
     }
+
+      /* Botón de "Leer en voz alta" */
+    #leer-btn {
+      font-size: 24px;
+      margin: 5px 0;  /* Espaciado vertical reducido */
+      padding: 10px 20px;
+      cursor: pointer;
+      background-color: #007bff;
+      border: none;
+      color: white;
+      border-radius: 5px;
+    }
 </style>
 
 </head>
@@ -76,7 +88,7 @@
     <button onclick="changeSpeed(0.1)">&gt;</button>
   </div>
    <div style="margin-top: 20px;">
-    <button onclick="leerEnVozAlta()">Leer en voz alta</button>
+    <button id="leer-btn" onclick="leerEnVozAlta()">Leer en voz alta</button>
   </div>
   <div id="contenido" style="white-space: pre-wrap; display:none;"></div>
 
