@@ -99,7 +99,15 @@
       document.getElementById("entradaLink").style.display = "none";
       cargarPorId(idParam);
     }
+    // Valor global inicial para la velocidad
+    let speed = 1.0;
 
+    // Función para cambiar la velocidad en incrementos/decrementos
+    function changeSpeed(delta) {
+      // Ajustar en saltos de 0.1 y limitar el rango de 0.5 a 2.0
+      speed = Math.min(2.0, Math.max(0.5, parseFloat((speed + delta).toFixed(1))));
+      document.getElementById("speed-value").textContent = speed.toFixed(1);
+    }
     function procesarLink() {
       const url = document.getElementById("linkInput").value;
       const idExtraido = extraerIdDeDrive(url);
@@ -153,12 +161,7 @@
           });
       });
     }
-    // Función para cambiar la velocidad en incrementos/decrementos
-    function changeSpeed(delta) {
-      // Ajustar en saltos de 0.1 y limitar el rango de 0.5 a 2.0
-      speed = Math.min(2.0, Math.max(0.5, parseFloat((speed + delta).toFixed(1))));
-      document.getElementById("speed-value").textContent = speed.toFixed(1);
-    }
+
     function leerEnVozAlta() {
       if (!text) return;
 
