@@ -42,11 +42,36 @@
   button:hover {
     background: #0056b3;
   }
+      #speed-control {
+      margin-bottom: 20px;
+      font-size: 24px;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+    #speed-control button {
+      font-size: 24px;
+      padding: 5px 10px;
+      cursor: pointer;
+      background-color: #007bff;
+      border: none;
+      color: white;
+      border-radius: 5px;
+    }
+    #speed-control span {
+      min-width: 50px;
+      text-align: center;
+    }
 </style>
 
 </head>
 <body>
   <h2>Texto cargado:</h2>
+   <div id="speed-control">
+    <button onclick="changeSpeed(-0.1)">&lt;</button>
+    <span id="speed-value">1.0</span>
+    <button onclick="changeSpeed(0.1)">&gt;</button>
+  </div>
    <div style="margin-top: 20px;">
     <button onclick="leerEnVozAlta()">Leer en voz alta</button>
   </div>
