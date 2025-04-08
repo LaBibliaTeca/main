@@ -172,7 +172,7 @@
         if (index < fragmentos.length) {
           const mensaje = new SpeechSynthesisUtterance(fragmentos[index]);
           mensaje.lang = 'es-ES';
-          mensaje.rate = 0.8;
+          mensaje.rate = 0.8*speed;
           mensaje.onend = function () {
             index++;
             hablarFragmento();
