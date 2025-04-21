@@ -187,7 +187,7 @@
     function leerEnVozAlta() {
       if (!text) return;
 
-      const fragmentos = text.match(/.{1,1000}(\s|$)/g);
+      const fragmentos = text.match(/.{1,500}(\s|$)/g);
       let index = 0;
 
       function hablarFragmento() {
