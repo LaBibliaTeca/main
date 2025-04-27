@@ -182,34 +182,58 @@
             console.error(error);
           });
       });
-    }
+      function dividirTextoEnFragmentos(texto, maxCaracteres = 200) {
+    const signos = /([.,;:!?。！？、])/g;
+    const partes = texto.split(signos);
 
-    function leerEnVozAlta() {
-      if (!text) return;
+    let fragmentos = [];
+    let fragmentoActual = "";
 
-      const fragmentos = text.match(/.{1,150}(\s|$)/g);
-      let index = 0;
+    for (let i = 0; i < partes.length; i++) {
+        fragmentoActual += partes[i];
 
-      function hablarFragmento() {
-        if (index < fragmentos.length) {
-              let textoFragmento = fragmentos[index];
-              // Si el fragmento no termina en un signo de puntuación, añadimos un punto
-    if (!/[.!?…]$/.test(textoFragmento.trim())) {
-      textoFragmento += '.';
-    }
-          const mensaje = new SpeechSynthesisUtterance(fragmentos[index]);
-          mensaje.lang = 'es-ES';
-          mensaje.rate = 0.8*speed;
-          mensaje.onend = function () {
-            index++;
-            hablarFragmento();
-          };
-          speechSynthesis.speak(mensaje);
+        if (signos.test(partes[i]) || fragmentoActual.length >= maxCaracteres) {
+            fragmentos.push(fragmentoActual.trim());
+            fragmentoActual = "";
         }
-      }
-
-      hablarFragmento();
     }
+
+    if (fragmentoActual.length > 0) {
+        fragmentos.push(fragmentoActual.trim());
+    }
+
+    return fragmentos;
+}
+
+    }
+function leerEnVozAlta() {
+    const texto = document.getElementById('contenido').innerText;
+
+    // Dividir el texto en fragmentos controlados
+    const fragmentos = dividirTextoEnFragmentos(texto, 200);
+
+    let index = 0;
+
+    function hablarFragmento() {
+        if (index < fragmentos.length) {
+            const mensaje = new SpeechSynthesisUtterance(fragmentos[index]);
+            mensaje.lang = 'es-ES';
+            mensaje.pitch = 1;
+            mensaje.rate = 0.6 * speed; // usando la velocidad ajustable
+
+            mensaje.onend = function() {
+                index++;
+                hablarFragmento();
+            };
+
+            window.speechSynthesis.speak(mensaje);
+        }
+    }
+
+    hablarFragmento();
+}
+
+
   </script>
 </body>
 </html>
