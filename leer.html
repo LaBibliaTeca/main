@@ -182,19 +182,26 @@
             console.error(error);
           });
       });
-      function dividirTextoEnFragmentos(texto, maxCaracteres = 200) {
+function dividirTextoEnFragmentos(texto, maxCaracteres = 200) {
     const signos = /([.,;:!?。！？、])/g;
     const partes = texto.split(signos);
 
     let fragmentos = [];
     let fragmentoActual = "";
 
-    for (let i = 0; i < partes.length; i++) {
-        fragmentoActual += partes[i];
+    let i = 0;
+    while (i < partes.length) {
+        let parte = partes[i];
+        let signo = (i + 1 < partes.length) ? partes[i + 1] : "";
 
-        if (signos.test(partes[i]) || fragmentoActual.length >= maxCaracteres) {
+        let unidad = parte + (signo ? signo : "");
+        i += signo ? 2 : 1; // Si había signo, avanzamos 2 posiciones, si no, 1.
+
+        if ((fragmentoActual.length + unidad.length) > maxCaracteres && fragmentoActual.length > 0) {
             fragmentos.push(fragmentoActual.trim());
-            fragmentoActual = "";
+            fragmentoActual = unidad;
+        } else {
+            fragmentoActual += unidad;
         }
     }
 
@@ -205,7 +212,6 @@
     return fragmentos;
 }
 
-    }
 function leerEnVozAlta() {
     const texto = document.getElementById('contenido').innerText;
 
