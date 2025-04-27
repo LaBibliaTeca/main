@@ -1,0 +1,148 @@
+<meta charset="UTF-8">
+<title>Lector de Documentos</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+  <style>
+  body {
+    font-size: 1.4em;
+    line-height: 1.6;
+    padding: 20px;
+    background-color: #fdfdfd;
+    color: #111;
+    font-family: sans-serif;
+  }
+
+  #contenido {
+    display: none;
+    margin-top: 20px;
+    font-size: 1.5em;
+    line-height: 1.8;
+    background: #fffbe6;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  }
+
+  input, button {
+    font-size: 1.2em;
+    padding: 8px;
+    margin-top: 10px;
+  }
+
+  button {
+    cursor: pointer;
+    border: none;
+    background: #007bff;
+    color: white;
+    border-radius: 5px;
+  }
+
+  button:hover {
+    background: #0056b3;
+  }
+</style>
+
+</head>
+<body>
+<h2>Texto cargado:</h2>
+<div id="contenido" style="white-space: pre-wrap; display:none;"></div>
+
+<div id="entradaLink" style="margin-top: 20px;">
+<label>Pega aquí el enlace de Google Drive:</label><br>
+<input type="text" id="linkInput" placeholder="https://drive.google.com/..." style="width:90%;">
+<button onclick="procesarLink()">Cargar documento</button>
+</div>
+
+<div style="margin-top: 20px;">
+<button onclick="leerEnVozAlta()">Leer en voz alta</button>
+</div>
+
+<script>
+let text = "";
+
+// Detectar si hay ID en la URL
+const params = new URLSearchParams(window.location.search);
+const idParam = params.get("id");
+
+if (idParam) {
+document.getElementById("entradaLink").style.display = "none";
+cargarPorId(idParam);
+}
+
+function procesarLink() {
+const url = document.getElementById("linkInput").value;
+const idExtraido = extraerIdDeDrive(url);
+if (idExtraido) {
+cargarPorId(idExtraido);
+document.getElementById("entradaLink").style.display = "none";
+} else {
+alert("No se pudo extraer un ID válido del enlace.");
+}
+}
+
+function extraerIdDeDrive(url) {
+const match = url.match(/[-\w]{25,}/);
+return match ? match[0] : null;
+}
+
+function cargarPorId(docId) {
+const pdfUrl = `https://drive.google.com/uc?export=download&id=${docId}`;
+
+// Intentamos primero como PDF
+const loadingTask = pdfjsLib.getDocument(pdfUrl);
+loadingTask.promise.then(pdf => {
+let pages = [];
+for (let i = 1; i <= pdf.numPages; i++) {
+pages.push(pdf.getPage(i).then(page =>
+page.getTextContent().then(content =>
+content.items.map(item => item.str).join(" ")
+)
+));
+}
+Promise.all(pages).then(allText => {
+text = allText.join("\n\n");
+document.getElementById("contenido").innerText = text;
+document.getElementById("contenido").style.display = "block";
+});
+}).catch(() => {
+// Si falla como PDF, lo tratamos como Google Doc de texto
+fetch(`https://docs.google.com/document/d/${docId}/export?format=txt`)
+.then(response => {
+if (!response.ok) throw new Error("No se pudo obtener como documento de texto.");
+return response.text();
+})
+.then(data => {
+text = data;
+document.getElementById("contenido").innerText = text;
+document.getElementById("contenido").style.display = "block";
+})
+.catch(error => {
+alert("No se pudo cargar el documento. Verifica el enlace o los permisos.");
+console.error(error);
+});
+});
+}
+
+function leerEnVozAlta() {
+if (!text) return;
+
+const fragmentos = text.match(/.{1,200}(\s|$)/g);
+let index = 0;
+
+function hablarFragmento() {
+if (index < fragmentos.length) {
+const mensaje = new SpeechSynthesisUtterance(fragmentos[index]);
+mensaje.lang = 'es-ES';
+mensaje.rate = 0.85;
+mensaje.onend = function () {
+index++;
+hablarFragmento();
+};
+speechSynthesis.speak(mensaje);
+}
+}
+
+hablarFragmento();
+}
+</script>
+</body>
+</html>
