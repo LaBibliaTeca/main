@@ -187,11 +187,16 @@
     function leerEnVozAlta() {
       if (!text) return;
 
-      const fragmentos = text.match(/.{1,200}(\s|$)/g);
+      const fragmentos = text.match(/.{1,150}(\s|$)/g);
       let index = 0;
 
       function hablarFragmento() {
         if (index < fragmentos.length) {
+              let textoFragmento = fragmentos[index];
+              // Si el fragmento no termina en un signo de puntuación, añadimos un punto
+    if (!/[.!?…]$/.test(textoFragmento.trim())) {
+      textoFragmento += '.';
+    }
           const mensaje = new SpeechSynthesisUtterance(fragmentos[index]);
           mensaje.lang = 'es-ES';
           mensaje.rate = 0.8*speed;
