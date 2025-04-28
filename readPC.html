@@ -183,11 +183,45 @@
           });
       });
     }
+function dividirTextoEnFragmentos(texto, maximoCaracteres = 200) {
+    const fragmentos = [];
+    let inicio = 0;
+
+    while (inicio < texto.length) {
+        // Elegir el próximo pedazo
+        let fin = Math.min(inicio + maximoCaracteres, texto.length);
+
+        // Buscar el último signo de puntuación antes del límite
+        let ultimoSigno = Math.max(
+            texto.lastIndexOf('.', fin),
+            texto.lastIndexOf(',', fin),
+            texto.lastIndexOf('!', fin),
+            texto.lastIndexOf('?', fin),
+            texto.lastIndexOf('…', fin),
+        );
+
+        // Si encontramos un signo razonablemente cerca (después de inicio), cortamos ahí
+        if (ultimoSigno > inicio + 30) { 
+            fin = ultimoSigno + 1; // Incluir el signo
+        }
+
+        // Tomamos el fragmento
+        const fragmento = texto.slice(inicio, fin).trim();
+        if (fragmento.length > 0) {
+            fragmentos.push(fragmento);
+        }
+
+        inicio = fin;
+    }
+
+    return fragmentos;
+}
 
     function leerEnVozAlta() {
       if (!text) return;
 
-      const fragmentos = text.match(/.{1,300}(\s|$)/g);
+    const fragmentos = dividirTextoEnFragmentos(texto, 200);
+
       let index = 0;
 
       function hablarFragmento() {
