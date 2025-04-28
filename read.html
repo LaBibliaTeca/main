@@ -114,6 +114,9 @@
 
   <script>
     let text = "";
+   let totalCaracteres = 0;
+let caracteresLeidos = 0;
+
 
     // Detectar si hay ID en la URL
     const params = new URLSearchParams(window.location.search);
@@ -229,8 +232,9 @@ let caracteresLeidos = 0;
             mensaje.rate = 0.6 * speed; // usando la velocidad ajustable
 
             mensaje.onend = function() {
-             <!-- PROGRESO -->
-             <!-- Leido -->
+
+
+             
           document.getElementById("progreso").textContent = 
                 `Leído: ${caracteresLeidos} / ${totalCaracteres}`;
              
