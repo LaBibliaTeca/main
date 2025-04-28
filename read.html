@@ -213,11 +213,12 @@ let caracteresLeidos = 0;
 
 function leerEnVozAlta() {
  <--! inicio del contador-->
- let totalCaracteres = texto.length;
-let caracteresLeidos = 0;
+
 
  
     const texto = document.getElementById('contenido').innerText;
+  let totalCaracteres = texto.length;
+let caracteresLeidos = 0;
 
     // Dividir el texto en fragmentos controlados
     const fragmentos = dividirTextoEnFragmentos(texto, 200);
