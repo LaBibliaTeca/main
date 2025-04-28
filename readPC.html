@@ -219,7 +219,6 @@ function dividirTextoEnFragmentos(texto, maximoCaracteres = 200) {
     function leerEnVozAlta() {
       if (!text) return;
 
-       const fragmentos = dividirTextoEnFragmentos(texto, 200);
          const fragmentos = text.match(/.{1,300}(\s|$)/g);
 
       let index = 0;
