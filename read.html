@@ -195,19 +195,26 @@
           });
       });
     }
-   function dividirTextoEnFragmentos(texto, maxCaracteres = 200) {
+function dividirTextoEnFragmentos(texto, maxCaracteres = 200) {
     const signos = /([.,;:!?。！？、])/g;
     const partes = texto.split(signos);
 
     let fragmentos = [];
     let fragmentoActual = "";
 
-    for (let i = 0; i < partes.length; i++) {
-        fragmentoActual += partes[i];
+    let i = 0;
+    while (i < partes.length) {
+        let parte = partes[i];
+        let signo = (i + 1 < partes.length) ? partes[i + 1] : "";
 
-        if (signos.test(partes[i]) || fragmentoActual.length >= maxCaracteres) {
+        let unidad = parte + (signo ? signo : "");
+        i += signo ? 2 : 1; // Si había signo, avanzamos 2 posiciones, si no, 1.
+
+        if ((fragmentoActual.length + unidad.length) > maxCaracteres && fragmentoActual.length > 0) {
             fragmentos.push(fragmentoActual.trim());
-            fragmentoActual = "";
+            fragmentoActual = unidad;
+        } else {
+            fragmentoActual += unidad;
         }
     }
 
@@ -219,13 +226,7 @@
 }
 
 function leerEnVozAlta() {
-
-
-
- 
     const texto = document.getElementById('contenido').innerText;
-  let totalCaracteres = texto.length;
-let caracteresLeidos = 0;
 
     // Dividir el texto en fragmentos controlados
     const fragmentos = dividirTextoEnFragmentos(texto, 200);
@@ -240,12 +241,6 @@ let caracteresLeidos = 0;
             mensaje.rate = 0.6 * speed; // usando la velocidad ajustable
 
             mensaje.onend = function() {
-
-
-             
-          document.getElementById("progreso").textContent = 
-                `Leído: ${caracteresLeidos} / ${totalCaracteres}`;
-             
                 index++;
                 hablarFragmento();
             };
@@ -256,6 +251,7 @@ let caracteresLeidos = 0;
 
     hablarFragmento();
 }
+
 
   
   </script>
