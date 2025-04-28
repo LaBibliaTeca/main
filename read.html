@@ -98,6 +98,8 @@
     <button id="leer-btn" onclick="leerEnVozAlta()">Leer en voz alta</button>
      <h4>"Si no cargaste el griego en tu celular,solo escucharas español"</h4>
   </div>
+<!-- PROGRESO -->
+ <div id="progreso" style="font-size: 0.9em; margin-bottom: 5px;">Leído: 0 / 0</div>
   <div id="contenido" style="white-space: pre-wrap; display:none;"></div>
 
   <div id="entradaLink" style="margin-top: 20px;">
@@ -207,6 +209,11 @@
 }
 
 function leerEnVozAlta() {
+ <--! inicio del contador-->
+ let totalCaracteres = texto.length;
+let caracteresLeidos = 0;
+
+ 
     const texto = document.getElementById('contenido').innerText;
 
     // Dividir el texto en fragmentos controlados
@@ -222,6 +229,11 @@ function leerEnVozAlta() {
             mensaje.rate = 0.6 * speed; // usando la velocidad ajustable
 
             mensaje.onend = function() {
+             <!-- PROGRESO -->
+             <!-- Leido -->
+          document.getElementById("progreso").textContent = 
+                `Leído: ${caracteresLeidos} / ${totalCaracteres}`;
+             
                 index++;
                 hablarFragmento();
             };
