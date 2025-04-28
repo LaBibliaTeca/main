@@ -39,7 +39,7 @@
     padding: 1px;
     margin-top: 1px;
   }
-
+0
   button {
     cursor: pointer;
     border: none;
@@ -55,7 +55,7 @@
       margin-bottom: 10px;
       font-size: 30px;
       display: inline-flex;
-      align-items: center;
+      align-items: center;0
       gap: 50px;
     }
     #speed-control button {
@@ -183,10 +183,10 @@
           });
       });
     }
-
+    let inicio = 0;
 function dividirTextoEnFragmentos(texto, maximoCaracteres = 200) {
-       const fragmentos = ["  "];
-    let inicio = 3;
+       const fragmentos = [];
+
 
     while (inicio < texto.length) {
         // Elegir el próximo pedazo
