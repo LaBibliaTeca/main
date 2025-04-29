@@ -18,6 +18,10 @@
     #inputZona {
       margin-bottom: 20px;
     }
+    #loading {
+      display: none;
+      margin: 10px 0;
+    }
   </style>
 </head>
 <body>
@@ -27,6 +31,8 @@
     <button onclick="procesarLink()">Cargar PDF</button>
   </div>
 
+  <div id="loading">Cargando PDF, por favor espera...</div>
+
   <div>
     <button onclick="leerEnVozAlta()">🔊 Leer en voz alta</button>
   </div>
@@ -34,6 +40,9 @@
   <div id="contenido"></div>
 
   <script>
+    // Configura PDF.js
+    pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.worker.min.js';
+    
     const params = new URLSearchParams(window.location.search);
     const id = params.get('id');
 
@@ -44,62 +53,57 @@
     }
 
     function procesarLink() {
-      const url = document.getElementById("linkInput").value;
-      const match = url.match(/\/d\/([^\/]+)\//);
-      if (match) {
-        const idExtraido = match[1];
+      const url = document.getElementById("linkInput").value.trim();
+      let idExtraido = '';
+      
+      // Extraer ID de diferentes formatos de URL de Google Drive
+      const matches = url.match(/(?:\/file\/d\/|id=)([^\/\?&]+)/);
+      if (matches && matches[1]) {
+        idExtraido = matches[1];
         cargarPDFDesdeID(idExtraido);
         document.getElementById("inputZona").style.display = "none";
       } else {
-        alert("No se pudo extraer el ID del enlace.");
+        alert("No se pudo extraer el ID del enlace. Asegúrate de que es un enlace válido de Google Drive.");
       }
     }
 
     function cargarPDFDesdeID(id) {
-      const url = `https://drive.google.com/uc?export=download&id=${id}`;
-      fetch(url)
-        .then(response => response.blob())
-        .then(blob => {
-          if (blob.type === "application/pdf") {
-            leerPDF(blob);
-          } else {
-            alert("Este archivo no es un PDF.");
+      document.getElementById("loading").style.display = "block";
+      
+      // Usar el visor directo de PDF.js con la URL de visualización de Google Drive
+      const url = `https://drive.google.com/file/d/${id}/preview`;
+      
+      // Opción alternativa (puede requerir que el archivo sea público)
+      // const url = `https://docs.google.com/uc?export=download&id=${id}`;
+      
+      // Cargar el PDF directamente con PDF.js
+      pdfjsLib.getDocument(url).promise.then(pdf => {
+        document.getElementById("loading").style.display = "none";
+        let textoCompleto = "";
+        let pagina = 1;
+
+        function leerPagina() {
+          if (pagina > pdf.numPages) {
+            mostrarContenido(textoCompleto);
+            return;
           }
-        })
-        .catch(error => {
-          console.error("Error al cargar el archivo:", error);
-          alert("No se pudo cargar el PDF.");
-        });
-    }
 
-    function leerPDF(blob) {
-      const reader = new FileReader();
-      reader.onload = function() {
-        const typedarray = new Uint8Array(this.result);
-        pdfjsLib.getDocument({ data: typedarray }).promise.then(pdf => {
-          let textoCompleto = "";
-          let pagina = 1;
-
-          function leerPagina() {
-            if (pagina > pdf.numPages) {
-              mostrarContenido(textoCompleto);
-              return;
-            }
-
-            pdf.getPage(pagina).then(p => {
-              p.getTextContent().then(tc => {
-                const textoPagina = tc.items.map(i => i.str).join(" ");
-                textoCompleto += textoPagina + "\n\n";
-                pagina++;
-                leerPagina();
-              });
+          pdf.getPage(pagina).then(p => {
+            p.getTextContent().then(tc => {
+              const textoPagina = tc.items.map(i => i.str).join(" ");
+              textoCompleto += textoPagina + "\n\n";
+              pagina++;
+              leerPagina();
             });
-          }
+          });
+        }
 
-          leerPagina();
-        });
-      };
-      reader.readAsArrayBuffer(blob);
+        leerPagina();
+      }).catch(error => {
+        document.getElementById("loading").style.display = "none";
+        console.error("Error al cargar el PDF:", error);
+        alert(`No se pudo cargar el PDF. Asegúrate de que el archivo es accesible públicamente o prueba con otro enlace.\nError: ${error.message}`);
+      });
     }
 
     function mostrarContenido(texto) {
@@ -113,8 +117,17 @@
     let textoExtraido = "";
 
     function leerEnVozAlta() {
+      if (!textoExtraido && !document.getElementById("contenido").innerText) {
+        alert("No hay texto para leer. Primero carga un PDF.");
+        return;
+      }
+      
       const texto = textoExtraido || document.getElementById("contenido").innerText;
-      const fragmentos = texto.match(/.{1,200}/g); // fragmentos más pequeños para Android
+      
+      // Detener cualquier lectura en curso
+      window.speechSynthesis.cancel();
+      
+      const fragmentos = texto.match(/.{1,200}/g) || [texto];
       let index = 0;
 
       function hablar() {
@@ -124,6 +137,11 @@
           mensaje.pitch = 1;
           mensaje.rate = 0.6;
           mensaje.onend = () => {
+            index++;
+            hablar();
+          };
+          mensaje.onerror = (e) => {
+            console.error("Error en síntesis de voz:", e);
             index++;
             hablar();
           };
