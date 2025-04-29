@@ -39,118 +39,35 @@
 
   <div id="contenido"></div>
 
-  <script>
-    // Configura PDF.js
-    pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.worker.min.js';
+function leerOracion() {
+    if (indiceOracion >= oraciones.length || isPaused) return;
     
-    const params = new URLSearchParams(window.location.search);
-    const id = params.get('id');
-
-    if (id) {
-      cargarPDFDesdeID(id);
-    } else {
-      document.getElementById("inputZona").style.display = "block";
-    }
-
-    function procesarLink() {
-      const url = document.getElementById("linkInput").value.trim();
-      let idExtraido = '';
-      
-      // Extraer ID de diferentes formatos de URL de Google Drive
-      const matches = url.match(/(?:\/file\/d\/|id=)([^\/\?&]+)/);
-      if (matches && matches[1]) {
-        idExtraido = matches[1];
-        cargarPDFDesdeID(idExtraido);
-        document.getElementById("inputZona").style.display = "none";
-      } else {
-        alert("No se pudo extraer el ID del enlace. Asegúrate de que es un enlace válido de Google Drive.");
-      }
-    }
-
-    function cargarPDFDesdeID(id) {
-      document.getElementById("loading").style.display = "block";
-      
-      // Usar el visor directo de PDF.js con la URL de visualización de Google Drive
-      const url = `https://drive.google.com/file/d/${id}/preview`;
-      
-      // Opción alternativa (puede requerir que el archivo sea público)
-      // const url = `https://docs.google.com/uc?export=download&id=${id}`;
-      
-      // Cargar el PDF directamente con PDF.js
-      pdfjsLib.getDocument(url).promise.then(pdf => {
-        document.getElementById("loading").style.display = "none";
-        let textoCompleto = "";
-        let pagina = 1;
-
-        function leerPagina() {
-          if (pagina > pdf.numPages) {
-            mostrarContenido(textoCompleto);
-            return;
-          }
-
-          pdf.getPage(pagina).then(p => {
-            p.getTextContent().then(tc => {
-              const textoPagina = tc.items.map(i => i.str).join(" ");
-              textoCompleto += textoPagina + "\n\n";
-              pagina++;
-              leerPagina();
-            });
-          });
-        }
-
-        leerPagina();
-      }).catch(error => {
-        document.getElementById("loading").style.display = "none";
-        console.error("Error al cargar el PDF:", error);
-        alert(`No se pudo cargar el PDF. Asegúrate de que el archivo es accesible públicamente o prueba con otro enlace.\nError: ${error.message}`);
-      });
-    }
-
-    function mostrarContenido(texto) {
-      const div = document.getElementById("contenido");
-      div.innerText = texto;
-      div.style.display = "block";
-      textoExtraido = texto; // para lectura
-    }
-
-    // Lector de voz con fragmentación para Android
-    let textoExtraido = "";
-
-    function leerEnVozAlta() {
-      if (!textoExtraido && !document.getElementById("contenido").innerText) {
-        alert("No hay texto para leer. Primero carga un PDF.");
+    const oracion = oraciones[indiceOracion].trim();
+    if (!oracion) {
+        indiceOracion++;
+        leerOracion();
         return;
-      }
-      
-      const texto = textoExtraido || document.getElementById("contenido").innerText;
-      
-      // Detener cualquier lectura en curso
-      window.speechSynthesis.cancel();
-      
-      const fragmentos = texto.match(/.{1,200}/g) || [texto];
-      let index = 0;
-
-      function hablar() {
-        if (index < fragmentos.length) {
-          const mensaje = new SpeechSynthesisUtterance(fragmentos[index]);
-          mensaje.lang = 'es-ES';
-          mensaje.pitch = 1;
-          mensaje.rate = 0.6;
-          mensaje.onend = () => {
-            index++;
-            hablar();
-          };
-          mensaje.onerror = (e) => {
-            console.error("Error en síntesis de voz:", e);
-            index++;
-            hablar();
-          };
-          speechSynthesis.speak(mensaje);
-        }
-      }
-
-      hablar();
     }
-  </script>
+    
+    currentUtterance = new SpeechSynthesisUtterance(oracion);
+    currentUtterance.lang = 'es-ES';
+    currentUtterance.rate = 0.9;
+    currentUtterance.pitch = 1;
+    
+    currentUtterance.onend = function() {
+        if (!isPaused) {
+            indiceOracion++;
+            leerOracion();
+        }
+    };
+    
+    currentUtterance.onerror = function(event) {
+        console.error("Error en síntesis de voz:", event);
+        indiceOracion++;
+        leerOracion();
+    };
+    
+    window.speechSynthesis.speak(currentUtterance);
+}
 </body>
 </html>
