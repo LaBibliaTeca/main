@@ -2,49 +2,63 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Lector desde Google Docs</title>
+  <title>Lector de Documentos</title>
 </head>
 <body>
   <h2>Texto cargado:</h2>
-  <div id="contenido" style="white-space: pre-wrap; display:none;"></div>
+  <div id="contenido" style="display:none; white-space: pre-wrap;"></div>
+  <button onclick="leerEnVozAlta()">Leer en voz alta</button>
 
   <script>
-    // Paso 1: Obtener el parámetro "id" de la URL
+    let text = ""; // global
+
+    // Obtener ID de documento desde URL
     const params = new URLSearchParams(window.location.search);
     const docId = params.get("id");
 
     if (!docId) {
-      alert("No se proporcionó el ID del documento.");
+      alert("Falta el parámetro ?id=...");
     } else {
       const url = `https://docs.google.com/document/d/${docId}/export?format=txt`;
 
-      let text = "";
-
-      // Paso 2: Descargar el texto del documento
       fetch(url)
         .then(response => {
-          if (!response.ok) {
-            throw new Error("No se pudo obtener el documento.");
-          }
+          if (!response.ok) throw new Error("No se pudo obtener el documento.");
           return response.text();
         })
         .then(data => {
           text = data;
           document.getElementById("contenido").innerText = text;
-
-          // Paso 3: Leer en voz alta
-          leerTexto(text);
+          // No se lee automáticamente para evitar bloqueo en móviles
         })
         .catch(error => {
-          console.error("Error:", error);
+          console.error("Error al obtener el texto:", error);
         });
     }
 
-    // Paso 4: Función para leer en voz alta
-    function leerTexto(texto) {
-      const utterance = new SpeechSynthesisUtterance(texto);
-      utterance.lang = "es-ES"; // o "es-MX" según tu preferencia
-      speechSynthesis.speak(utterance);
+    // Leer en voz alta en fragmentos (mejor para Android)
+    function leerEnVozAlta() {
+      const texto = text;
+      const fragmentos = texto.match(/.{1,500}(\s|$)/g); // divide en partes de hasta 500 caracteres sin cortar palabras
+      let index = 0;
+
+      function hablarFragmento() {
+        if (index < fragmentos.length) {
+          const mensaje = new SpeechSynthesisUtterance(fragmentos[index]);
+          mensaje.lang = 'es-ES';
+          mensaje.pitch = 1;
+          mensaje.rate = 0.85;
+
+          mensaje.onend = function() {
+            index++;
+            hablarFragmento();
+          };
+
+          speechSynthesis.speak(mensaje);
+        }
+      }
+
+      hablarFragmento();
     }
   </script>
 </body>
