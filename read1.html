@@ -220,32 +220,38 @@ function dividirTextoEnFragmentos(texto, maxCaracteres = 200) {
 
     return fragmentos;
 }
-
 function leerEnVozAlta() {
-    speechSynthesis.cancel(); // Detener cualquier síntesis previa
+    speechSynthesis.cancel(); // detener síntesis previa
 
-    const texto = document.getElementById('contenido').innerText;
-    const fragmentos = dividirTextoEnFragmentos(texto, 200);
-    let index = 0;
+    setTimeout(() => {
+        const texto = document.getElementById('contenido').innerText.trim();
 
-    function hablarFragmento() {
-        if (index < fragmentos.length) {
-            const mensaje = new SpeechSynthesisUtterance(fragmentos[index]);
-            mensaje.lang = 'es-ES';
-            mensaje.pitch = 1;
-            mensaje.rate = 0.6 * speed;
+        if (!texto) return; // Si no hay texto, salimos
 
-            mensaje.onend = function () {
-                index++;
-                hablarFragmento();
-            };
+        const fragmentos = dividirTextoEnFragmentos(texto, 200);
+        let index = 0;
 
-            speechSynthesis.speak(mensaje);
+        function hablarFragmento() {
+            if (index < fragmentos.length) {
+                const mensaje = new SpeechSynthesisUtterance(fragmentos[index]);
+                mensaje.lang = 'es-ES';
+                mensaje.pitch = 1;
+                mensaje.rate = 0.6 * speed;
+
+                mensaje.onend = function () {
+                    index++;
+                    hablarFragmento();
+                };
+
+                speechSynthesis.speak(mensaje);
+            }
         }
-    }
 
-    hablarFragmento();
+        hablarFragmento();
+    }, 100); // pequeña pausa para permitir limpieza interna
 }
+
+
 
 
 
