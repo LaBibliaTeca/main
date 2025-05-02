@@ -222,11 +222,10 @@ function dividirTextoEnFragmentos(texto, maxCaracteres = 200) {
 }
 
 function leerEnVozAlta() {
+    speechSynthesis.cancel(); // Detener cualquier síntesis previa
+
     const texto = document.getElementById('contenido').innerText;
-
-    // Dividir el texto en fragmentos controlados
     const fragmentos = dividirTextoEnFragmentos(texto, 200);
-
     let index = 0;
 
     function hablarFragmento() {
@@ -234,19 +233,20 @@ function leerEnVozAlta() {
             const mensaje = new SpeechSynthesisUtterance(fragmentos[index]);
             mensaje.lang = 'es-ES';
             mensaje.pitch = 1;
-            mensaje.rate = 0.6 * speed; // usando la velocidad ajustable
+            mensaje.rate = 0.6 * speed;
 
-            mensaje.onend = function() {
+            mensaje.onend = function () {
                 index++;
                 hablarFragmento();
             };
 
-            window.speechSynthesis.speak(mensaje);
+            speechSynthesis.speak(mensaje);
         }
     }
 
     hablarFragmento();
 }
+
 
 
   
