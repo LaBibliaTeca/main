@@ -53,22 +53,37 @@
                 console.error('Error:', error.message);
             }
         }
+     function leerEnVozAlta() {
+    // Obtener el texto del elemento con la clase "contenidotexto"
+    var texto = document.querySelector('.contenido').innerText;
 
-        // Función para leer en voz alta el contenido del archivo
-        function leerEnVozAlta() {
-            const texto = document.getElementById('contenido').innerText;
 
-            // Crear una nueva instancia de SpeechSynthesisUtterance
-            const mensaje = new SpeechSynthesisUtterance(texto);
+    // Dividir el texto en fragmentos más pequeños
+    const fragmentos = texto.match(/.{1,100}/g); // Cada fragmento tendrá máximo 500 caracteres
+  //const fragmentos= texto.match(/[\s\S]{1,100}/g) || []; // Divide en partes de hasta 100 caracteres
+    // Leer cada fragmento
+    let index = 0;
 
-            // Configurar propiedades del mensaje
-            mensaje.lang = 'es-ES'; // Idioma y acento
-            mensaje.pitch = 1; // Tono
-            mensaje.rate = .7; // Velocidad de habla
+    function hablarFragmento() {
+        if (index < fragmentos.length) {
+            const mensaje = new SpeechSynthesisUtterance(fragmentos[index]);
 
-            // Usar la API de síntesis de voz del navegador para hablar el mensaje
+            mensaje.lang = 'es-ES';
+            mensaje.pitch = 1;
+            mensaje.rate = 1;
+
+            mensaje.onend = function() {
+                index++;
+                hablarFragmento(); // Leer el siguiente fragmento
+            };
+
             window.speechSynthesis.speak(mensaje);
         }
+    }
+
+    hablarFragmento(); // Comienza a leer el primer fragmento
+}
+ 
     </script>
 
 </body>
