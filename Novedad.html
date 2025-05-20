@@ -25,7 +25,12 @@
 	
 <!-- Botón para leer en voz alta el contenido del archivo -->
 		    	<button style="width: 200px; height: 50px;background-color: yellow;font-size: 16px;" onclick="leerEnVozAlta()">Presionar para Escuchar en Voz Alta</button>
-
+<!-- Nuevos botones para controlar la velocidad -->
+<div style="margin-top: 10px;">
+    <button onclick="ajustarVelocidad(-0.1)">Disminuir Velocidad</button>
+    <button onclick="ajustarVelocidad(0.1)">Aumentar Velocidad</button>
+    <span id="velocidadActual" style="margin-left: 10px;">Velocidad: 0.9</span>
+</div>
 	<p><i>De Gustavo Uliarte</i></p>
 	
 
@@ -51,7 +56,14 @@
                 console.error('Error:', error.message);
             }
         }
+// varia velocidad
+let velocidad = 0.9; // valor inicial
 
+function ajustarVelocidad(cambio) {
+    velocidad = Math.max(0.1, Math.min(2.0, velocidad + cambio)); // limita entre 0.1 y 2.0
+    document.getElementById('velocidadActual').innerText = `Velocidad: ${velocidad.toFixed(1)}`;
+}
+	    
         // Función para leer en voz alta el contenido del archivo
        function leerEnVozAlta() {
     const texto = document.getElementById('contenido').innerText;
@@ -68,7 +80,7 @@
 
             mensaje.lang = 'es-ES';
             mensaje.pitch = 1;
-            mensaje.rate = 0.9;
+            mensaje.rate = velocidad;
 
             mensaje.onend = function() {
                 index++;
