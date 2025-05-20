@@ -22,7 +22,7 @@ function ajustarVelocidad(cambio) {
 
 function leerEnVozAlta() {
     const texto = document.getElementById('contenido').innerText;
-    const fragmentos = texto.match(/.{1,150}/g);
+    const fragmentos = texto.match(/.{1,200}/g);
     let index = 0;
 
     function hablarFragmento() {
