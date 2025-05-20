@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NOVEDADES</title>
+    <title>Novedad</title>
 <style>
     body {
         font-family:'Times New Roman', Times, serif;
@@ -22,20 +22,18 @@
 </style>
 </head>
 <body>
-
 	
 <!-- Botón para leer en voz alta el contenido del archivo -->
-	    	<button style="width: 200px; height: 50px;background-color: yellow;font-size: 16px;" onclick="leerEnVozAlta()">Presionar para Leer en Voz Alta</button>
+		    	<button style="width: 200px; height: 50px;background-color: yellow;font-size: 16px;" onclick="leerEnVozAlta()">Presionar para Escuchar en Voz Alta</button>
 
 	<p><i>De Gustavo Uliarte</i></p>
 	
-	<p><b>Novedades Fugaces</b><br> Si te interesa , compartilo a PDF , se borra en 24hs </p>
 
     
     <!-- Div donde se mostrará el contenido del archivo -->
     <div id="contenido"></div>
 
-  <script>
+    <script>
         // Cargar el archivo automáticamente al cargar la página
         window.onload = async function cargarArchivo() {
             try {
@@ -59,7 +57,7 @@
     const texto = document.getElementById('contenido').innerText;
 
     // Dividir el texto en fragmentos más pequeños
-    const fragmentos = texto.match(/.{1,500}/g); // Cada fragmento tendrá máximo 500 caracteres
+    const fragmentos = texto.match(/.{1,100}/g); // Cada fragmento tendrá máximo 500 caracteres
 
     // Leer cada fragmento
     let index = 0;
@@ -85,5 +83,5 @@
 }
     </script>
 
-</body>
+	</body>
 </html>
