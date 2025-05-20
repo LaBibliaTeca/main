@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prueba Google TTS</title>
+</head>
+<body>
+    <h1>Google Cloud TTS</h1>
+    <textarea id="text" rows="5" cols="50">Escribe aquí el texto que quieres escuchar. Puede ser tan largo como necesites, sin límites de caracteres.</textarea>
+    <br>
+    <button onclick="speak()">Leer en voz alta</button>
+
+    <script>
+        // Configuración básica
+        const API_KEY = "TU_API_KEY";  // 🔑 Reemplaza con tu clave
+        const API_URL = "https://texttospeech.googleapis.com/v1/text:synthesize";
+
+        async function speak() {
+            const text = document.getElementById("text").value;
+            
+            if (!text) {
+                alert("¡Escribe algo primero!");
+                return;
+            }
+
+            try {
+                // Llamada a la API de Google TTS
+                const response = await fetch(`${API_URL}?key=${API_KEY}`, {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({
+                        input: { text: text },
+                        voice: { 
+                            languageCode: "es-ES",  // Código de idioma (es-MX, en-US, etc.)
+                            name: "es-ES-Standard-A"  // Voz específica (opcional)
+                        },
+                        audioConfig: { 
+                            audioEncoding: "MP3",  // Formato de audio
+                            speakingRate: 1.0,    // Velocidad (1.0 = normal)
+                            pitch: 0.0           // Tono (0.0 = neutral)
+                        }
+                    })
+                });
+
+                if (!response.ok) {
+                    throw new Error(`Error: ${response.status}`);
+                }
+
+                const data = await response.json();
+                playAudio(data.audioContent);
+
+            } catch (error) {
+                console.error("Error al sintetizar voz:", error);
+                alert("Error al conectar con Google TTS. Verifica tu API Key.");
+            }
+        }
+
+        // Reproduce el audio base64
+        function playAudio(base64Audio) {
+            const audio = new Audio(`data:audio/mp3;base64,${base64Audio}`);
+            audio.play();
+        }
+    </script>
+</body>
+</html>
