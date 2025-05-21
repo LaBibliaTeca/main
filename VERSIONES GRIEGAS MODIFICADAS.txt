@@ -15,7 +15,7 @@ Precaución al realizar traducciones sobre el texto griego. ¿Qué texto griego 
 ¿Qué versión del Texto Mayoritario Bizantino te están ofreciendo? Por lo general colocan el año al lado.
 EJEMPLO DE DIGERENCIAS.
 1 Corintios 10:.7. La presencia de "paizó" (jugar referido a jóvenes), en lugar de "kōmos" ( puede referir  orgías), sugiere que la versión del Nuevo Testamento griego, podría ser una edición crítica del Texto Bizantino, pero no necesariamente una reproducción exacta de un manuscrito bizantino específico, por ejemplo una revisión de 2004. 
-Lo mismo en algunas versiones de la LXX.
+Lo mismo en algunas versiones de la Septuaginta.
 
 Algunas características de la Edición de Stephanus que podrían ayudar a identificarla son:.
 
@@ -28,7 +28,7 @@ Algunas características de la Edición de Stephanus que podrían ayudar a ident
 Hay varias posibilidades:.
 
 1. Edición crítica: Tu versión podría ser una edición crítica del Texto Bizantino, que combina lecturas de varios manuscritos bizantinos para crear un texto más fiable.
-2. Texto Mayoritario: Tu versión podría estar basada en el Texto Mayoritario (Majority Text), que es una reconstrucción del texto bizantino más común.
+2. Texto Mayoritario: Tu versión podría estar basada en el Texto Mayoritario , que es una reconstrucción del texto bizantino más común y aceptado.
 3. Edición moderna: Tu versión podría ser una edición moderna del Nuevo Testamento griego que se basa en el Texto Bizantino, pero con algunas modificaciones o correcciones.
 
 La ausencia de opciones de lectura (variantes textuales) sugiere que tu versión podría ser una edición simplificada o estandarizada del Texto Bizantino.
@@ -40,8 +40,8 @@ Para determinar con certeza la procedencia de tu versión, podrías:
 3. Comparar tu versión con otras versiones del Nuevo Testamento griego para identificar similitudes y diferencias.
 
 ¡Aviso!: Las versiones , en general, no se califican en si mismas como malas ,(salvo que sea un fraude), sino por la linea de las variantes textuales con las que decido trabajar.
-Si elijo la versión de Stefanus , se que voy a tener influencias del tipo textual alejandrino ,(ejemplo codex sinaítico y otros), y no del tipo bizantino, que es con el me vengo desenvolviendo.
-Si vas a usar la N V I , o la Biblias de las Américas,  venís del Tipo griego Textual Alejandrino.
+Si elijo la versión de Stefanus , se que voy a tener influencias del tipo textual alejandrino ,(ejemplo Codex Sinaítico y otros), y no del tipo bizantino, que es con el me vengo desenvolviendo.
+Si vas a usar la N V I , o la Biblias de las Américas,  venís del Tipo griego Textual Alejandrino (Ejemplo Codex Vaticanus).
 Si vas a usar Reina Valera antigua , venis del Texto griego Bizantino.
 Los traductores ya sabían que existían las dos variantes.
 Algunas versiones como la de las Américas , compensan con otro tipo el texto faltante. Ejemplo : avanzo con la variante textual hasta un punto , pongo un asterisco, y agrego el faltante usando el texto bizantino.Es un ejemplo.
