@@ -4,16 +4,17 @@ De Gustavo Uliarte.
 Este artículo ,no es para evaluar la fiabilidad del los textos publicados, sino mas bien, para poner en conocimiento del estudiante que  aplicaciones de la Biblia en celulares  y en otras  han presentado versiones modificadas por la escuela crítica sin aclarar ese proceso.
 Al encontrar ciertas inconsistencias , las he hecho notar.
 Recomiendo revisar en cada caso , que versión presenta cada uno . 
-Por ejemplo e-sword va a presentar una versión del Textux Receptus,  que no es de Erasmo (1516) que se basó en solo unos pocos manuscritos y contenía algunas lecturas diferentes. sino  de Robert Esttiene llamado Stephanus de 1546  que Incluyó otros manuscritos . 
+Por ejemplo e-sword va a presentar una versión del Textux Receptus,  que no es de Erasmo (1516) que se basó en solo unos pocos manuscritos y contenía algunas lecturas diferentes. sino  de Robert Esttiene llamado Stephanus de 1546  que Incluyó otros manuscritos (te dejo la revisión de tarea). 
 
 Debido a esto , no vamos a llegar a las mismas conclusiones de Casiodoro de Reina de 1569.
+Otras versiones de textos Bizantinos son revisiones bastante mas recientes y no anteriores a el Textus Receptus de Erasmo.
 Sin reproche del trabajo crítico , me parece que hubiera sido "honesto" advertir al lector.
 
 Consejos.
-Precaución al realizar traducciones sobre el texto griego. ¿Qué texto griego te están facilitando?. Evitaría el texto de Stefanus ,  preferiría el de Erasmo.
+Precaución al realizar traducciones sobre el texto griego. ¿Qué texto griego te están facilitando?. Para alinearme con Reina Valera 1569   preferiría el de Erasmo,evitaría el texto de Stefanus , o bien una versión bizantina anterior al 1516 , que seguramente no se publica.
 ¿Qué versión del Texto Mayoritario Bizantino te están ofreciendo? Por lo general colocan el año al lado.
-EJEMPLO.
-1 Corintios 10:.7. La presencia de "paizó" (jugar referido a jóvenes), en lugar de "kōmos" ( puede referir  orgías), sugiere que la versión del Nuevo Testamento griego, podría ser una edición crítica del Texto Bizantino, pero no necesariamente una reproducción exacta de un manuscrito bizantino específico. 
+EJEMPLO DE DIGERENCIAS.
+1 Corintios 10:.7. La presencia de "paizó" (jugar referido a jóvenes), en lugar de "kōmos" ( puede referir  orgías), sugiere que la versión del Nuevo Testamento griego, podría ser una edición crítica del Texto Bizantino, pero no necesariamente una reproducción exacta de un manuscrito bizantino específico, por ejemplo una revisión de 2004. 
 Lo mismo en algunas versiones de la LXX.
 
 Algunas características de la Edición de Stephanus que podrían ayudar a identificarla son:.
@@ -37,3 +38,11 @@ Para determinar con certeza la procedencia de tu versión, podrías:
 1. Verificar la introducción o prefacio de la versión para obtener información sobre su base textual y método de edición.
 2. Buscar información en línea sobre la versión específica que estás utilizando.
 3. Comparar tu versión con otras versiones del Nuevo Testamento griego para identificar similitudes y diferencias.
+
+¡Aviso!: Las versiones , en general, no se califican en si mismas como malas ,(salvo que sea un fraude), sino por la linea de las variantes textuales con las que decido trabajar.
+Si elijo la versión de Stefanus , se que voy a tener influencias del tipo textual alejandrino ,(ejemplo codex sinaítico y otros), y no del tipo bizantino, que es con el me vengo desenvolviendo.
+Si vas a usar la N V I , o la Biblias de las Américas,  venís del Tipo griego Textual Alejandrino.
+Si vas a usar Reina Valera antigua , venis del Texto griego Bizantino.
+Los traductores ya sabían que existían las dos variantes.
+Algunas versiones como la de las Américas , compensan con otro tipo el texto faltante. Ejemplo : avanzo con la variante textual hasta un punto , pongo un asterisco, y agrego el faltante usando el texto bizantino.Es un ejemplo.
+Fin.
