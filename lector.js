@@ -2,7 +2,7 @@
 const scriptTag = document.currentScript;
 const archivo = scriptTag.getAttribute('data-archivo') || 'archivo.txt';
 
-let velocidad = 0.9;
+let velocidad = 0.8;
 
 window.onload = async function cargarArchivo() {
     try {
