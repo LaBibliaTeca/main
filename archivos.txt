@@ -1,20 +1,20 @@
-main/Carta Ignacio a Esmirna.html
-main/ConURL.html
-main/LXXvsMASORETICA.html
-main/LXXvsMASORETICA.txt
-main/Libroteca.html
-main/Maria.html
-main/MilenioLiteral.html
-main/Novedad.html
-main/Novedad.txt
-main/Prologos de Jeronimo.txt
-main/Respuestas1.html
-main/Santiago.txt
-main/Santiago_Romanos.html
-main/TMLXX.txt
-mainVERSIONES GRIEGAS MODIFICADAS.txt
-main/Vinculación TM LXX.html
-main/cartaD.html
-main/gallo.html
+https://labibliateca.github.io/main/Carta Ignacio a Esmirna.html
+https://labibliateca.github.io/main/ConURL.html
+https://labibliateca.github.io/main/LXXvsMASORETICA.html
+https://labibliateca.github.io/main/LXXvsMASORETICA.txt
+https://labibliateca.github.io/main/Libroteca.html
+https://labibliateca.github.io/main/Maria.html
+https://labibliateca.github.io/main/MilenioLiteral.html
+https://labibliateca.github.io/main/Novedad.html
+https://labibliateca.github.io/main/Novedad.txt
+https://labibliateca.github.io/main/Prologos de Jeronimo.txt
+https://labibliateca.github.io/main/Respuestas1.html
+https://labibliateca.github.io/main/Santiago.txt
+https://labibliateca.github.io/main/Santiago_Romanos.html
+https://labibliateca.github.io/ain/TMLXX.txt
+https://labibliateca.github.io/mainVERSIONES GRIEGAS MODIFICADAS.txt
+https://labibliateca.github.io/main/Vinculación TM LXX.html
+https://labibliateca.github.io/main/cartaD.html
+https://labibliateca.github.io/main/gallo.html
 https://guarduino.github.io/ContraLasHerejias/test.txt
 
