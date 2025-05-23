@@ -11,7 +11,8 @@ https://labibliateca.github.io/main/Prologos de Jeronimo.txt
 https://labibliateca.github.io/main/Respuestas1.html
 https://labibliateca.github.io/main/Santiago.txt
 https://labibliateca.github.io/main/Santiago_Romanos.html
-https://labibliateca.github.io/ain/TMLXX.txt
+https://labibliateca.github.io/main/TMLXX.txt
+https://labibliateca.github.io/main/TMLXX.html
 https://labibliateca.github.io/mainVERSIONES GRIEGAS MODIFICADAS.txt
 https://labibliateca.github.io/main/cartaD.html
 https://labibliateca.github.io/main/gallo.html
