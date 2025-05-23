@@ -2,17 +2,25 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Buscador de textos</title>
+  <title>Buscador de archivos</title>
   <style>
-    body { font-family: sans-serif; padding: 2rem; max-width: 700px; margin: auto; }
+    body { font-family: sans-serif; padding: 2rem; max-width: 800px; margin: auto; }
     input, button { padding: 0.5rem; font-size: 1rem; width: 100%; margin: 0.5rem 0; }
-    #resultados p { margin-bottom: 1rem; }
+    #listaArchivos, #resultados p { margin-bottom: 1rem; }
+    code { background: #eee; padding: 2px 4px; border-radius: 4px; }
+    small { color: #444; }
   </style>
 </head>
 <body>
-  <h2>Buscador de palabras en archivos de La Bibliateca</h2>
-  <input type="text" id="busqueda" placeholder="Escribe una palabra...">
+  <h2>Buscador en archivos de La Bibliateca</h2>
+
+  <input type="text" id="busqueda" placeholder='Ej: judios & vulgata & maria'>
   <button onclick="buscar()">Buscar</button>
+
+  <h3>📄 Archivos cargados</h3>
+  <div id="listaArchivos"><em>Cargando...</em></div>
+
+  <h3>🔍 Resultados</h3>
   <div id="resultados"></div>
 
   <script>
@@ -21,18 +29,18 @@
 
     let documentos = [];
 
-    // Quita tildes de un texto
     function quitarAcentos(str) {
       return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
     }
 
-    // Cargar la lista de archivos y sus contenidos
     fetch(rutaBase + listaArchivo)
       .then(resp => resp.text())
       .then(texto => {
         const archivos = texto.split("\n")
           .map(l => l.trim())
           .filter(l => l && (l.endsWith(".txt") || l.endsWith(".html")));
+
+        document.getElementById("listaArchivos").innerHTML = archivos.map(f => `<code>${f}</code>`).join(", ");
 
         return Promise.all(
           archivos.map(nombre =>
@@ -47,28 +55,34 @@
       })
       .catch(error => {
         console.error("Error al cargar archivos:", error);
-        document.getElementById("resultados").innerHTML = "<p>Error al cargar los archivos.</p>";
+        document.getElementById("listaArchivos").innerHTML = "<p>Error al cargar archivos.</p>";
       });
 
     function buscar() {
-      const query = document.getElementById("busqueda").value.trim();
-      if (!query) return;
+      const input = document.getElementById("busqueda").value.trim();
+      if (!input) return;
 
-      const querySinTildes = quitarAcentos(query.toLowerCase());
+      // Separar palabras por "&" y normalizarlas
+      const palabras = input.split("&")
+        .map(p => quitarAcentos(p.trim().toLowerCase()))
+        .filter(p => p.length > 0);
 
-      const resultados = documentos.filter(doc => {
+      const resultados = documentos.map(doc => {
         const textoPlano = quitarAcentos(doc.texto.toLowerCase());
-        return textoPlano.includes(querySinTildes);
-      });
 
-      const html = resultados.map(doc => {
-        const textoPlano = quitarAcentos(doc.texto.toLowerCase());
-        const pos = textoPlano.indexOf(querySinTildes);
+        const contieneTodas = palabras.every(palabra => textoPlano.includes(palabra));
+        if (!contieneTodas) return null;
+
+        // Mostrar contexto para la primera palabra encontrada
+        const pos = textoPlano.indexOf(palabras[0]);
         const contexto = doc.texto.substring(Math.max(0, pos - 50), pos + 100);
-        return `<p><a href="${doc.url}" target="_blank">${doc.nombre}</a><br>...${contexto}...</p>`;
-      }).join("");
 
-      document.getElementById("resultados").innerHTML = html || "<p>No se encontraron coincidencias.</p>";
+        return `<p><a href="${doc.url}" target="_blank">${doc.nombre}</a><br><small>...${contexto}...</small></p>`;
+      }).filter(Boolean);
+
+      document.getElementById("resultados").innerHTML = resultados.length > 0
+        ? resultados.join("")
+        : "<p>No se encontraron coincidencias.</p>";
     }
   </script>
 </body>
