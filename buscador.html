@@ -23,67 +23,57 @@
   <h3>🔍 Resultados</h3>
   <div id="resultados"></div>
 
-  <script>
-    const rutaBase = "https://labibliateca.github.io/";
-    const listaArchivo = "main/archivos.txt";
+ <script>
+   const dominiosPermitidos = [
+  "https://labibliateca.github.io/",
+  "https://guarduino.github.io/"
+];
 
-    let documentos = [];
+const rutaBase = ""; // permite rutas completas o relativas
+const listaArchivo = "archivos.txt";
 
-    function quitarAcentos(str) {
-      return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-    }
+let documentos = [];
 
-    fetch(rutaBase + listaArchivo)
-      .then(resp => resp.text())
-      .then(texto => {
-        const archivos = texto.split("\n")
-          .map(l => l.trim())
-          .filter(l => l && (l.endsWith(".txt") || l.endsWith(".html")));
+function quitarAcentos(str) {
+  return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+}
 
-       // document.getElementById("listaArchivos").innerHTML = archivos.map(f => `<code>${f}</code>`).join(", ");
+// Cargar lista
+fetch(listaArchivo)
+  .then(resp => resp.text())
+  .then(texto => {
+    const archivos = texto.split("\n")
+      .map(l => l.trim())
+      .filter(l => l && (l.endsWith(".txt") || l.endsWith(".html")));
 
-        return Promise.all(
-          archivos.map(nombre =>
-            fetch(rutaBase + nombre)
-              .then(resp => resp.ok ? resp.text() : "")
-              .then(texto => ({ nombre, url: rutaBase + nombre, texto }))
-          )
-        );
+    return Promise.all(
+      archivos.map(nombre => {
+        const url = nombre.startsWith("http") ? nombre : rutaBase + nombre;
+
+        const esValida = dominiosPermitidos.some(dom => url.startsWith(dom));
+        if (!esValida) {
+          console.warn("Archivo ignorado por dominio no autorizado:", url);
+          return null;
+        }
+
+        return fetch(url)
+          .then(resp => resp.ok ? resp.text() : "")
+          .then(texto => ({ nombre, url, texto }))
+          .catch(err => {
+            console.warn("Error al cargar:", url);
+            return null;
+          });
       })
-      .then(resultados => {
-        documentos = resultados;
-      })
-      .catch(error => {
-        console.error("Error al cargar archivos:", error);
-        document.getElementById("listaArchivos").innerHTML = "<p>Error al cargar archivos.</p>";
-      });
+    );
+  })
+  .then(resultados => {
+    documentos = resultados.filter(Boolean);
+  })
+  .catch(error => {
+    console.error("Error al cargar archivos:", error);
+    document.getElementById("resultados").innerHTML = "<p>Error al cargar los archivos.</p>";
+  });
 
-    function buscar() {
-      const input = document.getElementById("busqueda").value.trim();
-      if (!input) return;
-
-      // Separar palabras por "&" y normalizarlas
-      const palabras = input.split("&")
-        .map(p => quitarAcentos(p.trim().toLowerCase()))
-        .filter(p => p.length > 0);
-
-      const resultados = documentos.map(doc => {
-        const textoPlano = quitarAcentos(doc.texto.toLowerCase());
-
-        const contieneTodas = palabras.every(palabra => textoPlano.includes(palabra));
-        if (!contieneTodas) return null;
-
-        // Mostrar contexto para la primera palabra encontrada
-        const pos = textoPlano.indexOf(palabras[0]);
-        const contexto = doc.texto.substring(Math.max(0, pos - 50), pos + 100);
-
-        return `<p><a href="${doc.url}" target="_blank">${doc.nombre}</a><br><small>...${contexto}...</small></p>`;
-      }).filter(Boolean);
-
-      document.getElementById("resultados").innerHTML = resultados.length > 0
-        ? resultados.join("")
-        : "<p>No se encontraron coincidencias.</p>";
-    }
   </script>
 </body>
 </html>
