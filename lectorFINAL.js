@@ -16,7 +16,7 @@ if (archivo) {
     });
 }
 
-let velocidad = 0.9;
+let velocidad = 0.8;
 
 function leerEnVozAlta() {
  // const texto = document.getElementById("contenido").innerText;
