@@ -16,5 +16,5 @@ mainVERSIONES GRIEGAS MODIFICADAS.txt
 main/Vinculación TM LXX.html
 main/cartaD.html
 main/gallo.html
-DE-DONDE-VIENEN-LOS-HNOS-LIBRES/index.html
-ContraLasHerejias/index.html
+https://guarduino.github.io/ContraLasHerejias/index.html
+
