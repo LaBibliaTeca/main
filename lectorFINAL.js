@@ -11,13 +11,15 @@ if (archivo) {
   fetch(archivo)
     .then(res => res.ok ? res.text() : "⚠️ No se pudo cargar el archivo.")
     .then(texto => {
-      document.getElementById("contenido").innerText = texto;
+      //document.getElementById("contenido").innerText = texto;
+       document.getElementById("contenido").innerHTML = texto;
     });
 }
 
 let velocidad = 0.9;
 
 function leerEnVozAlta() {
+ // const texto = document.getElementById("contenido").innerText;
   const texto = document.getElementById("contenido").innerText;
   const fragmentos = texto.match(/.{1,200}/g);
   let index = 0;
