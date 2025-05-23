@@ -18,7 +18,7 @@
   <button onclick="buscar()">Buscar</button>
 
   <h3>📄 Archivos cargados</h3>
-  <div id="listaArchivos"><em>Cargando...</em></div>
+  <!--<div id="listaArchivos"><em>Cargando...</em></div> -->
 
   <h3>🔍 Resultados</h3>
   <div id="resultados"></div>
@@ -40,7 +40,7 @@
           .map(l => l.trim())
           .filter(l => l && (l.endsWith(".txt") || l.endsWith(".html")));
 
-        document.getElementById("listaArchivos").innerHTML = archivos.map(f => `<code>${f}</code>`).join(", ");
+       // document.getElementById("listaArchivos").innerHTML = archivos.map(f => `<code>${f}</code>`).join(", ");
 
         return Promise.all(
           archivos.map(nombre =>
