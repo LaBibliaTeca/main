@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buscador de textos</title>
+  <style>
+
+  body {
+    font-family: sans-serif;
+    padding: 1.5rem;
+    max-width: 100%;
+    margin: auto;
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+  input, button {
+    padding: 0.8rem;
+    font-size: 1.5rem;
+    width: 90%;
+    margin: 0.6rem 0;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+  }
+  button {
+    background: #1d72b8;
+    color: white;
+    border: none;
+  }
+  button:hover {
+    background: #145a8a;
+  }
+  #resultados p {
+    margin-bottom: 1.5rem;
+  }
+  small {
+    color: #444;
+    font-size: 1rem;
+  }
+  a {
+    color: #1d72b8;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+</style>
+
+
+</head>
+<body>
+  <h2>Buscador en archivos de La Bibliateca.Git</h2>
+
+  <input type="text" id="busqueda" placeholder='Ej: jesus & fariseos & galilea'>
+  <button style="width: 200px; height: 50px;font-size: 16px;" onclick="buscar()">Buscar</button>
+
+  <div id="resultados"></div>
+
+  <script>
+    const listaArchivo = "archivos.txt";
+    const dominiosPermitidos = [
+      "https://labibliateca.github.io/",
+      "https://guarduino.github.io/"
+    ];
+
+    let documentos = [];
+
+    function quitarAcentos(str) {
+      return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+    }
+
+    // Cargar lista de archivos
+    fetch(listaArchivo)
+      .then(resp => resp.text())
+      .then(texto => {
+        const archivos = texto.split("\n")
+          .map(l => l.trim())
+          .filter(l => l && (l.endsWith(".txt") || l.endsWith(".html")));
+
+        return Promise.all(
+          archivos.map(nombre => {
+            const url = nombre.startsWith("http") ? nombre : nombre;
+            const esValida = dominiosPermitidos.some(dom => url.startsWith(dom));
+            if (!esValida) {
+              console.warn("Archivo ignorado por dominio no autorizado:", url);
+              return null;
+            }
+            return fetch(url)
+              .then(resp => resp.ok ? resp.text() : "")
+              .then(texto => ({ nombre, url, texto }))
+              .catch(err => {
+                console.warn("Error al cargar:", url);
+                return null;
+              });
+          })
+        );
+      })
+      .then(resultados => {
+        documentos = resultados.filter(Boolean);
+      })
+      .catch(error => {
+        console.error("Error al cargar archivos:", error);
+        document.getElementById("resultados").innerHTML = "<p>Error al cargar los archivos.</p>";
+      });
+
+    function buscar() {
+      const input = document.getElementById("busqueda").value.trim();
+      if (!input) return;
+
+      const palabras = input.split("&")
+        .map(p => quitarAcentos(p.trim().toLowerCase()))
+        .filter(p => p.length > 0);
+
+      const resultados = documentos.map(doc => {
+        // Limpiar HTML y acentos
+        const textoLimpio = quitarAcentos(doc.texto.replace(/<[^>]*>/g, '').toLowerCase());
+
+        const contieneTodas = palabras.every(palabra => textoLimpio.includes(palabra));
+        if (!contieneTodas) return null;
+
+        const pos = textoLimpio.indexOf(palabras[0]);
+        const contexto = doc.texto.substring(Math.max(0, pos - 50), pos + 100);
+
+      //  return `<p><a href="${doc.url}" target="_blank">${doc.nombre}</a><br><small>...${contexto}...</small></p>`;
+     // }).filter(Boolean);
+        return `<p><a href="principal.html?text=${encodeURIComponent(doc.url)}">${doc.nombre}</a><br><small>...${contexto}...</small></p>`;
+
+      document.getElementById("resultados").innerHTML =
+        resultados.length > 0
+          ? resultados.join("")
+          : "<p>No se encontraron coincidencias.</p>";
+    }
+  </script>
+</body>
+</html>
