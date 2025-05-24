@@ -6,8 +6,6 @@
     <title>CODEX AMIATINUS -PREFACIO</title>
 </head>
 <body>
-	 	    	<button style="width: 200px; height: 50px;background-color: rgb(255, 221, 3);font-size: 16px;" onclick="leerEnVozAlta()">Presionar para Leer en Voz Alta</button>
-<div class="contenido">
     <p style="font-size: small;">Sobre la VULGATA SIGLO IV <br>
 En este prefacio, Jeŕónimo manifiesta las dificultades de hacer la traducción al latín. <br> 
 El documento con su Prefacio añadido se llama CODEX AMIATINUS encontrado en el año 700dc . Fue reeditado en 1854
@@ -35,32 +33,5 @@ Deseo que estés bien en Cristo y que me tengas presente en tu memoria, bendecid
 </p>
 </div>
 
-    <script>
-     function leerEnVozAlta() {
-    // Obtener el texto del elemento con la clase "contenido-texto"
-    var texto = document.querySelector('.contenido').innerText;
-
-    // Dividir el texto en segmentos más pequeños
-    var partes = dividirTextoEnPartes(texto, 560); // Por ejemplo, 200 caracteres por parte
-
-    // Leer cada parte secuencialmente
-    partes.forEach((parte) => {
-        var mensaje = new SpeechSynthesisUtterance(parte);
-        mensaje.lang = 'es-ES';
-        mensaje.pitch = 1;
-        mensaje.rate = 0.8;
-        window.speechSynthesis.speak(mensaje);
-    });
-}
-
-function dividirTextoEnPartes(texto, tamano) {
-    var partes = [];
-    for (var i = 0; i < texto.length; i += tamano) {
-        partes.push(texto.slice(i, i + tamano));
-    }
-    return partes;
-}
-
-    </script>
 </body>
 </html>
