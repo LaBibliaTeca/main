@@ -25,12 +25,11 @@
 <body>
 
 	
-<!-- Botón para leer en voz alta el contenido del archivo -->
-	    	<button style="width: 200px; height: 50px;background-color: yellow;font-size: 16px;" onclick="leerEnVozAlta()">Presionar para Leer en Voz Alta</button>
+
 
 	<p><i>De Gustavo Uliarte</i></p>
 	
-	<p><b>Novedades Fugaces</b><br> El Gallo o la Trompeta </p>
+	<p><b>El Gallo o la Trompeta</b> </p>
     <p><i> El video original en instagram</i></p>
     <a href="https://www.instagram.com/reel/DBW8NemSGGm/?igsh=MW5jem1mbnppeWQyeA==">PULSAR</a><br>
     <!-- Div donde se mostrará el contenido del archivo -->
@@ -64,27 +63,7 @@ alba que ha llegado en cuatro horas. Por lo que se puede deducir habían
 gallos dando vueltas por la comunidad.<br>
 </div>
 
-    <script>
-        // Cargar el archivo automáticamente al cargar la página
-
-
-        // Función para leer en voz alta el contenido del archivo
-        function leerEnVozAlta() {
-            const texto = document.getElementById('contenido').innerText;
-
-            // Crear una nueva instancia de SpeechSynthesisUtterance
-            const mensaje = new SpeechSynthesisUtterance(texto);
-
-            // Configurar propiedades del mensaje
-            mensaje.lang = 'es-ES'; // Idioma y acento
-            mensaje.pitch = 1; // Tono
-            mensaje.rate = .7; // Velocidad de habla
-
-            // Usar la API de síntesis de voz del navegador para hablar el mensaje
-            window.speechSynthesis.speak(mensaje);
-        }
-    </script>
-
+  
 
 
 </body></html>
