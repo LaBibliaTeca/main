@@ -119,7 +119,7 @@
         if (!contieneTodas) return null;
 
         const pos = textoLimpio.indexOf(palabras[0]);
-        const contexto = doc.texto.substring(Math.max(0, pos - 50), pos + 100);
+        const contexto = doc.texto.substring(Math.max(0, pos - 50), pos + 50);
 
         //return `<p><a href="${doc.url}" target="_blank">${doc.nombre}</a><br><small>...${contexto}...</small></p>`;
         return `<p><a href="principal.html?texto=${doc.url}" target="_blank">${doc.nombre}</a><br><small>...${contexto}...</small></p>`;
