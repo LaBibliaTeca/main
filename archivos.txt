@@ -1,5 +1,4 @@
 https://labibliateca.github.io/main/Carta Ignacio a Esmirna.html
-https://labibliateca.github.io/main/ConURL.html
 https://labibliateca.github.io/main/LXXvsMASORETICA.html
 https://labibliateca.github.io/main/LXXvsMASORETICA.txt
 https://labibliateca.github.io/main/Libroteca.html
@@ -53,6 +52,10 @@ https://guarduino.github.io/HnosLibres/index.html
 https://guarduino.github.io/DoctrinasConceptos/index.html
 https://labibliateca.github.io/main/CodexAmiatinus.html
 https://guarduino.github.io/ContraLasHerejias/index.html
+https://labibliateca.github.io/Joel_LXX/Joel.html
+https://labibliateca.github.io/Documentos/CR.html
+https://labibliateca.github.io/Documentos/mishnah.html
+
 
 
 
