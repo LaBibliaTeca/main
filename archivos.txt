@@ -43,7 +43,7 @@ https://guarduino.github.io/Doctrinas-y-Conceptos/EvolucionIglesiasEvangelicas.h
 https://guarduino.github.io/CartaClementeCorintios/index.html
 https://guarduino.github.io/Catolica-Ortodoxa/index.html
 https://labibliateca.github.io/Documentos/siclos.html
-https://labibliateca.github.io/main/cartaD.html
+https://labibliateca.github.io/main/CodexAmiatinus.html
 https://guarduino.github.io/textos/2apologiajustino.html
 https://guarduino.github.io/textos/1JustinoApologia.html
 https://guarduino.github.io/textos/TertulianoContraPraxeas.html
