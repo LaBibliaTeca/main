@@ -24,7 +24,7 @@ https://labibliateca.github.io/IglesiaYSinagoga/index.html
 https://labibliateca.github.io/Eleccion/index.html
 https://labibliateca.github.io/Apostol/index.html
 https://labibliateca.github.io/ErraralBlanco/index.html
-https://labibliateca.github.io/Documentos/OBISPOS.html
+https://labibliateca.github.io/Documentos/Obispo.html
 https://labibliateca.github.io/IglesiasMinisteriales/index.html
 https://labibliateca.github.io/main/CARTA%20DE%20IGNACIO%20A%20EFESO.html
 https://labibliateca.github.io/main/Carta%20Ignacio%20a%20Esmirna.html
