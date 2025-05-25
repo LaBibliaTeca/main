@@ -44,6 +44,8 @@ https://guarduino.github.io/CartaClementeCorintios/index.html
 https://guarduino.github.io/Catolica-Ortodoxa/index.html
 https://labibliateca.github.io/Documentos/siclos.html
 https://labibliateca.github.io/main/cartaD.html
+https://guarduino.github.io/textos/2apologiajustino.html
+https://guarduino.github.io/textos/1JustinoApologia.html
 
 
 
