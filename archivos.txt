@@ -51,6 +51,7 @@ https://guarduino.github.io/textos/OrigenesContraCelso.html"
 https://guarduino.github.io/ContraLasHerejias/index.html
 https://guarduino.github.io/HnosLibres/index.html
 https://guarduino.github.io/DoctrinasConceptos/index.html
+https://labibliateca.github.io/main/CodexAmiatinus.html
 
 
 
