@@ -1,0 +1,45 @@
+ionesGriegas<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visor de texto</title>
+  <style>
+    body {
+      font-family: 'Times New Roman', Times, serif;
+      margin: 0;
+      padding: 10px;
+      background-color: #f7f4f4;
+      color: #000;
+    }
+    #contenido {
+     
+      font-size: 1.2rem;
+     
+    }
+    button {
+      font-size: 1rem;
+      padding: 0.5rem 1rem;
+      margin: 5px 5px 5px 0;
+    }
+    #velocidadActual {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <button onclick="leerEnVozAlta()">🔊 Escuchar</button>
+  <button onclick="ajustarVelocidad(-0.1)">- Velocidad</button>
+  <button onclick="ajustarVelocidad(0.1)">+ Velocidad</button>
+  <span id="velocidadActual">Velocidad: 0.8</span>
+
+  <p><i>La Bibliateca Git <br>De Gustavo Uliarte</i></p>
+
+  <div id="contenido">Cargando texto...</div>
+
+  <!-- Script que cargará el texto -->
+  <script src="lectorFINAL_corregido.js" data-archivo="https://labibliateca.github.io/main/VersionesGriegas.txt"></script>
+
+</body>
+</html>
