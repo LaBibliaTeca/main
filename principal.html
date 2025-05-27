@@ -26,9 +26,18 @@
       
      
     }
-    button-group {
-     margin-left : 10px;
-    }
+
+        .heading {
+            max-width: 360px;
+            min-width: 100px
+            margin: 0 auto;
+            padding: 10px;
+            background-color: #ffffff;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            box-sizing: border-box;
+
+        }
 
     button {
       font-size: 1rem;
@@ -41,7 +50,7 @@
   </style>
 </head>
 <body>
-  <div style= "margin-left: 10 px";>
+  <div class="heading">
   <button onclick="leerEnVozAlta()">🔊 Escuchar</button>
   <button onclick="ajustarVelocidad(-0.1)">- Velocidad</button>
   <button onclick="ajustarVelocidad(0.1)">+ Velocidad</button><br>
