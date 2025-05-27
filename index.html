@@ -19,6 +19,13 @@
             color: rgb(7, 7, 7);
             box-sizing: border-box;
         }
+ .enlaces a {
+    font-size: 16px; /* Tamaño de fuente específico */
+    color: #007bff;   /* Color de ejemplo */
+    text-decoration: underline; /* Puedes quitarlo si quieres, por defecto es subrayado */
+    margin-bottom: 5px; /* Pequeño margen para separar visualmente si no son parte de una lista */
+    display: inline-block; /* Útil para aplicar márgenes y rellenos a elementos en línea */
+}
 
         .container {
             display: flex;
@@ -72,6 +79,7 @@
   		flex-shrink: 0;
 }
 	.icon{width:5;height:5}
+		    
 
     </style>
 	
@@ -134,8 +142,8 @@ const nombre = "Usuario"; // Puedes obtener el nombre del usuario de otra parte
 	
 	<a href="https://www.youtube.com/playlist?list=PL8QRdJYtJHpCNLlLWLs_TMHs0oT9VpS-7"><img src="velo.png" width="42" height="54" alt="TEMAS ANIMADOS"/><span>___<b>TEMAS ANIMADOS</b></span></a>
 </div>
-<div>
-	<br>
+<div class="enlaces">
+	
 	<a href="https://labibliateca.github.io/main/LXXvsMASORETICA.html"><span style= "color:red"><b>Versión Griega o Hebrea</b></span></a>	<br />
 	<a href="principal.html?texto=PrologosJeronimo.html"><span style= "color:green"><b>PRÓLOGOS DE JERÓNIMO</b></span></a>	<br />
 	<a href="https://labibliateca.github.io/main/Santiago_Romanos.html"><span style= "color:red"><b>SANTIAGO VS ROMANOS 3</b></span></a>	<br />
