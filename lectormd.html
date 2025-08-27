@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Lector Markdown</title>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <style>
+    body { font-family: sans-serif; margin: 2em; background: #f9f9f9; }
+    #contenido { background: white; padding: 1em; border-radius: 8px; box-shadow: 0 0 10px #ccc; }
+  </style>
+</head>
+<body>
+  <h2>📖 Visualizador Markdown</h2>
+  <div id="contenido">Cargando contenido...</div>
+
+  <script>
+    // 🔍 Extraer parámetro ?texto=archivo.md
+    const params = new URLSearchParams(window.location.search);
+    const archivo = params.get("texto");
+
+    if (!archivo) {
+      document.getElementById("contenido").innerHTML = "<p>❌ Parámetro 'texto' no especificado.</p>";
+    } else {
+      // 🌐 Cargar archivo Markdown
+      fetch(archivo)
+        .then(res => {
+          if (!res.ok) throw new Error("Archivo no encontrado");
+          return res.text();
+        })
+        .then(md => {
+          // 🔄 Convertir a HTML
+          const html = marked.parse(md);
+          document.getElementById("contenido").innerHTML = html;
+        })
+        .catch(err => {
+          document.getElementById("contenido").innerHTML = `<p>⚠️ Error: ${err.message}</p>`;
+        });
+    }
+  </script>
+</body>
+</html>
