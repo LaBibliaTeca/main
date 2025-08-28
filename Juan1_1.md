@@ -14,7 +14,7 @@ Orígenes ve en λόγος una **existencia relacional**, no una identidad ontol
 Los  traductores no  afirman abiertamente que “El logos era Dios” sino “**el Verbo era divino** ”.   
 
  ## A ver,    si digo (en koiné): 
-**Ο Σίλας ἦν Σιλουανός [el] Silas era Silvano**  ,   establezco una identidad .  
+**Ὸ Σίλας ἦν Σιλουανός [el] Silas era Silvano**  ,   establezco una identidad .  
 En  koiné el artículo EL no se repite en el predicado , y sigue siendo un nombre propio.
 Aunque el supuesto teólogo, en el caso de θεός Dios se rehusa a admitir una identidad.  
 Si dentro de mi modelo expreso :
