@@ -53,11 +53,7 @@
     // 🧼 Limpieza de Markdown para lectura en voz alta
 function eliminarAlmohadillas(md) {
   return md
-    .replace(/^#{1,6}\s*/gm, '')             // Encabezados #
-    .replace(/\*\*\s*(.*?)\s*\*\*/g, '$1')   // Negrita **texto**
-    .replace(/(?<!\*)\*\s*(.*?)\s*\*(?!\*)/g, '$1') // Cursiva *texto* sin interferir con **
-
-    
+    .replace(/^#+\s*/gm, '');
 }
 
 
