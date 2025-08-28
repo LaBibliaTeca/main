@@ -12,7 +12,7 @@ Orígenes ve en λόγος una **existencia relacional**, no una identidad ontol
 ## Los Padres de la Iglesia debatieron si **θεός** debía entenderse como “divino” (atributo) o “Dios” (identidad), y esto influyó en las formulaciones trinitarias posteriores.    
 
 Los  traductores no  afirman abiertamente que “El logos era Dios” sino “**el Verbo era divino** ”.   
------
+
  ## A ver,    si digo (en koiné): 
 **Ο Σίλας ἦν Σιλουανός [el] Silas era Silvano**  ,   establezco una identidad .  
 En  koiné el artículo EL no se repite en el predicado , y sigue siendo un nombre propio.
@@ -21,7 +21,7 @@ Si dentro de mi modelo expreso :
 **Ο Λόγος εστιν Θεός**. El Verbo era Dios , ambos son nombres propios entonces SI establezco una identidad .  
 >Pero con mi viejo concepto: ¿Cómo podría ser Logos = Dios y “El Padre= Dios”?.
 
---- 
+
 [Esto es el DILEMA ONTOLÓGICO] ¿Qué hacer?.  
 **¿que ocurre cuando los modelos no cierran?.**  
 La respuesta, entonces es, “**no puede partir de definiciones filosóficas, **sino de declaraciones bíblicas (teológicas) puras**”.  
