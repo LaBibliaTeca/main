@@ -15,10 +15,10 @@ Los  traductores no  afirman abiertamente que “El logos era Dios” sino “**
 
  ## A ver,    si digo (en koiné): 
 **Ὸ Σίλας ἦν Σιλουανός , [el] Silas era Silvano**  ,   establezco una identidad .  
-En  koiné el artículo EL no se repite en el predicado , y sigue siendo un nombre propio.
+En  koiné el artículo **EL** no se repite en el predicado , y sigue siendo un nombre propio.
 Aunque el supuesto teólogo, en el caso de θεός Dios se rehusa a admitir la identidad.  
 Si dentro de mi modelo expreso :
-**Ό Λόγος εστιν Θεός**. El Verbo era Dios , ambos son nombres propios, entonces SI establezco una identidad .  
+**Ό Λόγος εστιν Θεός**. El Verbo era Dios , ambos son nombres propios, entonces SI establezco una identidad.    
 >Pero en mi modelo:, ¿Cómo podría ser Logos = Dios ,y “El Padre= Dios”?.
 
 
