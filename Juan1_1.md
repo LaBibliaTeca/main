@@ -11,8 +11,8 @@ La Vulgata traduce et Deus erat Verbum,  inclinándose hacia una afirmación fue
 Orígenes ve en λόγος una **existencia relacional**, no una identidad ontológica cerrada  .  
 ## Los Padres de la Iglesia debatieron si **θεός** debía entenderse como “divino” (atributo) o “Dios” (identidad), y esto influyó en las formulaciones trinitarias posteriores.    
 
-Los  traductores no  afirman abiertamente que “El logos era Dios” sino “**el Verbo era divino**”.  
-
+Los  traductores no  afirman abiertamente que “El logos era Dios” sino “**el Verbo era divino** ”.   
+-----
  ## A ver,... si digo (en koiné): 
 **Ο Σίλας ἦν Σιλουανός [el] Silas era Silvano**  ,   establezco una identidad .  
 En  koiné el artículo EL no se repite en el predicado , y sigue siendo un nombre propio.
