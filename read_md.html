@@ -62,7 +62,7 @@ function eliminarAlmohadillas(md) {
 
     const archivo = getParametro("texto");
     let textoPlano = "";
-    let velocidad = 0.9;
+    let velocidad = 0.7;
 
     if (!archivo) {
       document.getElementById("contenido").innerHTML = "<p>❌ Parámetro 'texto' no especificado.</p>";
@@ -110,7 +110,7 @@ function eliminarAlmohadillas(md) {
     // 🎛️ Ajustar velocidad
     function ajustarVelocidad(cambio) {
       velocidad = Math.max(0.1, Math.min(2.0, velocidad + cambio));
-      document.getElementById("velocidadActual").textContent = "Velocidad: " + velocidad.toFixed(.7);
+      document.getElementById("velocidadActual").textContent = "Velocidad: " + velocidad.toFixed(1);
     }
   </script>
 </body>
