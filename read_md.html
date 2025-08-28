@@ -108,10 +108,13 @@ function eliminarAlmohadillas(md) {
     }
 
     // 🎛️ Ajustar velocidad
-    function ajustarVelocidad(cambio) {
-      velocidad = Math.max(0.1, Math.min(2.0, velocidad + cambio));
-      document.getElementById("velocidadActual").textContent = "Velocidad: " + velocidad.toFixed(1);
-    }
+function ajustarVelocidad(cambio) {
+  let nueva = velocidad + cambio;
+  nueva = Math.max(0.1, Math.min(2.0, nueva));
+  velocidad = parseFloat(nueva.toFixed(1));
+  document.getElementById("velocidadActual").textContent = "Velocidad: " + velocidad;
+}
+
   </script>
 </body>
 </html>
