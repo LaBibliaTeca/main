@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Lector Markdown con Voz</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Librería para convertir Markdown a HTML -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: #f9f9f9;
+      margin: 20px;
+      color: #333;
+    }
+    #contenido {
+      background-color: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px #ccc;
+    }
+    button {
+      margin: 5px;
+      padding: 6px 12px;
+      font-size: 1rem;
+    }
+    #velocidadActual {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>📖 Lector Markdown con Voz</h2>
+
+  <button onclick="leerEnVozAlta()">🔊 Escuchar</button>
+  <button onclick="ajustarVelocidad(-0.1)">- Velocidad</button>
+  <button onclick="ajustarVelocidad(0.1)">+ Velocidad</button>
+  <span id="velocidadActual">Velocidad: 0.9</span>
+
+  <hr>
+  <div id="contenido">Cargando contenido...</div>
+
+  <script>
+    // 🔍 Obtener parámetro ?texto=archivo.md
+    function getParametro(nombre) {
+      const url = new URL(window.location.href);
+      return url.searchParams.get(nombre);
+    }
+
+    const archivo = getParametro("texto");
+    let textoPlano = ""; // Para lectura en voz alta
+    let velocidad = 0.9;
+
+    if (!archivo) {
+      document.getElementById("contenido").innerHTML = "<p>❌ Parámetro 'texto' no especificado.</p>";
+    } else {
+      // 🌐 Cargar archivo Markdown
+      fetch(archivo)
+        .then(res => {
+          if (!res.ok) throw new Error("Archivo no encontrado");
+          return res.text();
+        })
+        .then(md => {
+          textoPlano = md; // Guardamos el original para voz
+          const html = marked.parse(md); // Convertimos a HTML
+          document.getElementById("contenido").innerHTML = html;
+        })
+        .catch(err => {
+          document.getElementById("contenido").innerHTML = `<p>⚠️ Error: ${err.message}</p>`;
+        });
+    }
+
+    // 🔊 Lectura en voz alta
+    function leerEnVozAlta() {
+      const fragmentos = textoPlano.match(/.{1,200}/g);
+      let index = 0;
+
+      function hablarFragmento() {
+        if (index < fragmentos.length) {
+          const mensaje = new SpeechSynthesisUtterance(fragmentos[index]);
+          mensaje.lang = 'es-ES';
+          mensaje.pitch = 1;
+          mensaje.rate = velocidad;
+
+          mensaje.onend = function () {
+            index++;
+            hablarFragmento();
+          };
+
+          window.speechSynthesis.speak(mensaje);
+        }
+      }
+
+      hablarFragmento();
+    }
+
+    // 🎛️ Ajustar velocidad
+    function ajustarVelocidad(cambio) {
+      velocidad = Math.max(0.1, Math.min(2.0, velocidad + cambio));
+      document.getElementById("velocidadActual").textContent = "Velocidad: " + velocidad.toFixed(1);
+    }
+  </script>
+</body>
+</html>
