@@ -79,7 +79,7 @@ Problema:  Introduce división ontológica(del ser) no presente en el texto .
 Preconcepto : Esencia/subtancia οὐσία (ousía). Concilio  de Nicea.  
 Problema: Impone Categorías Aristotélicas.  
 
-**Ontología Trinitaria**, este concepto NO es el mismo que lo que plantea Justino su primera Apología capítulo 6: **”a Él, y al Hijo (que salió de Él y nos enseñó estas cosas, y al Espíritu profético, los adoramos y los conocemos en razón y verdad”**, sino que incluye el **concepto de “persona como representación”** que incorpora por ejemplo Tertuliano (210dc) que no significa lo mismo que en español (ver abajo).  
+**Ontología Trinitaria**, este concepto NO es el mismo que lo que plantea Justino su primera Apología capítulo 6: **”a Él, y al Hijo (que salió de Él y nos enseñó estas cosas, y al Espíritu profético, los adoramos y los conocemos en razón y verdad”**, sino que incluye el **concepto de “persona como representación”** que incorpora Tertuliano (leer "Contra Práxeas") que no significa lo mismo que en español (ver abajo).  
 **Relacionalidad filosófica :** Este concepto se sumó al anterior para justificar “la unidad” en lugar de aceptar “la manifestación como una unidad”, (cita de la definición que se menciona :”la expresión el verbo era dios es relacional, no ontológica, es decir el verbo era divino”).
 
 Bibliografía:
