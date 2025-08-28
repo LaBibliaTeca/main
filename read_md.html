@@ -54,6 +54,7 @@
 function eliminarAlmohadillas(md) {
   return md
       //.replace(/^#+\s*/gm, '');  // Encabezados #
+       .replace(/\*\*\s*(.*?)\s*\*\*/g, '$1')   // Negrita **texto**
        .replace(/^#{1,6}\s*/gm, '')         // Encabezados #
       //.replace(/\*\*(.*?)\*\*/g, '$1')     // Negrita **
 }
