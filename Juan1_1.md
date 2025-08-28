@@ -72,7 +72,7 @@ Eso es lo que nosotros decimos en nuestra jerga : Personas como si fueran indivi
 >Ahora bien ,distinguimos en  1Corintios 12:4-6: “.....  hay diversidad de dones, pero el **Espíritu** es el mismo. Y hay diversidad de ministerios, pero el **Señor** es el mismo. Y hay diversidad de operaciones, pero **Dios**, que hace todas las cosas en todos, es el mismo”.   
 
 Pero tenemos que reconocer que al introducir la palabra PERSONA estamos haciendo uso de un término que en latín tiene connotación de Rol o Representación y que Tertuliano que incorpora el término en Adversus Práxeas NO la redefine  y  **es una palabra extrabíblica** , puedo usarla en español como una actor pero el sentido latino es otro.      
-𝐏𝐚𝐫𝐚 𝐦𝐚𝐧𝐭𝐞𝐧𝐞𝐫 𝐥𝐚 𝐥𝐢́𝐧𝐞𝐚 𝐝𝐞 𝐧𝐮𝐞𝐬𝐭𝐫𝐨 𝐌𝐎𝐃𝐄𝐋𝐎, 𝐝𝐞𝐛𝐞𝐦𝐨𝐬 𝐦𝐚𝐧𝐭𝐞𝐧𝐞𝐫 𝐟𝐮𝐞𝐫𝐚 **CONCEPTOS EXTRAÑOS AL TEXTO**.
+Para mantener nuestro **MODELO**, debemos mantener fuera **CONCEPTOS EXTRAÑOS AL TEXTO**.
 Preconcepto : “Persona” en Latín (Tertuliano) /”Hipostasis” en griego(Concilio de Nicea ).   
 Problema:  Introduce división ontológica(del ser) no presente en el texto .  
 Preconcepto : Esencia/subtancia οὐσία (ousía). Concilio  de Nicea.  
