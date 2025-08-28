@@ -35,10 +35,13 @@
   <button onclick="leerEnVozAlta()">🔊 Escuchar</button>
   <button onclick="ajustarVelocidad(-0.1)">- Velocidad</button>
   <button onclick="ajustarVelocidad(0.1)">+ Velocidad</button>
-  <span id="velocidadActual">Velocidad: 0.8</span>
+  <span id="velocidadActual">Velocidad: 0.7</span>
 
   <hr>
   <div id="contenido">Cargando contenido...</div>
+    const archivo = getParametro("texto");
+    let textoPlano = "";
+    let velocidad = 0.7;
 
   <script>
     const proxy = "https://cors-anywhere.herokuapp.com/";
@@ -61,9 +64,6 @@ function eliminarAlmohadillas(md) {
 
 
 
-    const archivo = getParametro("texto");
-    let textoPlano = "";
-    let velocidad = 0.8;
 
     if (!archivo) {
       document.getElementById("contenido").innerHTML = "<p>❌ Parámetro 'texto' no especificado.</p>";
