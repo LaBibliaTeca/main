@@ -42,7 +42,7 @@
 
   <script>
     const proxy = "https://cors-anywhere.herokuapp.com/";
-    const archivo = proxy + getParametro("texto");
+
 
     // 🔍 Obtener parámetro ?texto=archivo.md
     function getParametro(nombre) {
@@ -69,7 +69,7 @@ function eliminarAlmohadillas(md) {
           return res.text();
         })
         .then(md => {
-          textoPlano = limpiarMarkdown(md); // ✅ Limpieza para voz
+         textoPlano = eliminarAlmohadillas(md);// ✅ Limpieza para voz
           const html = marked.parse(md);    // Renderizado visual
           document.getElementById("contenido").innerHTML = html;
         })
