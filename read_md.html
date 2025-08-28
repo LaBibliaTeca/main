@@ -52,7 +52,9 @@
 
     // 🧼 Limpieza de Markdown para lectura en voz alta
 function eliminarAlmohadillas(md) {
-  return md.replace(/^#+\s*/gm, '');
+  return md
+      .replace(/^#+\s*/gm, '');  // Encabezados #
+      .replace(/\*\*(.*?)\*\*/g, '$1')     // Negrita **
 }
 
 
