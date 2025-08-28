@@ -56,26 +56,6 @@ function eliminarAlmohadillas(md) {
 }
 
 
-\[.*?\]
-
-\(.*?\)/g, '')     // Imágenes ![alt](url)
-        .replace(/
-
-\[([^\]
-
-]+)\]
-
-\([^)]+\)/g, '$1') // Enlaces [texto](url)
-        .replace(/`{1,3}(.*?)`{1,3}/g, '$1') // Código en línea
-        .replace(/^-{3,}$/gm, '')            // Separadores ---
-        .replace(/^\s*>+/gm, '')             // Citas >
-        .replace(/^\s*[-*+]\s+/gm, '')       // Listas con -, *, +
-        .replace(/^\s*\d+\.\s+/gm, '')       // Listas numeradas
-        .replace(/\r?\n|\r/g, ' ')           // Saltos de línea → espacio
-        .replace(/\s+/g, ' ')                // Espacios múltiples → uno solo
-        .trim();
-    }
-
     const archivo = getParametro("texto");
     let textoPlano = "";
     let velocidad = 0.9;
