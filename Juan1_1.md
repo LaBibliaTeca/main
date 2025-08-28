@@ -4,7 +4,7 @@
 *A pesar que las Iglesias y los comentarios Bíblicos y Exegéticos pretenden explicar como que el Verbo era Dios, existe una especie de trastienda donde la explicaciones académicas son otras.* 
 
 **Esta es la afirmación que exponen: “La frase θεός  εστιν ό λόγος no busca resolver la ontología (identidad) divina , sino introducir al lector en una comprensión relacional y funcional del Logos. La ausencia del artículo en θεός sugiere que Juan no pretende una identificación absoluta, sino una afirmación de naturaleza.”**
-## Si la idea es acaso presentar que El logos no es Dios en un sentido distinto de identidad, ¿por qué no lo decimos en los púlpitos abiertamente? . 
+## Si la idea es acaso presentar que El logos es Dios en un sentido distinto de identidad, ¿por qué no lo decimos en los púlpitos abiertamente? . 
 
 ## Posturas históricas.
 La Vulgata traduce et Deus erat Verbum,  inclinándose hacia una afirmación fuerte de divinidad.    
@@ -16,23 +16,23 @@ Los  traductores no  afirman abiertamente que “El logos era Dios” sino “**
  ## A ver,    si digo (en koiné): 
 **Ὸ Σίλας ἦν Σιλουανός , [el] Silas era Silvano**  ,   establezco una identidad .  
 En  koiné el artículo EL no se repite en el predicado , y sigue siendo un nombre propio.
-Aunque el supuesto teólogo, en el caso de θεός Dios se rehusa a admitir una identidad.  
-Si dentro de mi modelo expreso :
-**Ό Λόγος εστιν Θεός**. El Verbo era Dios , ambos son nombres propios entonces SI establezco una identidad .  
->Pero con mi viejo concepto: ¿Cómo podría ser Logos = Dios y “El Padre= Dios”?.
+Aunque el supuesto teólogo, en el caso de θεός Dios se rehusa a admitir la identidad.  
+Si dentro de mi sistema lógico expreso :
+**Ό Λόγος εστιν Θεός**. El Verbo era Dios , ambos son nombres propios, entonces SI establezco una identidad .  
+>Pero en mi sistema:, ¿Cómo podría ser Logos = Dios ,y “El Padre= Dios”?.
 
 
-[Esto es el DILEMA ONTOLÓGICO] ¿Qué hacer?.  
-**¿que ocurre cuando los modelos no cierran?.**  
+[Esto es el DILEMA ONTOLÓGICO] .¿Qué hacer?.  
+**¿qué ocurre cuando un sistema lógico no cierra?.**  
 La respuesta, entonces es, “**no puede partir de definiciones filosóficas, **sino de declaraciones bíblicas (teológicas) puras**”.  
 ## Bajemos un cambio :
 **PRINCIPIOS TEOLÓGICOS, NO FILOSÓFICOS**.  
 Volvamos al texto bíblico:
-Hebreos 1:3 dice que el Hijo es “el resplandor de su gloria y la imagen misma de su sustancia” (χαρακτὴρ τῆς ὑποστάσεως αὐτοῦ). Esto implica:
-El Logos no es una parte de Dios, sino su expresión plena.
-La “imagen” no es una parte , es la imagen de su gloria.
+Hebreos 1:3 dice que el Hijo es “el resplandor de su gloria y la imagen misma de su sustancia”, (χαρακτὴρ τῆς ὑποστάσεως αὐτοῦ). Esto implica:
+*El Logos no es una parte de Dios, sino su expresión plena*.
+*La “imagen” no es una parte , es la imagen de su gloria*.
 En el contexto hebreo, kabod (gloria) habla de Dios sin definir su esencia (ουσια) como lo hace el concepto Niceno.
-Sin entrar en detalles hemos definido la trilogía sin necesidad de divisiones .
+Sin entrar en detalles hemos definido la tríada sin necesidad de divisiones extremas .
 Dios(en el sentido del Dios único) , la imagen de su gloria y su presencia.  
 ## Aquí viene la propuesta:
 Vacía tu vocabulario de expresiones extrabíblicas como : existencia, ser, persona e identidad , ontológico y relacional .y constrúyelas desde cero a partir de los textos hebreos y griegos bíblicos, procurando armar un esquema limpio. ¿A qué conclusiones llegarías?.  
@@ -47,12 +47,12 @@ Esencia del griego *ουσια* o  Naturaleza (no φυσις como en Stgo 3:7).
 Substancia.  
 *No porque sean inútiles, sino porque han condicionado la lectura más allá del texto*.    
 
-## Paso 2 : Recuperar LEXICO BIBLICO 
-Hebreo y Griego  
-Kabod      δοξα   Doxa         Gloria  Manifestación.  
-Ruaj       πνευμα Pneuma       Espíritu Presencia.  
-Tzelem     χαρακτήρ Karacter   Imagen,   Lo visible .           
-dabar      Λόγος Logos       Palabra ,Expresión .   
+## Paso 2 : Recuperar LÉXICO BIBLICO 
+Hebreo ,  Griego   y          Español. 
+Kabod   ,  δοξα ,Doxa ,       Gloria  Manifestación.  
+Ruaj   ,   πνευμα,Pneuma  ,   Espíritu Presencia.  
+Tzelem  ,  χαρακτήρ,Karacter  ,Imagen,   Lo visible .           
+dabar  ,   Λόγος, Logos ,     Palabra ,Expresión .   
 
 Salmo 33:6: "Por la palabra (dabar) del Señor fueron hechos los cielos, y todo el ejército de ellos por el aliento de su boca."
 Jn 1:3: “Todas las cosas por él fueron hechas, y sin él nada de lo que ha sido hecho, fue hecho”.  
