@@ -69,7 +69,8 @@ function eliminarAlmohadillas(md) {
           return res.text();
         })
         .then(md => {
-         textoPlano = eliminarAlmohadillas(md);// ✅ Limpieza para voz
+          console.log("Contenido cargado:", md);
+          textoPlano = eliminarAlmohadillas(md);// ✅ Limpieza para voz
           const html = marked.parse(md);    // Renderizado visual
           document.getElementById("contenido").innerHTML = html;
         })
