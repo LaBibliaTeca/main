@@ -2,130 +2,66 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Lector Markdown con Voz</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visualización y Lectura de Markdown</title>
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <style>
-    body {
-      font-family: sans-serif;
-      background-color: #f9f9f9;
-      margin: 20px;
-      color: #333;
-    }
-    #contenido {
-      background-color: white;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 0 10px #ccc;
-    }
-    button {
-      margin: 5px;
-      padding: 6px 12px;
-      font-size: 1rem;
-    }
-    #velocidadActual {
-      font-weight: bold;
-    }
+    body { font-family: sans-serif; margin: 2em; }
+    #visor { border: 1px solid #ccc; padding: 1em; background: #f9f9f9; }
+    button { margin-top: 1em; padding: 0.5em 1em; }
   </style>
 </head>
 <body>
 
-  <h2>📖 Lector Markdown con Voz</h2>
+  <h2>Visualización del texto Markdown</h2>
+  <div id="visor"></div>
 
-  <button onclick="leerEnVozAlta()">🔊 Escuchar</button>
-  <button onclick="ajustarVelocidad(-0.1)">- Velocidad</button>
-  <button onclick="ajustarVelocidad(0.1)">+ Velocidad</button>
-  <span id="velocidadActual">Velocidad: 0.9</span>
-
-  <hr>
-  <div id="contenido">Cargando contenido...</div>
+  <button onclick="leerTexto()">🔊 Leer texto</button>
 
   <script>
-    // 🔍 Obtener parámetro ?texto=archivo.md
-    function getParametro(nombre) {
-      const url = new URL(window.location.href);
-      return url.searchParams.get(nombre);
-    }
+    // Texto Markdown original
+    const md = `
+# Introducción
 
-    // 🧼 Limpieza de Markdown para lectura en voz alta
-    function limpiarMarkdown(md) {
-      return md
-        .replace(/^#{1,6}\s*/gm, '')         // Encabezados #
-        .replace(/\*\*(.*?)\*\*/g, '$1')     // Negrita **
-        .replace(/\*(.*?)\*/g, '$1')         // Cursiva *
-        .replace(/!
+Este es un ejemplo de texto **Markdown** que será visualizado sin filtros.
 
-\[.*?\]
+## Advertencia metodológica
 
-\(.*?\)/g, '')     // Imágenes ![alt](url)
-        .replace(/
+Evite simplificaciones. Use criterios claros y replicables.
 
-\[([^\]
+- Paso 1: analizar el contexto
+- Paso 2: aplicar lógica textual
+- Paso 3: validar resultados
 
-]+)\]
+> Nota: este flujo es adaptable para autodidactas.
+`;
 
-\([^)]+\)/g, '$1') // Enlaces [texto](url)
-        .replace(/`{1,3}(.*?)`{1,3}/g, '$1') // Código en línea
-        .replace(/^-{3,}$/gm, '')            // Separadores ---
-        .replace(/^\s*>+/gm, '')             // Citas >
-        .replace(/^\s*[-*+]\s+/gm, '')       // Listas con -, *, +
-        .replace(/^\s*\d+\.\s+/gm, '')       // Listas numeradas
-        .replace(/\r?\n|\r/g, ' ')           // Saltos de línea → espacio
-        .replace(/\s+/g, ' ')                // Espacios múltiples → uno solo
+    // Visualización sin filtros
+    document.getElementById("visor").innerHTML = marked(md);
+
+    // Función para limpiar Markdown para lectura
+    function limpiarMarkdown(texto) {
+      return texto
+        .replace(/[#>*_`]/g, '')         // elimina símbolos Markdown
+        .replace(/\n{2,}/g, '. ')        // reemplaza saltos dobles por pausa
+        .replace(/\n/g, ', ')            // reemplaza saltos simples por coma
+        .replace(/\s{2,}/g, ' ')         // normaliza espacios
         .trim();
     }
 
-    const archivo = getParametro("texto");
-    let textoPlano = "";
-    let velocidad = 0.9;
+    // Función para leer el texto filtrado
+    function leerTexto() {
+      const textoPlano = limpiarMarkdown(md);
+      const fragmentos = textoPlano.match(/.{1,200}/g); // fragmenta para TTS
 
-    if (!archivo) {
-      document.getElementById("contenido").innerHTML = "<p>❌ Parámetro 'texto' no especificado.</p>";
-    } else {
-      fetch(archivo)
-        .then(res => {
-          if (!res.ok) throw new Error("Archivo no encontrado");
-          return res.text();
-        })
-        .then(md => {
-          textoPlano = limpiarMarkdown(md); // ✅ Limpieza para voz
-          const html = marked.parse(md);    // Renderizado visual
-          document.getElementById("contenido").innerHTML = html;
-        })
-        .catch(err => {
-          document.getElementById("contenido").innerHTML = `<p>⚠️ Error: ${err.message}</p>`;
-        });
-    }
-
-    // 🔊 Lectura en voz alta
-    function leerEnVozAlta() {
-      const fragmentos = textoPlano.match(/.{1,200}/g);
-      let index = 0;
-
-      function hablarFragmento() {
-        if (index < fragmentos.length) {
-          const mensaje = new SpeechSynthesisUtterance(fragmentos[index]);
-          mensaje.lang = 'es-ES';
-          mensaje.pitch = 1;
-          mensaje.rate = velocidad;
-
-          mensaje.onend = function () {
-            index++;
-            hablarFragmento();
-          };
-
-          window.speechSynthesis.speak(mensaje);
-        }
-      }
-
-      hablarFragmento();
-    }
-
-    // 🎛️ Ajustar velocidad
-    function ajustarVelocidad(cambio) {
-      velocidad = Math.max(0.1, Math.min(2.0, velocidad + cambio));
-      document.getElementById("velocidadActual").textContent = "Velocidad: " + velocidad.toFixed(1);
+      fragmentos.forEach(frag => {
+        const u = new SpeechSynthesisUtterance(frag);
+        u.rate = 1.1;
+        u.pitch = 1;
+        u.lang = 'es-ES';
+        speechSynthesis.speak(u);
+      });
     }
   </script>
+
 </body>
 </html>
