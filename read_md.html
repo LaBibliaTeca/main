@@ -1,67 +1,54 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <title>Visualización y Lectura de Markdown</title>
-  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-  <style>
-    body { font-family: sans-serif; margin: 2em; }
-    #visor { border: 1px solid #ccc; padding: 1em; background: #f9f9f9; }
-    button { margin-top: 1em; padding: 0.5em 1em; }
-  </style>
-</head>
-<body>
+function getParametro(nombre) {
+  const url = new URL(window.location.href);
+  return url.searchParams.get(nombre);
+}
 
-  <h2>Visualización del texto Markdown</h2>
-  <div id="visor"></div>
+const archivo = getParametro("texto");
+let textoPlano = "";
+let velocidad = 0.9;
 
-  <button onclick="leerTexto()">🔊 Leer texto</button>
+if (!archivo) {
+  document.getElementById("contenido").innerHTML = "<p>❌ Parámetro 'texto' no especificado.</p>";
+} else {
+  fetch(archivo)
+    .then(res => {
+      if (!res.ok) throw new Error("Archivo no encontrado");
+      return res.text();
+    })
+    .then(md => {
+      textoPlano = md;
+      const html = marked.parse(md);
+      document.getElementById("contenido").innerHTML = html;
+    })
+    .catch(err => {
+      document.getElementById("contenido").innerHTML = `<p>⚠️ Error: ${err.message}</p>`;
+    });
+}
 
-  <script>
-    // Texto Markdown original
-    const md = `
-# Introducción
+function leerEnVozAlta() {
+  const fragmentos = textoPlano.match(/.{1,200}/g);
+  let index = 0;
 
-Este es un ejemplo de texto **Markdown** que será visualizado sin filtros.
+  function hablarFragmento() {
+    if (index < fragmentos.length) {
+      const mensaje = new SpeechSynthesisUtterance(fragmentos[index]);
+      mensaje.lang = 'es-ES';
+      mensaje.pitch = 1;
+      mensaje.rate = velocidad;
 
-## Advertencia metodológica
+      mensaje.onend = () => {
+        index++;
+        hablarFragmento();
+      };
 
-Evite simplificaciones. Use criterios claros y replicables.
-
-- Paso 1: analizar el contexto
-- Paso 2: aplicar lógica textual
-- Paso 3: validar resultados
-
-> Nota: este flujo es adaptable para autodidactas.
-`;
-
-    // Visualización sin filtros
-    document.getElementById("visor").innerHTML = marked(md);
-
-    // Función para limpiar Markdown para lectura
-    function limpiarMarkdown(texto) {
-      return texto
-        .replace(/[#>*_`]/g, '')         // elimina símbolos Markdown
-        .replace(/\n{2,}/g, '. ')        // reemplaza saltos dobles por pausa
-        .replace(/\n/g, ', ')            // reemplaza saltos simples por coma
-        .replace(/\s{2,}/g, ' ')         // normaliza espacios
-        .trim();
+      window.speechSynthesis.speak(mensaje);
     }
+  }
 
-    // Función para leer el texto filtrado
-    function leerTexto() {
-      const textoPlano = limpiarMarkdown(md);
-      const fragmentos = textoPlano.match(/.{1,200}/g); // fragmenta para TTS
+  hablarFragmento();
+}
 
-      fragmentos.forEach(frag => {
-        const u = new SpeechSynthesisUtterance(frag);
-        u.rate = 1.1;
-        u.pitch = 1;
-        u.lang = 'es-ES';
-        speechSynthesis.speak(u);
-      });
-    }
-  </script>
-
-</body>
-</html>
+function ajustarVelocidad(cambio) {
+  velocidad = Math.max(0.1, Math.min(2.0, velocidad + cambio));
+  document.getElementById("velocidadActual").textContent = "Velocidad: " + velocidad.toFixed(1);
+}
