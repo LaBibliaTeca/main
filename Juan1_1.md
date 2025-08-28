@@ -47,7 +47,7 @@ Esencia del griego *ουσια* o  Naturaleza (no φυσις como en Santiago 3:
 Substancia.  
 *No porque sean inútiles, sino porque han condicionado la lectura más allá del texto*.    
 
-## Paso 2 : Recuperar LÉXICO BIBLICO 
+## Paso 2 : Recuperar LÉXICO BÍBLICO 
 Hebreo ,  Griego   y          Español. 
 Kabod   ,  δοξα ,Doxa ,       Gloria  Manifestación.  
 Ruaj   ,   πνευμα,Pneuma  ,   Espíritu Presencia.  
