@@ -41,6 +41,9 @@
   <div id="contenido">Cargando contenido...</div>
 
   <script>
+    const proxy = "https://cors-anywhere.herokuapp.com/";
+    const archivo = proxy + getParametro("texto");
+
     // 🔍 Obtener parámetro ?texto=archivo.md
     function getParametro(nombre) {
       const url = new URL(window.location.href);
