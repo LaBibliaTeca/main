@@ -53,7 +53,9 @@
     // 🧼 Limpieza de Markdown para lectura en voz alta
 function eliminarAlmohadillas(md) {
   return md
-    .replace(/^#+\s*/gm, '');
+    .replace(/[*#]/g, '')           // elimina todos los * y #
+    .replace(/\s+/g, ' ')           // normaliza espacios
+    .trim();
 }
 
 
