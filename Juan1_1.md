@@ -57,14 +57,14 @@ dabar  ,   Λόγος, Logos ,     Palabra ,Expresión .
 Salmo 33:6: "Por la palabra (dabar) del Señor fueron hechos los cielos, y todo el ejército de ellos por el aliento de su boca."
 Jn 1:3: “Todas las cosas por él fueron hechas, y sin él nada de lo que ha sido hecho, fue hecho”.  
 ## Este modelo no Fragmenta.    
-**🔹 Afirmación 1: Dios se manifiesta en su gloria.**  
+** Afirmación 1: Dios se manifiesta en su gloria.**  
 En el texto bíblico, Dios no se presenta como una “persona ” en sentido filosófico latino o griego de apariencia , **sino como una presencia (kabod)** y su espíritu  actúa (ruaj).    
-**🔹 Afirmación 2: El Logos no es otro (Dios), sino expresión de Dios**.  
+** Afirmación 2: El Logos no es otro (Dios), sino expresión de Dios**.  
 El Logos es la expresión plena de Dios.  
  Como χαρακτήρ imagen  (kharaktēr) (Heb 1:3), es el sello de lo que Dios es, sin ser otro.  
-**🔹 Afirmación 3: La imagen no es una parte , es su revelación**.   
+** Afirmación 3: La imagen no es una parte , es su revelación**.   
 El tzelem צֶלֶם (imagen en griego : χαρακτήρ (kharaktēr) Heb 1:3) no separa a Dios de su manifestación, sino que permite que lo invisible se vuelva visible sin perder unidad.  
-**🔹 Afirmación 4: La gloria no es una parte**.  
+** Afirmación 4: La gloria no es una parte**.  
 La kabod (gloria) no es una parte de Dios, sino su impacto perceptible. El Logos es esa gloria 'hecha' palabra.   
 
 ## El Texto permite distinguir tres actores o  tres sujetos que ejecutan acciones independientemente. 
