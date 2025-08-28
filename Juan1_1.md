@@ -43,7 +43,7 @@ Vacía tu vocabulario de expresiones extrabíblicas como : existencia, ser, pers
 Identidad.  
 Ontología .  
 Relacionalidad.  
-Esencia del griego *ουσια* o  Naturaleza (no φυσις como en Stgo 3:7).  
+Esencia del griego *ουσια* o  Naturaleza (no φυσις como en Santiago 3:7).  
 Substancia.  
 *No porque sean inútiles, sino porque han condicionado la lectura más allá del texto*.    
 
@@ -61,15 +61,15 @@ Jn 1:3: “Todas las cosas por él fueron hechas, y sin él nada de lo que ha 
 En el texto bíblico, Dios no se presenta como una “persona ” en sentido filosófico latino o griego de apariencia , **sino como una presencia (kabod)** y su espíritu  actúa (ruaj).    
 ** Afirmación 2: El Logos no es otro (Dios), sino expresión de Dios**.  
 El Logos es la expresión plena de Dios.  
- Como χαρακτήρ imagen  (kharaktēr) (Heb 1:3), es el sello de lo que Dios es, sin ser otro.  
+ Como χαρακτήρ imagen  (kharaktēr) (Hebreos 1:3), es el sello de lo que Dios es, sin ser otro.  
 ** Afirmación 3: La imagen no es una parte , es su revelación**.   
-El tzelem צֶלֶם (imagen en griego : χαρακτήρ (kharaktēr) Heb 1:3) no separa a Dios de su manifestación, sino que permite que lo invisible se vuelva visible sin perder unidad.  
+El tzelem צֶלֶם (imagen en griego : χαρακτήρ (kharaktēr) Hebreos 1: 3),no separa a Dios de su manifestación, sino que permite que lo invisible se vuelva visible sin perder unidad.  
 ** Afirmación 4: La gloria no es una parte**.  
 La kabod (gloria) no es una parte de Dios, sino su impacto perceptible. El Logos es esa gloria 'hecha' palabra.   
 
 ## El Texto permite distinguir tres actores o  tres sujetos que ejecutan acciones independientemente. 
 Eso es lo que nosotros decimos en nuestra jerga : Personas como si fueran individuos pero en latín y griego koiné significa "apariencia" , "representación".  
-Ahora bien ,distinguimos en  1Co 12:4-6: “.....  hay diversidad de dones, pero el **Espíritu** es el mismo. Y hay diversidad de ministerios, pero el **Señor** es el mismo. Y hay diversidad de operaciones, pero **Dios**, que hace todas las cosas en todos, es el mismo”.   
+>Ahora bien ,distinguimos en  1Corintios 12:4-6: “.....  hay diversidad de dones, pero el **Espíritu** es el mismo. Y hay diversidad de ministerios, pero el **Señor** es el mismo. Y hay diversidad de operaciones, pero **Dios**, que hace todas las cosas en todos, es el mismo”.   
 
 Pero tenemos que reconocer que al introducir la palabra PERSONA estamos haciendo uso de un término que en latín tiene connotación de Rol o Representación y que Tertuliano que incorpora el término en Adversus Práxeas NO la redefine  y  **es una palabra extrabíblica** , puedo usarla en español como una actor pero el sentido latino es otro.      
 𝐏𝐚𝐫𝐚 𝐦𝐚𝐧𝐭𝐞𝐧𝐞𝐫 𝐥𝐚 𝐥𝐢́𝐧𝐞𝐚 𝐝𝐞 𝐧𝐮𝐞𝐬𝐭𝐫𝐨 𝐌𝐎𝐃𝐄𝐋𝐎, 𝐝𝐞𝐛𝐞𝐦𝐨𝐬 𝐦𝐚𝐧𝐭𝐞𝐧𝐞𝐫 𝐟𝐮𝐞𝐫𝐚 **CONCEPTOS EXTRAÑOS AL TEXTO**.
