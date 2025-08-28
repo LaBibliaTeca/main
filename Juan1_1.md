@@ -18,7 +18,7 @@ Los  traductores no  afirman abiertamente que “El logos era Dios” sino “**
 En  koiné el artículo EL no se repite en el predicado , y sigue siendo un nombre propio.
 Aunque el supuesto teólogo, en el caso de θεός Dios se rehusa a admitir una identidad.  
 Si dentro de mi modelo expreso :
-**Ο Λόγος εστιν Θεός**. El Verbo era Dios , ambos son nombres propios entonces SI establezco una identidad .  
+**Ό Λόγος εστιν Θεός**. El Verbo era Dios , ambos son nombres propios entonces SI establezco una identidad .  
 >Pero con mi viejo concepto: ¿Cómo podría ser Logos = Dios y “El Padre= Dios”?.
 
 
