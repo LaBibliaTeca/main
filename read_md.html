@@ -4,10 +4,7 @@
   <meta charset="UTF-8">
   <title>Lector Markdown con Voz</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <!-- Librería para convertir Markdown a HTML -->
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-
   <style>
     body {
       font-family: sans-serif;
@@ -50,22 +47,49 @@
       return url.searchParams.get(nombre);
     }
 
+    // 🧼 Limpieza de Markdown para lectura en voz alta
+    function limpiarMarkdown(md) {
+      return md
+        .replace(/^#{1,6}\s*/gm, '')         // Encabezados #
+        .replace(/\*\*(.*?)\*\*/g, '$1')     // Negrita **
+        .replace(/\*(.*?)\*/g, '$1')         // Cursiva *
+        .replace(/!
+
+\[.*?\]
+
+\(.*?\)/g, '')     // Imágenes ![alt](url)
+        .replace(/
+
+\[([^\]
+
+]+)\]
+
+\([^)]+\)/g, '$1') // Enlaces [texto](url)
+        .replace(/`{1,3}(.*?)`{1,3}/g, '$1') // Código en línea
+        .replace(/^-{3,}$/gm, '')            // Separadores ---
+        .replace(/^\s*>+/gm, '')             // Citas >
+        .replace(/^\s*[-*+]\s+/gm, '')       // Listas con -, *, +
+        .replace(/^\s*\d+\.\s+/gm, '')       // Listas numeradas
+        .replace(/\r?\n|\r/g, ' ')           // Saltos de línea → espacio
+        .replace(/\s+/g, ' ')                // Espacios múltiples → uno solo
+        .trim();
+    }
+
     const archivo = getParametro("texto");
-    let textoPlano = ""; // Para lectura en voz alta
+    let textoPlano = "";
     let velocidad = 0.9;
 
     if (!archivo) {
       document.getElementById("contenido").innerHTML = "<p>❌ Parámetro 'texto' no especificado.</p>";
     } else {
-      // 🌐 Cargar archivo Markdown
       fetch(archivo)
         .then(res => {
           if (!res.ok) throw new Error("Archivo no encontrado");
           return res.text();
         })
         .then(md => {
-          textoPlano = md; // Guardamos el original para voz
-          const html = marked.parse(md); // Convertimos a HTML
+          textoPlano = limpiarMarkdown(md); // ✅ Limpieza para voz
+          const html = marked.parse(md);    // Renderizado visual
           document.getElementById("contenido").innerHTML = html;
         })
         .catch(err => {
