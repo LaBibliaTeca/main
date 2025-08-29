@@ -58,6 +58,8 @@ function eliminarAlmohadillas(md) {
   return md
     .replace(/[*#]/g, '')           // elimina todos los * y #
     .replace(/\s+/g, ' ')           // normaliza espacios
+    .replace(/<\/?ins>/g, '')
+    .replace(/[<>&]/g, '')
     .trim();
 }
 
