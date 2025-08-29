@@ -57,7 +57,7 @@ Tzelem  ,  χαρακτήρ,Karacter  ,Imagen,   Lo visible .
 dabar  ,   Λόγος, Logos ,     Palabra ,Expresión .   
 
 Salmo 33:6: "Por la palabra (dabar) del Señor fueron hechos los cielos, y todo el ejército de ellos por el aliento de su boca". 
-Jn 1:3: “Todas las cosas por él fueron hechas, y sin él nada de lo que ha sido hecho, fue hecho”.  
+Juann 1:3: “Todas las cosas por él fueron hechas, y sin él nada de lo que ha sido hecho, fue hecho”.  
 ## Este modelo no Fragmenta.    
 **Afirmación 1: Dios se manifiesta en su gloria.**  
 En el texto bíblico, Dios no se presenta como una “persona ” en sentido filosófico latino o griego de apariencia , **sino como una presencia (kabod)** y su espíritu  actúa (ruaj).    
