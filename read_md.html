@@ -61,7 +61,29 @@ function eliminarAlmohadillas(md) {
     .replace(/<\/?ins>/g, '')
     .replace(/[<>&]/g, '')
     .trim();
+} 
+  //Fragmentar 220 max o espacio
+    function dividirTextoPorPalabras(texto, maxCaracteres = 220) {
+  const fragmentos = [];
+  let restante = texto;
+
+  while (restante.length > 0) {
+    // Buscar el último espacio antes del límite
+    let corte = restante.lastIndexOf(' ', maxCaracteres);
+
+    // Si no hay espacio, cortamos en el límite exacto
+    if (corte === -1) corte = maxCaracteres;
+
+    const fragmento = restante.slice(0, corte).trim();
+    fragmentos.push(fragmento);
+
+    // Eliminar el fragmento ya procesado
+    restante = restante.slice(corte).trim();
+  }
+
+  return fragmentos;
 }
+
 
 
 
@@ -88,7 +110,9 @@ function eliminarAlmohadillas(md) {
 
     // 🔊 Lectura en voz alta
     function leerEnVozAlta() {
-      const fragmentos = textoPlano.match(/.{1,220}/g);
+     // const fragmentos = textoPlano.match(/.{1,220}/g);
+      const fragmentos = dividirTextoPorPalabras(textoPlano, 220);
+
       let index = 0;
 
       function hablarFragmento() {
