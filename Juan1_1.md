@@ -8,8 +8,7 @@
 
 ## Posturas históricas.
 La Vulgata traduce et Deus erat Verbum,  inclinándose hacia una afirmación fuerte de divinidad.    
-Orígenes ve en λόγος una **existencia relacional**, no una identidad ontológica cerrada  .  
-## Los Padres de la Iglesia debatieron si **θεός** debía entenderse como “divino” (atributo) o “Dios” (identidad), y esto influyó en las formulaciones trinitarias posteriores.    
+Orígenes ve en λόγος una **existencia relacional**, no una identidad ontológica cerrada  .  ciormulaciones trinitarias posteriores.    
 
 Los  traductores no  afirman abiertamente que “El logos era Dios” sino “**el Verbo era divino** ”.   
 
