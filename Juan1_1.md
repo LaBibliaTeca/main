@@ -27,7 +27,7 @@ Si dentro de mi modelo expreso :
 La respuesta, entonces es, “**no puede partir de definiciones filosóficas, **sino de declaraciones bíblicas (teológicas) puras**”.  
 ## Bajemos un cambio :
 **PRINCIPIOS TEOLÓGICOS, NO FILOSÓFICOS**.  
-<u>Volvamos al texto bíblico:</u>
+<ins>Volvamos al texto bíblico:</ins>
 Hebreos 1:3 dice que el Hijo es “el resplandor de su gloria y la imagen misma de su sustancia”, (χαρακτὴρ τῆς ὑποστάσεως αὐτοῦ). Esto implica:
 *El Logos no es una parte de Dios, sino su expresión plena*.
 *La “imagen” no es una parte , es la imagen de su gloria*.
