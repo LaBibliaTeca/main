@@ -33,7 +33,7 @@ Hebreos 1:3 dice que el Hijo es “el resplandor de su gloria y la imagen misma 
 *El Logos no es una parte de Dios, sino su expresión plena*.
 *La “imagen” no es una parte , es la imagen de su gloria*.
 
-En el contexto hebreo, kabod (gloria) habla de Dios sin definir su esencia (ουσια) como lo hace el concepto Niceno.
+En el contexto hebreo, kabod (gloria) habla de Dios sin definir su esencia ,(ουσια) como lo hace el concepto Niceno.
 Sin entrar en detalles hemos definido la tríada sin necesidad de divisiones extremas .
 Dios(en el sentido del Dios único) , la imagen de su gloria y su presencia.  
 ## Aquí viene la propuesta:
@@ -56,7 +56,7 @@ Ruaj   ,   πνευμα,Pneuma  ,   Espíritu Presencia.
 Tzelem  ,  χαρακτήρ,Karacter  ,Imagen,   Lo visible .           
 dabar  ,   Λόγος, Logos ,     Palabra ,Expresión .   
 
-Salmo 33:6: "Por la palabra (dabar) del Señor fueron hechos los cielos, y todo el ejército de ellos por el aliento de su boca."
+Salmo 33:6: "Por la palabra (dabar) del Señor fueron hechos los cielos, y todo el ejército de ellos por el aliento de su boca". 
 Jn 1:3: “Todas las cosas por él fueron hechas, y sin él nada de lo que ha sido hecho, fue hecho”.  
 ## Este modelo no Fragmenta.    
 **Afirmación 1: Dios se manifiesta en su gloria.**  
@@ -81,7 +81,7 @@ Problema:  Introduce división ontológica(del ser) no presente en el texto .
 Preconcepto : Esencia/subtancia οὐσία (ousía). Concilio  de Nicea.  
 Problema: Impone Categorías Aristotélicas.  
 
-**Ontología Trinitaria**, este concepto NO es el mismo que lo que plantea Justino su primera Apología capítulo 6: **”a Él, y al Hijo (que salió de Él y nos enseñó estas cosas, y al Espíritu profético, los adoramos y los conocemos en razón y verdad”**, sino que incluye el **concepto de “persona como representación”** que incorpora Tertuliano (leer "Contra Práxeas") que no significa lo mismo que en español (ver abajo).  
+**Ontología Trinitaria**, este concepto NO es el mismo que lo que plantea Justino su primera Apología capítulo 6: **”a Él, y al Hijo (que salió de Él y nos enseñó estas cosas, y al Espíritu profético, los adoramos y los conocemos en razón y verdad”**, sino que incluye el **concepto de “persona como representación”** que incorpora Tertuliano (leer "Contra Práxeas") que no significa lo mismo que en español.  
 **Relacionalidad filosófica :** Este concepto se sumó al anterior para justificar “la unidad” en lugar de aceptar “la manifestación como una unidad”, (cita de la definición que se menciona :”la expresión el verbo era dios es relacional, no ontológica, es decir el verbo era divino”).
 
 Bibliografía:
