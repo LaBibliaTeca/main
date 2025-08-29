@@ -25,7 +25,7 @@ Si dentro de mi modelo expreso :
 
 [Esto es el DILEMA ONTOLÓGICO] .¿Qué hacer?.  
 **¿qué ocurre cuando un modelo no cierra?.**  
-La respuesta, entonces es, “**no puede partir de definiciones filosóficas, **sino de declaraciones bíblicas (teológicas) puras**”.  
+La respuesta, entonces es, “**no puede partir de definiciones filosóficas**, **sino de declaraciones bíblicas (teológicas) puras**”.  
 ## Bajemos un cambio :
 **PRINCIPIOS TEOLÓGICOS, NO FILOSÓFICOS**.  
 <ins>Volvamos al texto bíblico:</ins>
