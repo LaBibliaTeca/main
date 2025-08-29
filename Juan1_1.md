@@ -27,10 +27,11 @@ Si dentro de mi modelo expreso :
 La respuesta, entonces es, “**no puede partir de definiciones filosóficas, **sino de declaraciones bíblicas (teológicas) puras**”.  
 ## Bajemos un cambio :
 **PRINCIPIOS TEOLÓGICOS, NO FILOSÓFICOS**.  
-Volvamos al texto bíblico:
+<u>Volvamos al texto bíblico:</u>
 Hebreos 1:3 dice que el Hijo es “el resplandor de su gloria y la imagen misma de su sustancia”, (χαρακτὴρ τῆς ὑποστάσεως αὐτοῦ). Esto implica:
 *El Logos no es una parte de Dios, sino su expresión plena*.
 *La “imagen” no es una parte , es la imagen de su gloria*.
+
 En el contexto hebreo, kabod (gloria) habla de Dios sin definir su esencia (ουσια) como lo hace el concepto Niceno.
 Sin entrar en detalles hemos definido la tríada sin necesidad de divisiones extremas .
 Dios(en el sentido del Dios único) , la imagen de su gloria y su presencia.  
