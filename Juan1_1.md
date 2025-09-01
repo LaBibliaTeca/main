@@ -1,5 +1,5 @@
 # Interpretación de Juan 1:1
-**Este ensayo NO intenta tomar posturas Trinitarias o "Anti"  sino limpiar nuestro léxico o vocabulario de expresiones extrabiblicas o Filosóficas.**
+**Este ensayo NO intenta tomar posturas Trinitarias o "Anti"  sino limpiar nuestro léxico o vocabulario de expresiones extrabíblicas o Filosóficas.**
 
 *A pesar que las Iglesias y los comentarios Bíblicos y Exegéticos pretenden explicar como que el Verbo era Dios, existe una especie de trastienda donde la explicaciones académicas son otras.* 
 
