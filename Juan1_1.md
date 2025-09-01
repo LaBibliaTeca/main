@@ -3,7 +3,7 @@
 
 *A pesar que las Iglesias y los comentarios Bíblicos y Exegéticos pretenden explicar como que el Verbo era Dios, existe una especie de trastienda donde la explicaciones académicas son otras.* 
 
-**Esta es la afirmación que exponen:, “La frase θεός  εστιν ό λόγος no busca resolver la ontología (identidad) divina , sino introducir al lector en una comprensión relacional y funcional del Logos. La ausencia del artículo en θεός sugiere que Juan no pretende una identificación absoluta, sino una afirmación de naturaleza.”**
+**Esta es la afirmación que exponen:, “La frase θεός  εστιν ό λόγος  (traducida el Verbo era Dios) no busca resolver la ontología (identidad) divina , sino introducir al lector en una comprensión relacional y funcional del Logos. La ausencia del artículo en θεός sugiere que Juan no pretende una identificación absoluta, sino una afirmación de naturaleza.”**
 ## Si la idea es acaso presentar que El logos es Dios en un sentido distinto de identidad, ¿por qué no lo decimos en los púlpitos abiertamente? . 
 
 ## Posturas históricas.
