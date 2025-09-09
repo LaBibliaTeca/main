@@ -1,4 +1,4 @@
-# ¿Por que quieren cambiar JEHOVÁ por YAHWHE.  
+# ¿Por qué quieren cambiar JEHOVÁ por YAHWHE.  
    ##Si todos los nombres que empiezan con el nombre de Jehóva se pronuncian YEHO?
 
 
