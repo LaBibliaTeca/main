@@ -2,7 +2,7 @@
     Si todos los nombres que empiezan con el nombre de Jehóva se pronuncian YEHO?
 
 
-| 🕎 Hebreo Original | 🔤 Translitera | 🇪🇸 Español | ✨ Significado           |
+| 🕎 Hebreo  | 🔤 Translitera | 🇪🇸 Español | ✨ Significado           |
 |-------------------|-------------------|---------------------|-------------------------|
 | יְהוֹנָתָן          | Yehonatan         | Jonatán             | Jehová ha dado          |
 | יְהוֹיָדָע          | Yehoiada          | Joiada              | Jehová conoce           |
