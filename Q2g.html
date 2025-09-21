@@ -154,26 +154,21 @@ iframe {
                             <span style="color:#000000;">Biblioteca de Temas - Ayuda para el estudiante.</span><br>
 			    
      <!--<a href="https://wa.me/541156394763"><span style= "color:blue;font-size:12px;"><b><br>PREGUNTAS x WHATSAPP</b></span></a> -->                      
-         <form id="contact-form">
-	              <label ><b>PREGUNTAS x CASILLA </b> </label> <br>
-	              <input style="font-size:24px;" type="text" name="from_name" placeholder="Alias" required> <br>
-                  <textarea maxlength="300" id="message" name="message" placeholder="Tu Pregunta (máx. 300 letras)" required></textarea><br>
+				<form id="contact-form" onsubmit="return enviarMensajeWhatsApp(event)">
+				  <label><b>PREGUNTAS x CASILLA</b></label><br>
+				  <input style="font-size:24px;" type="text" name="from_name" placeholder="Alias" required><br>
+				  <textarea maxlength="300" id="message" name="message" placeholder="Tu Pregunta (máx. 300 letras)" required></textarea><br>
+				
+				  <button type="submit" style="width: 200px; height: 50px; background-color: #334fff; font-size: 16px;">
+				    <img src="SenWhatsapp.png" alt="PREGUNTA A WHATSAPP" style="height: 35px; vertical-align: top;">
+				  </button>
+				
+				  <div id="mensaje-whatsapp"></div>
+				  <div id="confirmation-message" style="display: none; color: green; font-size: 18px; margin-top: 10px;">
+				    ¡Mensaje enviado!
+				  </div>
+				</form>
 
-            <!-- AHora Whatsapp -->
-	        
-           
-                        
-                <button type="submit" style="width: 200px; height: 50px;background-color: #334fff;font-size: 16px;" onsubmit="enviarMensajeWhatsApp()">
-                  <img src="SenWhatsapp.png" alt="PREGUNTA A WHATSAPP" style="height: 35px; vertical-align:top;">
-                </button>
-
-	               <div id="mensaje-whatsapp"></div>
-                 <!-- Mensaje de confirmación (oculto por defecto) -->
-                <div id="confirmation-message" style="display: none; color: green; font-size: 18px; margin-top: 10px;">
-                    ¡Mensaje enviado!
-                </div>
-
-        </form>
                 <div>  
                    <p> <b><span style= "color:black">Aquí abajo, todas las respuestas a sus preguntas .</span></b></a></p>
                 </div > 
@@ -190,26 +185,31 @@ iframe {
 
 
  <script>
-
-function enviarMensajeWhatsApp() {
-          const nombre = document.querySelector('input[name="from_name"]').value || "Anónimo";
-          const mensaje = document.getElementById("message").value;
-			const destino = "5491156394763";
-			const textoPlano = [
-			  "Hola Bibliateca!",
-			  `Alias: ${nombre}`,
-			  `Pregunta: ${mensaje}`
-			].join("\n");
 			
-			const texto = encodeURIComponent(textoPlano);
-			const whatsappURL = `https://wa.me/${destino}?text=${texto}`;
+			function enviarMensajeWhatsApp(event) {
+			  event.preventDefault(); // Evita el envío tradicional
+			
+			  const nombre = document.querySelector('input[name="from_name"]').value.trim();
+			  const mensaje = document.getElementById('message').value.trim();
+			
+			  // Validación adicional por seguridad
+			  if (!nombre || !mensaje) {
+			    document.getElementById('mensaje-whatsapp').innerHTML =
+			      '<span style="color: red;">⚠️ Completá todos los campos antes de enviar.</span>';
+			    return false;
+			  }
+			
+			  const destino = "5491156394763"; // Número en formato internacional
+			  const textoPlano = `Hola Bibliateca!\nAlias: ${nombre}\nPregunta: ${mensaje}`;
+			  const texto = encodeURIComponent(textoPlano);
+			  const whatsappURL = `https://wa.me/${destino}?text=${texto}`;
+			
+			  window.open(whatsappURL, "_blank");
+			  document.getElementById('confirmation-message').style.display = "block";
+			  document.getElementById('mensaje-whatsapp').innerHTML = "";
+			  return false;
+			}
 
-	
-         // const destino = "5491156394763";
-          //const texto = `Hola Bibliateca!%0A Alias: ${encodeURIComponent(nombre)}%0A Pregunta:${encodeURIComponent(mensaje)}`;
-         // const whatsappURL = `https://wa.me/${destino}?text=${texto}`;
-           window.open(whatsappURL, '_blank');
-            }
    </script>
 
 	<!--<div class="page-footer">
