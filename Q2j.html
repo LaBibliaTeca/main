@@ -198,9 +198,16 @@ iframe {
 function enviarMensajeWhatsApp() {
           const nombre = document.querySelector('input[name="from_name"]').value || "Anónimo";
           const mensaje = document.getElementById("message").value;
-          const destino = "541168302217";
-          const texto = `Hola Bibliateca!%0A Alias: ${encodeURIComponent(nombre)}%0A Pregunta:${encodeURIComponent(mensaje)}`;
-          const whatsappURL = `https://wa.me/${destino}?text=${texto}`;
+			const destino = "541168302217";
+			const textoPlano = `Hola Bibliateca!\nAlias: ${nombre}\nPregunta: ${mensaje}`;
+			const texto = encodeURIComponent(textoPlano);
+			const whatsappURL = `https://wa.me/${destino}?text=${texto}`;
+
+
+	
+         // const destino = "541168302217";
+          //const texto = `Hola Bibliateca!%0A Alias: ${encodeURIComponent(nombre)}%0A Pregunta:${encodeURIComponent(mensaje)}`;
+         // const whatsappURL = `https://wa.me/${destino}?text=${texto}`;
            window.open(whatsappURL, '_blank');
             }
    </script>
