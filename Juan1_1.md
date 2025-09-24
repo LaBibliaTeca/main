@@ -1,6 +1,6 @@
 # Interpretación de Juan 1:1 .  
 **Este ensayo NO intenta tomar posturas Trinitarias o "Anti"  sino limpiar nuestro léxico o vocabulario de expresiones extrabíblicas o Filosóficas.**
-
+[**TOCAR PARA PREGUNTAR AL AUTOR**](Q2g.html) .
 *A pesar que las Iglesias y los comentarios Bíblicos y Exegéticos pretenden explicar como que el Verbo era Dios, existe una especie de trastienda donde la explicaciones académicas son otras.* 
 
 **Esta es la afirmación que exponen:, “La frase θεός  εστιν ό λόγος  (traducida el Verbo era Dios) no busca resolver la identidad divina , sino introducir al lector en una comprensión relacional y funcional del Logos. La ausencia del artículo "ό , (el)" en θεός sugiere que Juan no pretende una identificación absoluta, sino una afirmación de naturaleza.”**
