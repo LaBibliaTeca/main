@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boletín de la Bibliateca</title>
+  <style>
+    body {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      margin: 0;
+      padding: 1px;
+      background-color: white;
+      color: #000;
+    }
+    #contenido {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 10px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+      box-sizing: border-box;
+    }
+    button {
+      font-size: 1rem;
+      padding: 0.25rem 1rem;
+      margin: 5px 5px 5px 0;
+    }
+    #velocidadActual {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <button onclick="leerEnVozAlta()">🔊 Escuchar</button>
+  <button onclick="ajustarVelocidad(-0.1)">- Velocidad</button>
+  <button onclick="ajustarVelocidad(0.1)">+ Velocidad</button><br>
+  <span id="velocidadActual">Velocidad: 0.8</span><br>
+
+  <p><i>La Bibliateca Git <br>De Gustavo Uliarte</i></p>
+
+  <div id="contenido">Cargando texto...</div>
+
+  <script>
+    const archivo = getParametro("texto");
+    let textoPlano = "";
+    let velocidad = 0.8;
+
+    function getParametro(nombre) {
+      const url = new URL(window.location.href);
+      return url.searchParams.get(nombre);
+    }
+
+    function limpiarHTML(texto) {
+      return texto
+        .replace(/<[^>]+>/g, '') // elimina etiquetas HTML
+        .replace(/\s+/g, ' ')    // normaliza espacios
+        .replace(/[<>&]/g, '')   // elimina caracteres especiales
+        .trim();
+    }
+
+    function dividirTextoPorPalabras(texto, maxCaracteres = 220) {
+      const fragmentos = [];
+      let restante = texto;
+
+      while (restante.length > 0) {
+        let corte = restante.lastIndexOf('.', maxCaracteres);
+        if (corte === -1) corte = restante.lastIndexOf(' ', maxCaracteres);
+        if (corte === -1) corte = maxCaracteres;
+
+        const fragmento = restante.slice(0, corte + 1).trim();
+        fragmentos.push(fragmento);
+        restante = restante.slice(corte + 1).trim();
+      }
+
+      return fragmentos;
+    }
+
+    function leerEnVozAlta() {
+      const fragmentos = dividirTextoPorPalabras(textoPlano, 220);
+      let index = 0;
+
+      function hablarFragmento() {
+        if (index < fragmentos.length) {
+          const mensaje = new SpeechSynthesisUtterance(fragmentos[index]);
+          mensaje.lang = 'es-ES';
+          mensaje.pitch = 1;
+          mensaje.rate = velocidad;
+
+          mensaje.onend = () => {
+            index++;
+            hablarFragmento();
+          };
+
+          window.speechSynthesis.speak(mensaje);
+        }
+      }
+
+      hablarFragmento();
+    }
+
+    function ajustarVelocidad(cambio) {
+      velocidad = Math.max(0.1, Math.min(2.0, velocidad + cambio));
+      velocidad = parseFloat(velocidad.toFixed(1));
+      document.getElementById("velocidadActual").textContent = "Velocidad: " + velocidad;
+    }
+
+    if (archivo) {
+      fetch(archivo)
+        .then(res => {
+          if (!res.ok) throw new Error("Archivo no encontrado");
+          return res.text();
+        })
+        .then(texto => {
+          textoPlano = limpiarHTML(texto);
+          document.getElementById("contenido").innerHTML = texto;
+        })
+        .catch(err => {
+          document.getElementById("contenido").innerHTML = `<p>⚠️ Error: ${err.message}</p>`;
+        });
+    } else {
+      document.getElementById("contenido").innerHTML = "<p>❌ No se especificó archivo.</p>";
+    }
+  </script>
+
+</body>
+</html>
