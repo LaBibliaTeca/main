@@ -20,7 +20,7 @@ let velocidad = 0.8;
 function dividirPorOraciones(texto, maxCaracteres = 200) {
   const fragmentos = [];
   const abreviaturas = [
-    "Sr", "Sra", "Srta", "Dr", "Dra", "Ing", "Lic", "Arq", "Pág", "etc", "p.ej", "Ud", "Uds"
+    "Sr", "Sra", "Srta", "Dr", "Dra", "Ing", "Lic", "Arq", "Pág", "etc", "p.ej", ":", "Ud", "Uds"
   ];
 
   // Limpia texto y unifica saltos de línea
