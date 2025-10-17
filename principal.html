@@ -44,7 +44,6 @@
 
   <script>
     const archivo = getParametro("texto");
-    let textoPlano = "";
     let velocidad = 0.8;
 
     function getParametro(nombre) {
@@ -52,15 +51,7 @@
       return url.searchParams.get(nombre);
     }
 
-    function limpiarHTML(texto) {
-      return texto
-        .replace(/<[^>]+>/g, '') // elimina etiquetas HTML
-        .replace(/\s+/g, ' ')    // normaliza espacios
-        .replace(/[<>&]/g, '')   // elimina caracteres especiales
-        .trim();
-    }
-
-    function dividirTextoPorPalabras(texto, maxCaracteres = 220) {
+    function dividirTextoPorPuntos(texto, maxCaracteres = 220) {
       const fragmentos = [];
       let restante = texto;
 
@@ -78,7 +69,8 @@
     }
 
     function leerEnVozAlta() {
-      const fragmentos = dividirTextoPorPalabras(textoPlano, 220);
+      const textoPlano = document.getElementById("contenido").innerText;
+      const fragmentos = dividirTextoPorPuntos(textoPlano, 220);
       let index = 0;
 
       function hablarFragmento() {
@@ -112,9 +104,8 @@
           if (!res.ok) throw new Error("Archivo no encontrado");
           return res.text();
         })
-        .then(texto => {
-          textoPlano = limpiarHTML(texto);
-          document.getElementById("contenido").innerHTML = texto;
+        .then(html => {
+          document.getElementById("contenido").innerHTML = html; // ✅ muestra HTML con formato
         })
         .catch(err => {
           document.getElementById("contenido").innerHTML = `<p>⚠️ Error: ${err.message}</p>`;
