@@ -16,39 +16,37 @@ if (archivo) {
 
 let velocidad = 0.8;
 
+// 🔧 Divide texto sin cortar oraciones por abreviaturas o decimales
 function dividirPorOraciones(texto, maxCaracteres = 200) {
   const fragmentos = [];
-  let restante = texto.trim();
+  const abreviaturas = [
+    "Sr", "Sra", "Srta", "Dr", "Dra", "Ing", "Lic", "Arq", "Pág", "etc", "p.ej", "Ud", "Uds"
+  ];
 
-  while (restante.length > 0) {
-    // Busca el último punto dentro del límite de caracteres
-    let corte = restante.lastIndexOf('.', maxCaracteres);
+  // Limpia texto y unifica saltos de línea
+  texto = texto.replace(/\s+/g, ' ').trim();
 
-    // Si no hay punto, busca signos de cierre alternativos
-    if (corte === -1) {
-      const signos = ['?', '!', ';'];
-      for (const s of signos) {
-        const pos = restante.lastIndexOf(s, maxCaracteres);
-        if (pos > corte) corte = pos;
-      }
+  // Divide por oraciones, respetando los casos especiales
+  const regex = /(?<!\b(?:Sr|Sra|Srta|Dr|Dra|Ing|Lic|Arq|Pág|etc|p\.ej|Ud|Uds))(?<!\d)\.(?=\s+[A-ZÁÉÍÓÚÑ])/g;
+  // Explicación:
+  // - (?<!abreviatura) no corta después de abreviaturas
+  // - (?<!\d)\. evita cortar decimales
+  // - (?=\s+[A-Z]) requiere una mayúscula después → inicio probable de nueva oración
+
+  const oraciones = texto.split(regex).map(o => o.trim()).filter(Boolean);
+
+  // Combina oraciones para no pasar el límite de caracteres
+  let buffer = "";
+  for (let i = 0; i < oraciones.length; i++) {
+    const agregar = oraciones[i] + ".";
+    if ((buffer + " " + agregar).length <= maxCaracteres) {
+      buffer += (buffer ? " " : "") + agregar;
+    } else {
+      fragmentos.push(buffer.trim());
+      buffer = agregar;
     }
-
-    // Si no encontró nada, busca espacio cercano
-    if (corte === -1) corte = restante.lastIndexOf(' ', maxCaracteres);
-
-    // Si aún no hay corte válido, corta en el límite exacto
-    if (corte === -1 || corte < 0) corte = maxCaracteres;
-
-    // Si hay un punto más adelante pero cerca, lo incluye (para no cortar una oración)
-    const siguientePunto = restante.indexOf('.', maxCaracteres);
-    if (siguientePunto !== -1 && siguientePunto - maxCaracteres < 80) {
-      corte = siguientePunto;
-    }
-
-    const fragmento = restante.slice(0, corte + 1).trim();
-    fragmentos.push(fragmento);
-    restante = restante.slice(corte + 1).trim();
   }
+  if (buffer) fragmentos.push(buffer.trim());
 
   return fragmentos;
 }
@@ -81,4 +79,3 @@ function ajustarVelocidad(cambio) {
   velocidad = Math.max(0.1, Math.min(2.0, velocidad + cambio));
   document.getElementById("velocidadActual").textContent = "Velocidad: " + velocidad.toFixed(1);
 }
-
