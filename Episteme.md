@@ -1,6 +1,6 @@
 
 **En contra  del CRITERIO EPISTEMOLOGICO**.   
-_De Gustavo Uliarte_. 
+_De Gustavo Uliarte_.   
 ¡Qué filósofos no consideraban la EPISTEMOLOGÍA como CIENCIA?.  
 
 Filósofos críticos con la epistemología como ciencia.  
