@@ -19,7 +19,7 @@ Ejemplo:Si la probabilidad de una hipótesis es del 90% entonces la hipótesis s
 Luego denominamos **Epistemología probalistica** a la que deriva de esta estimación de la CERTEZA.  
 El enunciado puede ser considerado en forma genérica como CIERTO o VERAZ pero la conclusión debe pasar por la estimación de probabiidad.
 ### UN ENUNCIADO PUEDE SER CONSIDERADO COMO UN POSTULADO (1)  PERO  UNA CONCLUSIÓN SIEMPRE DEBE SER COMPROBADA.
-(1)Defimición : Un postulado no debe ser necesariamente cierto , solo no debe contradecirse con otros postulados del mismo sistema.  
+(1)Definición : Un postulado no debe ser necesariamente cierto , solo no debe contradecirse con otros postulados del mismo sistema.  
 
 
 ## Cuadro comparativo: Epistemología absoluta vs. Epistemología probabilística
