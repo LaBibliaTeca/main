@@ -92,7 +92,7 @@ El enunciado puede ser considerado en forma genérica como CIERTO o VERAZ pero l
     - El 5% restante → se mantiene como **hipótesis improbable** o falsedad en la medición discreta
   - Si la evidencia respalda la hipótesis en bajo grado (ej. 20%) → entonces la conclusión es **falsedad probable**
     - El 80% restante → se considera hipótesis alternativa más fuerte
-- Resultado: **unicidad flexible**, determinada por cálculo probabilístico.
+- Resultado: **unicidad flexible**, determinada por estimación o cálculo probabilístico.
 
 ---
 
