@@ -29,7 +29,7 @@ El enunciado puede ser considerado en forma genérica como CIERTO o VERAZ pero l
 | **Definición de verdad** | Certeza plena, dato y conclusión considerados incuestionables. | La verdad es la hipótesis con mayor probabilidad (ej. 95% frente a 5%). |
 | **Tratamientode lo improbable** | Se descarta como falso sin matices. | Se califica como “falsedad en la medición discreta”, pero puede mantenerse como hipótesis no probable. |
 | **Evidencia** | Se interpreta como fundamento definitivo. | Se interpreta como estimación aproximada, nunca absoluta. |
-| **Co nclusión** | Se presenta como dato absoluto, universal. | Se presenta como certeza relativa, dependiente de rangos discretos de probabilidad. |
+| **Conclusión** | Se presenta como dato absoluto, universal. | Se presenta como certeza relativa, dependiente de rangos discretos de probabilidad. |
 | **Analogía física** | Física clásica: posición de la partícula como dato absoluto. | Física cuántica: posición como distribución estadística. |
 | **Actitud frente a la epistemología** | Busca clausurar el debate con fundamentos universales. | Mantiene abierto el debate, reconociendo la falibilidad y la actualización de la evidencia. |
 | **Ejemplo práctico** | “Esta teoría es verdadera sin excepción.” | “Esta teoría es cierta en un 95%, pero dejo un 5% como hipótesis improbable.” |
