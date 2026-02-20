@@ -17,7 +17,7 @@ ___
 **Certeza según la estimación de hipotesis probable.**  
 Ejemplo:Si la probabilidad de una hipótesis es del 90% entonces la hipótesis se considera CIERTA o VERAZ y su opuesto con el 10% es FALSO.  
 Luego denominamos **Epistemología probalistica** a la que deriva de esta estimación de la CERTEZA.  
-El enunciado puede ser considerado en forma genérica como CIERTO o VERAZ pera la conclusión debe pasar por la estimación de probabiidad.
+El enunciado puede ser considerado en forma genérica como CIERTO o VERAZ pero la conclusión debe pasar por la estimación de probabiidad.
 ### UN ENUNCIADO PUEDE SER CONSIDERADO COMO UN POSTULADO (1)  PERO  UNA CONCLUSIÓN SIEMPRE DEBE SER COMPROBADA.
 (1)Defimición : Un postulado no debe ser necesariamente cierto , solo no debe contradecirse con otros postulados del mismo sistema.  
 
