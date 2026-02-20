@@ -12,7 +12,7 @@ Filósofos críticos con la epistemología como ciencia.
 | **Karl Popper** | Aunque defendió la filosofía de la ciencia, rechazó la idea de una epistemología como ciencia positiva. Para él, el conocimiento avanza por conjeturas y refutaciones, no por fundamentos seguros. | Falsacionismo, siglo XX |
 | **Paul Feyerabend** |   Rechazó la epistemología normativa y la idea de método científico universal. Defendió el “anarquismo metodológico”: todo vale en la práctica científica|Contra el método (1975).|
 | **Rolando García**  | Señaló que la epistemología especulativa perdió capacidad explicativa frente a la ciencia contemporánea, y que incluso los empiristas reconocieron su fracaso.| Crisis epistemológica del siglo XX.|
-
+___
 
 **Certeza según la estimación de hipotesis probable.**  
 Ejemplo:Si la probabilidad de una hipótesis es del 90% entonces la hipótesis se considera CIERTA o VERAZ y su opuesto con el 10% es FALSO.  
