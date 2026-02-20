@@ -1,9 +1,9 @@
 
-**Porque no siempre es aceptable el criterio epistemológico**.   
+**En contra  del criterio epistemológico**.   
 _De Gustavo Uliarte_. 
 
 **Certeza según la estimación de hipotesis probable.**  
-Ejemplo:Si la probabilidad de una hipótesis es del 90% entonces la hipótesis se considera CIERTA y su opuesto con el 10% es FALSO.  
+Ejemplo:Si la probabilidad de una hipótesis es del 90% entonces la hipótesis se considera CIERTA o VERAZ y su opuesto con el 10% es FALSO.  
 Luego denominamos Epistemología probalistica a la que deriva de esta estimación de la CERTEZA. 
 El enunciado puede ser considerado en forma genérica como CIERTO o VERAZ pera la conclusión de pasar por la estimación de probabiidad.
 ### UN ENUNCIADO PUEDE SER CONSIDERADO COMO UN POSTULADO  PERO  UNA CONCLUSIÓN SIEMPRE DEBE SER COMPROBADA.
