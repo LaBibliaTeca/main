@@ -62,4 +62,27 @@ El enunciado puede ser considerado en forma genérica como CIERTO o VERAZ pera l
 > La evidencia solo permite rangos discretos de probabilidad, nunca verdades definitivas.  
 > La unicidad de la respuesta no implica dogma, sino cálculo probabilístico.
 
+# Árbol lógico: Evaluación de la verdad
+
+## Epistemología dogmática
+- Si hay **dato observado** → entonces se toma como **evidencia definitiva**
+  - Si la evidencia respalda la hipótesis → entonces la conclusión es **verdad absoluta**
+  - Si la evidencia contradice la hipótesis → entonces la conclusión es **falsedad absoluta**
+- Resultado: **unicidad rígida**, sin grados de probabilidad.
+
+---
+
+## Modelo probabilístico discreto
+- Si hay **dato observado** → entonces se toma como **evidencia estimativa**
+  - Si la evidencia respalda la hipótesis en alto grado (ej. 95%) → entonces la conclusión es **verdad con certeza relativa**
+    - El 5% restante → se mantiene como **hipótesis improbable** o falsedad en la medición discreta
+  - Si la evidencia respalda la hipótesis en bajo grado (ej. 20%) → entonces la conclusión es **falsedad probable**
+    - El 80% restante → se considera hipótesis alternativa más fuerte
+- Resultado: **unicidad flexible**, determinada por cálculo probabilístico.
+
+---
+
+## Diferencia esencial
+- **Dogmática**: Unicidad = certeza absoluta → clausura el debate.
+- **Probabilística**: Unicidad = certeza relativa → cálculo estimativo, admite revisión.
 
