@@ -62,4 +62,4 @@ El enunciado puede ser considerado en forma genérica como CIERTO o VERAZ pera l
 > La evidencia solo permite rangos discretos de probabilidad, nunca verdades definitivas.  
 > La unicidad de la respuesta no implica dogma, sino cálculo probabilístico.
 
-  
+
