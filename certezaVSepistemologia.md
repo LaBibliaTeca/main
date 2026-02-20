@@ -6,7 +6,7 @@ _De Gustavo Uliarte_.
 Ejemplo:Si la probabilidad de una hipótesis es del 90% entonces la hipótesis se considera CIERTA y su opuesto con el 10% es FALSO.  
 Luego denominamos Epistemología probalistica a la que deriva de esta estimación de la CERTEZA. 
 El enunciado puede ser considerado en forma genérica como CIERTO o VERAZ pera la conclusión de pasar por la estimación de probabiidad.
-### UN ENUNCIADO PUEDE SER CONSIDERADO COMO UN POSTULADO  PERO  UNA CONCLUSIÓN SIEMPRE DEBE SR COMPROBADA.
+### UN ENUNCIADO PUEDE SER CONSIDERADO COMO UN POSTULADO  PERO  UNA CONCLUSIÓN SIEMPRE DEBE SER COMPROBADA.
 
 ## Cuadro comparativo: Epistemología absoluta vs. Epistemología probabilística
 
