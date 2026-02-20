@@ -4,10 +4,14 @@ _De Gustavo Uliarte_.
 ¡Qué filósofos no consideraban la EPISTEMOLOGÍA como CIENCIA?.  
 
 Filósofos críticos con la epistemología como ciencia.  
-|Filósofo|	Crítica principal|	Contexto|
-|David Hume|	Puso en duda la posibilidad de un conocimiento racional seguro, reduciendo la epistemología a hábitos psicológicos de asociación.|	Empirismo británico del siglo XVIII.|
-|Karl Popper|	Aunque defendió la filosofía de la ciencia, rechazó la idea de una epistemología como ciencia positiva. Para él, el conocimiento avanza por conjeturas y refutaciones, no por fundamentos seguros.	|Falsacionismo, siglo XX.| 
+# Filósofos que rechazaron la epistemología como ciencia
 
+| Filósofo     | Crítica principal                                                                 | Contexto                          |
+|--------------|-----------------------------------------------------------------------------------|-----------------------------------|
+| **David Hume** | Puso en duda la posibilidad de un conocimiento racional seguro, reduciendo la epistemología a hábitos psicológicos de asociación. | Empirismo británico del siglo XVIII |
+| **Karl Popper** | Aunque defendió la filosofía de la ciencia, rechazó la idea de una epistemología como ciencia positiva. Para él, el conocimiento avanza por conjeturas y refutaciones, no por fundamentos seguros. | Falsacionismo, siglo XX |
+| **Paul Feyerabend** |                                              |          |
+| **Rolando García**  |                                              |          |
 
 
 **Certeza según la estimación de hipotesis probable.**  
