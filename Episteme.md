@@ -27,7 +27,7 @@ El enunciado puede ser considerado en forma genérica como CIERTO o VERAZ pero l
 | Aspecto | EPISTEMOLOGÍA ABSOLUTA | Enfoque probabilístico (Mi modelo) |
 |---------|------------------------|------------------------------------|
 | **Definición de verdad** | Certeza plena, dato y conclusión considerados incuestionables. | La verdad es la hipótesis con mayor probabilidad (ej. 95% frente a 5%). |
-| **Tratamientode lo improbable** | Se descarta como falso sin matices. | Se califica como “falsedad en la medición discreta”, pero puede mantenerse como hipótesis no probable. |
+| **Tratamiento de lo improbable** | Se descarta como falso sin matices. | Se califica como “falsedad en la medición discreta”, pero puede mantenerse como hipótesis no probable. |
 | **Evidencia** | Se interpreta como fundamento definitivo. | Se interpreta como estimación aproximada, nunca absoluta. |
 | **Conclusión** | Se presenta como dato absoluto, universal. | Se presenta como certeza relativa, dependiente de rangos discretos de probabilidad. |
 | **Analogía física** | Física clásica: posición de la partícula como dato absoluto. | Física cuántica: posición como distribución estadística. |
