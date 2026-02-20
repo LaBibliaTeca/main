@@ -24,7 +24,7 @@ El enunciado puede ser considerado en forma genérica como CIERTO o VERAZ pera l
 
 ## Cuadro comparativo: Epistemología absoluta vs. Epistemología probabilística
 
-| Aspecto | EPISTEMOLOGÍA ABSOLUTA Enfoque probabilístico (tu modelo) |
+| Aspecto | EPISTEMOLOGÍA ABSOLUTA | Enfoque probabilístico (Mi modelo) |
 |---------|------------------------|------------------------------------|
 | **Definición de verdad** | Certeza plena, dato y conclusión considerados incuestionables. | La verdad es la hipótesis con mayor probabilidad (ej. 95% frente a 5%). |
 | **Tratamientode lo improbable** | Se descarta como falso sin matices. | Se califica como “falsedad en la medición discreta”, pero puede mantenerse como hipótesis no probable. |
