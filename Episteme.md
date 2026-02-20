@@ -37,7 +37,7 @@ El enunciado puede ser considerado en forma genérica como CIERTO o VERAZ pero l
 ---
 
 ## Estrategia de rechazo de la justificación absoluta
-- **Argumento central**: La conclusión absoluta confunde evidencia con certeza.  
+- **Argumento central**: La conclusión absoluta confunde EVIDENCIA con CERTEZA.  
 - **Respuesta crítica**: La evidencia solo permite rangos discretos de probabilidad, nunca verdades definitivas.  
 - **Analogía**: Así como la física cuántica reemplaza la certeza clásica por distribuciones estadísticas, el modelo probabilístico reemplaza la conclusión absoluta por estimaciones discretas.
 
