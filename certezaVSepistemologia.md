@@ -1,16 +1,18 @@
 
-**En contra  del criterio epistemológico**.   
+**En contra  del CRITERIO EPISTEMOLOGICO**.   
 _De Gustavo Uliarte_. 
 
 **Certeza según la estimación de hipotesis probable.**  
 Ejemplo:Si la probabilidad de una hipótesis es del 90% entonces la hipótesis se considera CIERTA o VERAZ y su opuesto con el 10% es FALSO.  
-Luego denominamos Epistemología probalistica a la que deriva de esta estimación de la CERTEZA. 
+Luego denominamos **Epistemología probalistica** a la que deriva de esta estimación de la CERTEZA. 
 El enunciado puede ser considerado en forma genérica como CIERTO o VERAZ pera la conclusión de pasar por la estimación de probabiidad.
-### UN ENUNCIADO PUEDE SER CONSIDERADO COMO UN POSTULADO  PERO  UNA CONCLUSIÓN SIEMPRE DEBE SER COMPROBADA.
+### UN ENUNCIADO PUEDE SER CONSIDERADO COMO UN POSTULADO (1)  PERO  UNA CONCLUSIÓN SIEMPRE DEBE SER COMPROBADA.
+(1) Un postulado no debe ser necesariamente cierto , solo no debe contradecirse con otros postulados del mismo sistema.  
+
 
 ## Cuadro comparativo: Epistemología absoluta vs. Epistemología probabilística
 
-| Aspecto | Epistemología absoluta | Enfoque probabilístico (tu modelo) |
+| Aspecto | EPISTEMOLOGÍA ABSOLUTA Enfoque probabilístico (tu modelo) |
 |---------|------------------------|------------------------------------|
 | **Definición de verdad** | Certeza plena, dato y conclusión considerados incuestionables. | La verdad es la hipótesis con mayor probabilidad (ej. 95% frente a 5%). |
 | **Tratamientode lo improbable** | Se descarta como falso sin matices. | Se califica como “falsedad en la medición discreta”, pero puede mantenerse como hipótesis no probable. |
