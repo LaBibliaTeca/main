@@ -25,4 +25,41 @@ El enunciado puede ser considerado en forma genérica como CIERTO o VERAZ pera l
 ## Estrategia de rechazo de la justificación absoluta
 - **Argumento central**: La conclusión absoluta confunde evidencia con certeza.  
 - **Respuesta crítica**: La evidencia solo permite rangos discretos de probabilidad, nunca verdades definitivas.  
-- **Analogía**: Así como la física cuántica reemplaza la certeza clásica por distribuciones estadísticas, el modelo probabilístico reemplaza la conclusión absoluta por estimaciones discretas.  
+- **Analogía**: Así como la física cuántica reemplaza la certeza clásica por distribuciones estadísticas, el modelo probabilístico reemplaza la conclusión absoluta por estimaciones discretas.
+
+# Esquema comparativo: Unicidad probabilística vs. Unicidad dogmática
+
+## 1. Punto de partida
+- **Dato absoluto**: aceptado en ambos enfoques como insumo.
+- **Conclusión**: aquí surge la diferencia.
+
+---
+
+## 2. Epistemología dogmática
+- **Unicidad**: la conclusión se presenta como verdad absoluta, incuestionable.
+- **Evidencia**: interpretada como fundamento definitivo.
+- **Actitud**: clausura el debate, se convierte en un dogma.
+- **Analogía física**: posición de la partícula en física clásica: dato absoluto y fijo.
+
+---
+
+## 3. Modelo probabilístico discreto
+- **Unicidad**: la conclusión es única en cada evaluación, pero surge de un cálculo de probabilidad.
+- **Evidencia**: estimación aproximada, nunca absoluta.
+- **Actitud**: mantiene abierto el debate, reconoce falibilidad y actualización.
+- **Analogía física**: posición de la partícula en física cuántica: distribución estadística, pero cada medición arroja un valor único.
+
+---
+
+## 4. Diferencia esencial
+- **Dogma**: confunde la unicidad de la respuesta con la inflexibilidad absoluta.
+- **Probabilidad**: reconoce la unicidad de la respuesta, pero como resultado de un cálculo estimativo (ej. 95% certeza vs. 5% hipótesis improbable).
+
+---
+
+## 5. Estrategia crítica
+> La justificación epistemológica absoluta se rechaza porque confunde evidencia con certeza.  
+> La evidencia solo permite rangos discretos de probabilidad, nunca verdades definitivas.  
+> La unicidad de la respuesta no implica dogma, sino cálculo probabilístico.
+
+  
