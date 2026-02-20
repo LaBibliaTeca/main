@@ -1,4 +1,7 @@
-# Cuadro comparativo: Epistemología absoluta vs. Epistemología probabilística
+
+**Porque no siempre es aceptable el criterio epistemológico**. 
+_De Gustavo Uliarte_.  
+## Cuadro comparativo: Epistemología absoluta vs. Epistemología probabilística
 
 | Aspecto | Epistemología absoluta | Enfoque probabilístico (tu modelo) |
 |---------|------------------------|------------------------------------|
