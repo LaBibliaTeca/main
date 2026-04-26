@@ -1,3 +1,4 @@
+<p style="font-size:30px,">
 ### La Carta de Eusebio a la Iglesia de Cesarea
 
 _Comentario de Gustavo Uliarte._  
@@ -33,3 +34,4 @@ Ha surgido la distracción y conmoción de las iglesias. En consecuencia, puesto
 Consideramos necesario, amados, informarles de la cautela que ha caracterizado tanto nuestro examen como nuestra coincidencia en estas cosas, y que por motivos justificables resistimos hasta el último momento la introducción de ciertas expresiones objetables mientras éstas no fueran aceptables; y los recibimos sin disputa, cuando después de una madura deliberación al examinar el sentido de las palabras, parecieron estar de acuerdo con lo que originalmente habíamos propuesto como  
 una sólida confesión de fe.  
 fin
+</p>
