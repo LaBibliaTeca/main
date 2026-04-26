@@ -1,6 +1,4 @@
- EusebioLetter
-
-### La Carta de Eusebio
+### La Carta de Eusebio a la Iglesia de Cesarea
 
 _Comentario de Gustavo Uliarte._  
   
