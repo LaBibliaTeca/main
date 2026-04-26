@@ -24,7 +24,7 @@ mandamiento dado en gracia, y el tipo en el producto terminado, y el cordero en 
 el hombre, y el
 hombre en dios
 8. Porque el que nació como Hijo, y como cordero fue llevado al matadero, sacrificado como oveja y sepultado
-como hombre, resucitó de entre los muertos como Dios, siendo por naturaleza Dios y hombre.Machine Translated by Google
+como hombre, resucitó de entre los muertos como Dios, siendo por naturaleza Dios y hombre.
 9. Él es todo: en lo que juzga es ley, en lo que enseña es evangelio, en lo que salva es gracia, en lo que
 engendra es Padre, en lo que es engendrado es Hijo, en lo que engendra es Hijo, en lo que 
 sufre es oveja, en lo que es sepultado es hombre, en lo que renace es Dios.
@@ -49,7 +49,7 @@ estaban prefiguradas en el pueblo, y la enseñanza del evangelio fue proclamada 
 40. El pueblo, por tanto, se convirtió en el modelo de la iglesia, y la ley en un bosquejo parabólico. Pero el evangelio se
 convirtió en la explicación.
 de la ley y su cumplimiento, mientras que la iglesia se convirtió en
-almacén de la verdadMachine Translated by Google
+almacén de la verdad.  
 41. Por tanto, el tipo tenía valor antes de su realización, y la parábola era maravillosa antes de su interpretación. esto es para
 Dicen que la gente tenía valor antes de que la iglesia apareciera en escena, y que la ley era
 maravillosa antes de que el evangelio fuera llevado a la escena.
@@ -98,7 +98,7 @@ los príncipes se juntaron contra el Señor y contra su ungido.
 PD. 2:1­2.
 63. Y Jeremías: Soy como un cordero inocente llevado al sacrificio. Conspiraron contra mí y dijeron: ¡Ven! arrojémosle un árbol
 para su alimento, y exterminémoslo de la tierra de los vivientes, para que su nombre nunca sea recordado.
-Jer. 11:19Machine Translated by Google
+Jer. 11:19.   
 64. E Isaías: Como oveja fue llevado al matadero, y como cordero calla delante del que lo trasquila, no abrió la boca.
 ¿Quién, pues, se lo dirá a su descendencia?
 Isa. 53:7
@@ -124,7 +124,7 @@ es el
 quien fue asesinado en Abel, y atado como sacrificio en Isaac, y desterrado en Jacob, y vendido en José, y expuesto en Moisés,
 y sacrificado en el cordero, y perseguido en David, y deshonrado en los profetas.
 70. Éste es el que se hizo humano en una virgen, el que fue colgado en el madero, el que fue sepultado en la tierra, el que
-resucitó de entre los muertos y el que levantó a los hombres del sepulcro de abajo a las alturas del cielo. .Machine Translated by Google
+resucitó de entre los muertos y el que levantó a los hombres del sepulcro de abajo a las alturas del cielo.   
 71. Este es el cordero que fue inmolado. Este es el cordero que fue
 ellos estan en silencio Éste es el que nació de María, esa hermosa cordera. Este es el que fue tomado del rebaño, y arrastrado
 al sacrificio, y al atardecer lo mataron y de noche lo sepultaron; el que no fue quebrantado mientras estaba en el
