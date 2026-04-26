@@ -2,7 +2,7 @@
 ### La Carta de Eusebio a la Iglesia de Cesarea
 
 _Comentario de Gustavo Uliarte._  
- <p style="font-size:30px,"> 
+ <p style="font-size:50px,"> 
 Como consecuencia de las tensiones producidas en el Concilio de Nicea del 325 dc por la ruptura con las iglesias de tendencia arriana , más las generadas por el término homo-ousios o misma-sustancia que podrían interpretar la divinidad como de propiedades materiales, Eusebio escribe esta carta procurando aclarar el tema . Es dudoso , como cita, que Constantino haya emitido opinión, sino más bien preferencia.  
   
 El concepto de engendrado en cuanto al hijo , se basa en el salmo 2:.7 . Para Eusebio es tomado como hecho sucedido antes de la fundación del mundo  
