@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boletín de la Bibliateca</title>
+  <style>
+    body {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 20px;
+      margin: 0;
+      padding: 1px;
+      background-color: white;
+      color: #000;
+    }
+    #contenido {
+      max-width: 360px;
+      min-width: 100px;
+      margin: 0 auto;
+      padding: 10px;
+      background-color: #ffffff;
+      border-radius: 5px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+      box-sizing: border-box;
+    }
+    button {
+      font-size: 1rem;
+      padding: 0.25rem 1rem;
+      margin: 5px 5px 5px 0;
+    }
+    #velocidadActual {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <button onclick="leerEnVozAlta()">🔊 Escuchar</button>
+  <button onclick="ajustarVelocidad(-0.1)">- Velocidad</button>
+  <button onclick="ajustarVelocidad(0.1)">+ Velocidad</button><br>
+  <span id="velocidadActual">Velocidad: 0.8</span><br>
+
+  <p><i>Comentarios Biblicos <br></i></p>
+
+  <div id="contenido">Cargando texto...</div>
+
+  <!-- Script que cargará el texto -->
+  <script src="lectorFINAL.js" data-archivo="contenido.html"></script>
+
+</body>
+</html>
