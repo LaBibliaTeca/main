@@ -22,7 +22,22 @@ if (archivo) {
 }
 
 let velocidad = 0.8;
+//agrego
+function limpiarTextoLectura(texto) {
+  return texto
+    // Quitar encabezados Markdown (#, ##, ###...)
+    .replace(/^#+\s*/gm, "")
 
+    // Quitar marcadores de negrita y cursiva
+    .replace(/\*/g, "")
+    .replace(/_/g, "")
+
+    // Eliminar espacios repetidos
+    .replace(/[ \t]+/g, " ")
+
+    .trim();
+}
+//termina agrego
 function dividirPorOraciones(texto, maxCaracteres = 200) {
   const regex = /(?<!\d)\.(?=\s+[A-ZÁÉÍÓÚÑ])/g;
   const oraciones = texto.split(regex).map(o => o.trim()).filter(Boolean);
@@ -44,7 +59,11 @@ function dividirPorOraciones(texto, maxCaracteres = 200) {
 }
 
 function leerEnVozAlta() {
-  const texto = document.getElementById("contenido").innerText;
+  //const texto = document.getElementById("contenido").innerText;
+const texto = limpiarTextoLectura(
+  document.getElementById("contenido").innerText
+);
+  
   const fragmentos = dividirPorOraciones(texto, 200);
   let index = 0;
 
