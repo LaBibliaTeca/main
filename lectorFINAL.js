@@ -12,9 +12,21 @@ if (archivo) {
       if (!res.ok) throw new Error("No se pudo cargar: " + archivo);
       return res.text();
     })
-    .then(texto => {
-      document.getElementById("contenido").innerHTML = texto;
-    })
+  .then(texto => {
+  
+    const contenido = document.getElementById("contenido");
+  
+    if (archivo.toLowerCase().endsWith(".md")) {
+      contenido.innerHTML = marked.parse(texto);
+  
+    } else if (archivo.toLowerCase().endsWith(".html")) {
+      contenido.innerHTML = texto;
+  
+    } else {
+      contenido.textContent = texto;
+    }
+
+})
     .catch(err => {
       document.getElementById("contenido").innerHTML = "⚠️ Error: " + err.message;
       console.error(err);
