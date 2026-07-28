@@ -51,17 +51,7 @@
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <!-- Script que cargará el texto -->
   <script src="lectorFINAL.js" data-archivo="contenido.html"></script>
-<!-- Cambia el título -->
-<script>
-const params = new URLSearchParams(window.location.search);
-const archivo = params.get("texto");
 
-if (archivo) {
-    document.title = archivo
-        .split("/")
-        .pop()
-        .replace(/\.(md|txt)$/i, "");
-}
-</script>
+
 </body>
 </html>
