@@ -5,7 +5,12 @@ function getParametro(nombre) {
 
 const script = document.currentScript;
 const archivo = getParametro("texto") || script.getAttribute("data-archivo");
-
+// Cambiar el título de la pestaña
+if (archivo) {
+  const nombre = archivo.split("/").pop();
+  document.title = nombre.replace(/\.(md|txt|html)$/i, "");
+}
+// Fin Cambiar titulo
 if (archivo) {
   fetch(archivo)
     .then(res => {
