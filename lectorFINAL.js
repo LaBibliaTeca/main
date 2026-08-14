@@ -51,6 +51,7 @@ function limpiarTextoLectura(texto) {
 
     // Eliminar espacios repetidos
     .replace(/[ \t]+/g, " ")
+    .replace(/\n{2,}/g, "\n") // colapsa saltos múltiples
 
     .trim();
 }
@@ -78,7 +79,7 @@ function dividirPorOraciones(texto, maxCaracteres = 200) {
 function leerEnVozAlta() {
   //const texto = document.getElementById("contenido").innerText;
 const texto = limpiarTextoLectura(
-  document.getElementById("contenido").innerText
+  document.getElementById("contenido").textContent
 );
   
   const fragmentos = dividirPorOraciones(texto, 200);
