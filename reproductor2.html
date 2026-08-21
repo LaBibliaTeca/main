@@ -52,10 +52,20 @@
 </head>
 <body>
 
-  <button onclick="leerEnVozAlta()">🔊 Escuchar</button>
-  <button onclick="ajustarVelocidad(-0.1)">- Velocidad</button>
-  <button onclick="ajustarVelocidad(0.1)">+ Velocidad</button><br>
-  <span id="velocidadActual">Velocidad: 0.8</span><br>
+<div style="display: flex; justify-content: space-between; align-items: center;">
+
+  <div>
+    <button onclick="leerEnVozAlta()">🔊 Escuchar</button>
+    <button onclick="ajustarVelocidad(-0.1)">- Velocidad</button>
+    <button onclick="ajustarVelocidad(0.1)">+ Velocidad</button><br>
+    <span id="velocidadActual">Velocidad: 0.8</span><br>
+  </div>
+
+  <img src="90G.png"
+       style="height: 70px; width: auto; margin-right: 10px;"
+       alt="">
+
+</div>
 
   <p><i>Análisis Lingüistico <br>De Jorge Ramirez</i><r>
   Todos los articulos pueden ser refutados</p>
