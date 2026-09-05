@@ -46,8 +46,12 @@
 <p style="background-color: #00c3ff; color: #ffffff; padding: 7px; font-weight: bold; text-align: center; font-size: 1rem; animation: flash 1s steps(2, start) infinite;">
   " NO NECESITAS LEER , PUEDES ECUCHAR "
 </p>
-
-<style>@keyframes flash { to { visibility: hidden; } }</style>
+<style>
+@keyframes flash-largo { 
+  0%, 66% { visibility: visible; } 
+  67%, 100% { visibility: hidden; } 
+}
+</style>
     <button onclick="leerEnVozAlta()">🔊 Escuchar</button>
     <button onclick="ajustarVelocidad(-0.1)">- Velocidad</button>
     <button onclick="ajustarVelocidad(0.1)">+ Velocidad</button><br>
