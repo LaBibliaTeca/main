@@ -38,7 +38,7 @@ if (archivo) {
     });
 }
 
-let velocidad = 0.8;
+let velocidad = 0.7;
 //agrego
 function limpiarTextoLectura(texto) {
   return texto
