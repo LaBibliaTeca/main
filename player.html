@@ -48,8 +48,8 @@
 </p>
 <style>
 @keyframes flash-largo { 
-  0%, 66% { visibility: visible; } 
-  67%, 100% { visibility: hidden; } 
+  0%, 66% { opacity: 1; }    /* Prendido el 66% del tiempo */
+  67%, 100% { opacity: 0; }  /* Apagado el resto del tiempo */
 }
 </style>
     <button onclick="leerEnVozAlta()">🔊 Escuchar</button>
