@@ -62,10 +62,18 @@
   67%, 100% { opacity: 0; }  /* Apagado el resto del tiempo */
 }
 </style>
-    <button onclick="leerEnVozAlta()">🔊 Escuchar</button>
-    <button onclick="ajustarVelocidad(-0.1)">- Velocidad</button>
-    <button onclick="ajustarVelocidad(0.1)">+ Velocidad</button><br>
-    <span id="velocidadActual">Velocidad: 0.7</span><br>
+<div style="display: flex; align-items: center;">
+    <div>
+        <button onclick="leerEnVozAlta()">🔊 Escuchar</button>
+        <button onclick="ajustarVelocidad(-0.1)">- Velocidad</button>
+        <button onclick="ajustarVelocidad(0.1)">+ Velocidad</button><br>
+        <span id="velocidadActual">Velocidad: 0.7</span><br>
+    </div>
+
+    <img src="G90.png"
+         style="height: 70px; width: auto; margin-left: 10px;"
+         alt="">
+</div>
 
 
 <div style="display: flex; justify-content: space-between; align-items: center;">
