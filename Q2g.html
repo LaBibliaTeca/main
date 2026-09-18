@@ -190,44 +190,42 @@ iframe {
 </form>
 
 <script>
-				function enviarMensajeWhatsApp(event) {
-				  event.preventDefault(); // Evita el envío tradicional
-				
-				  const nombre = document.querySelector('input[name="from_name"]').value.trim();
-				  let mensaje = document.getElementById('message').value.trim();
-				
-				  if (!nombre || !mensaje) {
-				    document.getElementById('mensaje-whatsapp').innerHTML =
-				      '<span style="color: red;">⚠️ Completá todos los campos antes de enviar.</span>';
-				    return false; // 🔴 IMPORTANTE
-				  }
-				
-				  // Sanitización
-				  mensaje = mensaje.replace(/</g, "")
-				                   .replace(/>/g, "")
-				                   .replace(/script/gi, "")
-				                   .replace(/[{}]/g, "")
-				                   .replace(/tel:/gi, "")
-				                   .replace(/callto:/gi, "")
-				                   .replace(/\+\d+/g, "")
-				                   .replace(/\*\d+#/g, "");
-				
-				  const destino = "5491156394763"; // número real
-				  const textoPlano = `Hola Bibliateca!\nAlias: ${nombre}\nPregunta: ${mensaje}`;
-				  const texto = encodeURIComponent(textoPlano);
-				  const whatsappURL = `https://wa.me/${destino}?text=${texto}`;
-				
-				  window.open(whatsappURL, "_blank");
-				
-				  document.getElementById('confirmation-message').style.display = "block";
-				  document.getElementById('mensaje-whatsapp').innerHTML = "";
-				
-				  return false; // 🔴 Esto evita que el form redirija a Q2g.html
-				}
-				
+function enviarMensajeWhatsApp(event) {
+  event.preventDefault(); // Evita el envío tradicional del form
 
+  const nombre = document.querySelector('input[name="from_name"]').value.trim();
+  let mensaje = document.getElementById('message').value.trim();
 
-   </script>
+  if (!nombre || !mensaje) {
+    document.getElementById('mensaje-whatsapp').innerHTML =
+      '<span style="color: red;">⚠️ Completá todos los campos antes de enviar.</span>';
+    return false;
+  }
+
+  // Sanitizar caracteres peligrosos
+  mensaje = mensaje.replace(/</g, "")
+                   .replace(/>/g, "")
+                   .replace(/script/gi, "")
+                   .replace(/[{}]/g, "")
+                   .replace(/tel:/gi, "")
+                   .replace(/callto:/gi, "")
+                   .replace(/\+\d+/g, "")
+                   .replace(/\*\d+#/g, "");
+
+  const destino = "5491156394763"; // tu número real
+  const textoPlano = `Hola Bibliateca!\nAlias: ${nombre}\nPregunta: ${mensaje}`;
+  const texto = encodeURIComponent(textoPlano);
+
+  const whatsappURL = `https://wa.me/${destino}?text=${texto}`;
+  window.open(whatsappURL, "_blank"); // 🔴 abre WhatsApp
+
+  document.getElementById('confirmation-message').style.display = "block";
+  document.getElementById('mensaje-whatsapp').innerHTML = "";
+
+  return false; // 🔴 evita que el form redirija a Q2g.html
+}
+</script>
+
 
 	<!--<div class="page-footer">
 	</div>-->
