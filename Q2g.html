@@ -185,12 +185,12 @@ iframe {
 
 
  <script>
-			
+		<script>
 			function enviarMensajeWhatsApp(event) {
 			  event.preventDefault(); // Evita el envío tradicional
 			
 			  const nombre = document.querySelector('input[name="from_name"]').value.trim();
-			  const mensaje = document.getElementById('message').value.trim();
+			  let mensaje = document.getElementById('message').value.trim();
 			
 			  // Validación adicional por seguridad
 			  if (!nombre || !mensaje) {
@@ -199,7 +199,13 @@ iframe {
 			    return false;
 			  }
 			
-			  const destino = "5491156394763";//  Número en formato internacional
+			  // 🔒 Sanitizar: eliminar caracteres peligrosos
+			  mensaje = mensaje.replace(/</g, "")
+			                   .replace(/>/g, "")
+			                   .replace(/script/gi, "")
+			                   .replace(/[{}]/g, "");
+			
+			  const destino = "5491156394763"; // Número en formato internacional
 			  const textoPlano = `Hola Bibliateca!\nAlias: ${nombre}\nPregunta: ${mensaje}`;
 			  const texto = encodeURIComponent(textoPlano);
 			  const whatsappURL = `https://wa.me/${destino}?text=${texto}`;
@@ -209,6 +215,9 @@ iframe {
 			  document.getElementById('mensaje-whatsapp').innerHTML = "";
 			  return false;
 			}
+</script>
+
+			
 
    </script>
 
