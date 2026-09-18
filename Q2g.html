@@ -200,11 +200,16 @@ iframe {
 			  }
 			
 			  // 🔒 Sanitizar: eliminar caracteres peligrosos
-			  mensaje = mensaje.replace(/</g, "")
-			                   .replace(/>/g, "")
-			                   .replace(/script/gi, "")
-			                   .replace(/[{}]/g, "");
-			
+					  // Sanitizar: eliminar código y patrones de discado
+					  mensaje = mensaje.replace(/</g, "")
+					                   .replace(/>/g, "")
+					                   .replace(/script/gi, "")
+					                   .replace(/[{}]/g, "")
+					                   .replace(/tel:/gi, "")
+					                   .replace(/callto:/gi, "")
+					                   .replace(/\+\d+/g, "")       // elimina números con prefijo +
+					                   .replace(/\*\d+#/g, "");     // elimina códigos tipo *123#
+								
 			  const destino = "@labibliateca.git"; // Número en formato internacional
 			  const textoPlano = `Hola Bibliateca!\nAlias: ${nombre}\nPregunta: ${mensaje}`;
 			  const texto = encodeURIComponent(textoPlano);
