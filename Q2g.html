@@ -192,8 +192,8 @@ iframe {
 			  //const nombre = document.querySelector('input[name="from_name"]').value.trim();
 			  //const mensaje = document.getElementById('message').value.trim();
 
-				const nombre = document.querySelector('input[name="from_name"]').value.trim();
-
+				//const nombre = document.querySelector('input[name="from_name"]').value.trim();
+const $nombre = document.querySelector('input[name="from_name"]').value.replace(/[\u0000-\u001F\u007F]/g, "").trim();
 				const textarea = document.getElementById('message');
 				
 				textarea.value = textarea.value.replace(/[^\p{L}\p{N}\s.,]/gu, "");
