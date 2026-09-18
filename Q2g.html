@@ -189,9 +189,17 @@ iframe {
 			function enviarMensajeWhatsApp(event) {
 			  event.preventDefault(); // Evita el envío tradicional
 			
-			  const nombre = document.querySelector('input[name="from_name"]').value.trim();
-			  const mensaje = document.getElementById('message').value.trim();
-			
+			  //const nombre = document.querySelector('input[name="from_name"]').value.trim();
+			  //const mensaje = document.getElementById('message').value.trim();
+
+				const nombre = document.querySelector('input[name="from_name"]').value.trim();
+
+				const textarea = document.getElementById('message');
+				
+				textarea.value = textarea.value.replace(/[^\p{L}\p{N}\s.,]/gu, "");
+				
+				const mensaje = textarea.value.trim();
+			//------------------------------
 			  // Validación adicional por seguridad
 			  if (!nombre || !mensaje) {
 			    document.getElementById('mensaje-whatsapp').innerHTML =
