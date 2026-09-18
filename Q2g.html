@@ -198,7 +198,11 @@ iframe {
 			      '<span style="color: red;">⚠️ Completá todos los campos antes de enviar.</span>';
 			    return false;
 			  }
-			
+			  // Sanitización básica
+  mensaje = mensaje.replace(/</g, "")
+                   .replace(/>/g, "")
+                   .replace(/script/gi, "")
+                   .replace(/[{}]/g, "");
 			  const destino = "5491156394763";// Número en formato internacional
 			  const textoPlano = `Hola Bibliateca!\nAlias: ${nombre}\nPregunta: ${mensaje}`;
 			  const texto = encodeURIComponent(textoPlano);
