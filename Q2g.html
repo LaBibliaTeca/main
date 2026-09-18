@@ -218,7 +218,8 @@ iframe {
 			  window.open(whatsappURL, "_blank");
 			  document.getElementById('confirmation-message').style.display = "block";
 			  document.getElementById('mensaje-whatsapp').innerHTML = "";
-			  return false;
+			  
+			  return false; // 🔴 Esto evita que el form redirija a Q2g.html
 			}
 </script>
 
