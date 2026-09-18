@@ -191,13 +191,9 @@ iframe {
 			
 			  //const nombre = document.querySelector('input[name="from_name"]').value.trim();
 			  //const mensaje = document.getElementById('message').value.trim();
-			const campoNombre = document.querySelector('input[name="from_name"]');
-			
-			campoNombre.value = campoNombre.value.replace(/[\u0000-\u001F\u007F]/g, "");
-			
-			const nombre = campoNombre.value.trim();
-				//const nombre = document.querySelector('input[name="from_name"]').value.trim();
 
+				//const nombre = document.querySelector('input[name="from_name"]').value.trim();
+					const nombre = document.querySelector('input[name="from_name"]').value.replace(/[^\p{L}\p{N}\s.,]/gu, "").trim();
 				const textarea = document.getElementById('message');
 				
 				textarea.value = textarea.value.replace(/[^\p{L}\p{N}\s.,]/gu, "");
