@@ -209,7 +209,7 @@ iframe {
 			  const destino = "5491168302217";// Número en formato internacional
 			  const textoPlano = `Análisis Lingüistico!\nAlias: ${nombre}\nPregunta: ${mensaje}`;
 			  const texto = encodeURIComponent(textoPlano);
-			  const whatsappURL = `https://wa.me/*${destino}*?text=${texto}`;
+			  const whatsappURL = `https://wa.me/${destino}?text=${texto}`;
 			
 			  window.open(whatsappURL, "_blank");
 			  document.getElementById('confirmation-message').style.display = "block";
