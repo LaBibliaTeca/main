@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comparte la Bibliateca</title>
+  <style>
+    body {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 20px;
+      margin: 0;
+      padding: 1px;
+      background-color: white;
+      color: #000;
+          }
+       #contenido {
+        font-size: 1.2rem;
+        width: 100%;
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 10px;
+        background-color: #ffffff;
+        border-radius: 5px;
+        box-shadow: 0 0 5px rgba(0,0,0,0.1);
+        box-sizing: border-box;
+        white-space: normal;   /* evita espacios excesivos */
+      }
+      
+      #contenido p {
+        margin: 0.5em 0;       /* controla separación entre párrafos */
+      }
+
+
+    
+    button {
+      font-size: 1rem;
+      padding: 0.25rem 1rem;
+      margin: 5px 5px 5px 0;
+    }
+    #velocidadActual {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+<p style="background-color: #0c7291; color: #ffffff; padding: 5px; font-weight: bold; text-align: center; font-size: 1rem; animation: flash-largo 1.5s infinite; margin: 0;">
+  " NO NECESITAS LEER , PUEDES ESCUCHAR "
+</p>
+<style>
+@keyframes flash-largo { 
+  0%, 66% { opacity: 1; }    /* Prendido el 66% del tiempo */
+  67%, 100% { opacity: 0; }  /* Apagado el resto del tiempo */
+}
+</style>
+  <div style="display: flex; align-items: center;">
+    <div>
+        <button onclick="leerEnVozAlta()">🔊 Escuchar</button>
+        <button onclick="ajustarVelocidad(-0.1)">- Velocidad</button>
+        <button onclick="ajustarVelocidad(0.1)">+ Velocidad</button><br>
+
+    </div>
+
+    <img src="G90.png"
+         style="height: 70px; width: auto; margin-left: 10px;"
+         alt="">
+</div>
+  
+
+<div style="display: flex; justify-content: space-between; align-items: center;">
+
+  <div>
+      <span id="velocidadActual">Velocidad: 0.7</span><br>
+     <i>Páginas de Estudio<br>De Gustavo Uliarte</i><br>
+      <a href="Q2g.html" target="_blank"><b>Preguntas al Autor</b></a> 
+   </div>
+    
+      <img src="copifoto.png"
+           style="height: 60px; width: auto; margin-right: 40px;"
+           alt="">
+
+</div>
+  <!--<a href="Q2g_.html"><b>PREGUNTAS AL AUTOR</b></a>-->
+  <div id="contenido">Cargando texto...</div>
+ <!-- Script qmarkdown -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <!-- Script que cargará el texto -->
+  <script src="lectorFINAL.js?v=4" data-archivo="contenido.html"></script>
+
+
+</body>
+</html>
