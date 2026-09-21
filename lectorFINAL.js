@@ -117,3 +117,29 @@ function ajustarVelocidad(cambio) {
   // Corregido un pequeño punto extra que causaba error de sintaxis en el toFixed
   document.getElementById("velocidadActual").textContent = "Velocidad: " + velocidad.toFixed(1);
 }
+///
+// Copiar selección conservando formato HTML
+document.addEventListener("copy", function (e) {
+  const seleccion = window.getSelection();
+
+  if (!seleccion.rangeCount || seleccion.isCollapsed) return;
+
+  const rango = seleccion.getRangeAt(0);
+
+  // Solo actuar si la selección está dentro de #contenido
+  const contenido = document.getElementById("contenido");
+  if (!contenido.contains(rango.commonAncestorContainer)) return;
+
+  // Texto plano
+  const textoPlano = seleccion.toString();
+
+  // HTML de la selección
+  const contenedor = document.createElement("div");
+  contenedor.appendChild(rango.cloneContents());
+  const textoHTML = contenedor.innerHTML;
+
+  e.clipboardData.setData("text/plain", textoPlano);
+  e.clipboardData.setData("text/html", textoHTML);
+
+  e.preventDefault();
+});
