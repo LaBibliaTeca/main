@@ -56,11 +56,7 @@
   <div style="display: flex; align-items: center;">
     <div>
 
-        <button
-            style="background:#ffcc00;"
-            onclick="this.style.background='#4CAF50'; this.style.color='white'; this.disabled=true; leerEnVozAlta();">
-            🔊 Escuchar
-        </button>
+          <button style="background:#ffcc00;" onclick="this.style.background='#4CAF50';this.style.color='white';this.innerHTML='🔊 Escuchando';this.disabled=true;leerEnVozAlta();">🔊 Escuchar</button>    
       
         <button onclick="ajustarVelocidad(-0.1)">- Velocidad</button>
         <button onclick="ajustarVelocidad(0.1)">+ Velocidad</button><br>
